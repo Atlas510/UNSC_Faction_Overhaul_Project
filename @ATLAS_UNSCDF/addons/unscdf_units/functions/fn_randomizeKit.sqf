@@ -65,7 +65,7 @@ private _classPools = createHashMapFromArray [
     ["B_UNSCDF_Rifleman", createHashMapFromArray [
         ["headgear",  ["TCP_H_Helmet_CH43A_Olive", "TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_WatchCap_Olive","TCP_H_Helmet_ECH43A_Olive_Silver",
                        "TCP_H_booniehat_Olive","WOLFoT_TcP_UNSC_A_Boonie_Woodland_2"]],
-        ["vest",      ["TCP_V_M43A_GungnirS_1_Olive","TCP_V_M43A_GungnirS_2_Olive","TCP_V_M43A_GungnirS_3_Olive",]],
+        ["vest",      ["TCP_V_M43A_GungnirS_1_Olive","TCP_V_M43A_GungnirS_2_Olive","TCP_V_M43A_GungnirS_3_Olive"]],
         ["nvg",       ["OPTRE_NVG"]],
         ["optics",    ["OPTRE_MA5_BUIS","CTGCY_MA5_Sight_2"]],
         ["muzzles",   []],
@@ -78,7 +78,7 @@ private _classPools = createHashMapFromArray [
     ["B_UNSCDF_Squad_Leader", createHashMapFromArray [
         ["headgear",  ["TCP_H_Helmet_CH43A_Olive", "TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_WatchCap_Olive","TCP_H_Helmet_ECH43A_Olive_Silver",
                        "TCP_H_booniehat_Olive","WOLFoT_TcP_UNSC_A_Boonie_Woodland_2"]],
-        ["vest",      ["TCP_V_M43A_GungnirS_1_Olive","TCP_V_M43A_GungnirS_2_Olive","TCP_V_M43A_GungnirS_3_Olive",]],
+        ["vest",      ["TCP_V_M43A_GungnirS_1_Olive","TCP_V_M43A_GungnirS_2_Olive","TCP_V_M43A_GungnirS_3_Olive"]],
         ["nvg",       ["OPTRE_NVG"]],
         ["optics",    ["CTGCY_BR55_Scope_ACE","OPTRE_M12_Optic","OPTRE_M12_Optic_Green","OPTRE_M12_Optic_Red"]],
         ["muzzles",   []],
@@ -91,7 +91,7 @@ private _classPools = createHashMapFromArray [
     ["B_UNSCDF_Team_Leader", createHashMapFromArray [
         ["headgear",  ["TCP_H_Helmet_CH43A_Olive", "TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_WatchCap_Olive","TCP_H_Helmet_ECH43A_Olive_Silver",
                        "TCP_H_booniehat_Olive","WOLFoT_TcP_UNSC_A_Boonie_Woodland_2"]],
-        ["vest",      ["TCP_V_M43A_GungnirS_1_Olive","TCP_V_M43A_GungnirS_2_Olive","TCP_V_M43A_GungnirS_3_Olive",]],
+        ["vest",      ["TCP_V_M43A_GungnirS_1_Olive","TCP_V_M43A_GungnirS_2_Olive","TCP_V_M43A_GungnirS_3_Olive"]],
         ["nvg",       ["OPTRE_NVG"]],
         ["optics",    ["OPTRE_MA5_BUIS","CTGCY_MA5_Sight_2"]],
         ["muzzles",   []],
@@ -104,7 +104,7 @@ private _classPools = createHashMapFromArray [
     ["B_UNSCDF_Ammo_Bearer", createHashMapFromArray [
         ["headgear",  ["TCP_H_Helmet_CH43A_Olive", "TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_WatchCap_Olive","TCP_H_Helmet_ECH43A_Olive_Silver",
                        "TCP_H_booniehat_Olive","WOLFoT_TcP_UNSC_A_Boonie_Woodland_2"]],
-        ["vest",      ["TCP_V_M43A_GungnirS_1_Olive","TCP_V_M43A_GungnirS_2_Olive","TCP_V_M43A_GungnirS_3_Olive",]],
+        ["vest",      ["TCP_V_M43A_GungnirS_1_Olive","TCP_V_M43A_GungnirS_2_Olive","TCP_V_M43A_GungnirS_3_Olive"]],
         ["nvg",       ["OPTRE_NVG"]],
         ["optics",    ["OPTRE_MA5_BUIS","CTGCY_MA5_Sight_2"]],
         ["muzzles",   []],
@@ -117,7 +117,7 @@ private _classPools = createHashMapFromArray [
     ["B_UNSCDF_Autorifleman_01", createHashMapFromArray [
         ["headgear",  ["TCP_H_Helmet_CH43A_Olive", "TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_WatchCap_Olive","TCP_H_Helmet_ECH43A_Olive_Silver",
                        "TCP_H_booniehat_Olive","WOLFoT_TcP_UNSC_A_Boonie_Woodland_2"]],
-        ["vest",      ["TCP_V_M43A_GungnirL_1_Olive","TCP_V_M43A_GungnirL_2_Olive","TCP_V_M43A_GungnirL_3_Olive",]],
+        ["vest",      ["TCP_V_M43A_GungnirL_1_Olive","TCP_V_M43A_GungnirL_2_Olive","TCP_V_M43A_GungnirL_3_Olive"]],
         ["nvg",       ["OPTRE_NVG"]],
         ["optics",    ["OPTRE_M73_SmartLink", "none"]],
         ["muzzles",   []],
@@ -130,7 +130,7 @@ private _classPools = createHashMapFromArray [
     // Corpsman — all arrays empty: no randomization applied
     ["B_UNSCDF_Corpsman", createHashMapFromArray [
         ["headgear",  []],
-        ["vest",      ["TCP_V_M43A_GungnirS_1_Olive","TCP_V_M43A_GungnirS_2_Olive","TCP_V_M43A_GungnirS_3_Olive",]],
+        ["vest",      ["TCP_V_M43A_GungnirS_1_Olive","TCP_V_M43A_GungnirS_2_Olive","TCP_V_M43A_GungnirS_3_Olive"]],
         ["nvg",       ["OPTRE_NVG"]],
         ["optics",    []],
         ["muzzles",   []],
@@ -154,20 +154,20 @@ private _classPools = createHashMapFromArray [
     ["B_UNSCDF_Engineer", createHashMapFromArray [
         ["headgear",  ["TCP_H_Helmet_CH43A_Olive", "TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_WatchCap_Olive","TCP_H_Helmet_ECH43A_Olive_Silver",
                        "TCP_H_booniehat_Olive","WOLFoT_TcP_UNSC_A_Boonie_Woodland_2"]],
-        ["vest",      ["TCP_V_M43A_GungnirS_1_Olive","TCP_V_M43A_GungnirS_2_Olive","TCP_V_M43A_GungnirS_3_Olive",]],
+        ["vest",      ["TCP_V_M43A_GungnirS_1_Olive","TCP_V_M43A_GungnirS_2_Olive","TCP_V_M43A_GungnirS_3_Olive"]],
         ["nvg",       ["OPTRE_NVG"]],
         ["optics",    ["OPTRE_MA5_BUIS","CTGCY_MA5_Sight_2"]],
         ["muzzles",   []],
         ["pointers",  []],
         ["bipods",    []],
         ["extras",     ["ACE_MRE_BeefStew_Item", "ACE_MRE_ChikenTikkaMasala_Item", "ACE_MRE_ChickenHerbDumplings_Item", "ACE_MRE_CreamChickenSoup_Item",
-                       "ACE_MRE_CreamTomatoSoup_Item", "ACE_MRE_LambCurry_Item", "ACE_MRE_MeatballsPasta_Item", "ACE_MRE_SteakVegetables_Item "]
+                       "ACE_MRE_CreamTomatoSoup_Item", "ACE_MRE_LambCurry_Item", "ACE_MRE_MeatballsPasta_Item", "ACE_MRE_SteakVegetables_Item "]]
     ]],
 
     ["B_UNSCDF_Explosive_Specialist", createHashMapFromArray [
         ["headgear",  ["TCP_H_Helmet_CH43A_Olive", "TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_WatchCap_Olive","TCP_H_Helmet_ECH43A_Olive_Silver",
                        "TCP_H_booniehat_Olive","WOLFoT_TcP_UNSC_A_Boonie_Woodland_2"]],
-        ["vest",      ["TCP_V_M43A_GungnirL_1_1_Olive","TCP_V_M43A_GungnirL_2_1_Olive","TCP_V_M43A_GungnirL_3_1_Olive",]],
+        ["vest",      ["TCP_V_M43A_GungnirL_1_1_Olive","TCP_V_M43A_GungnirL_2_1_Olive","TCP_V_M43A_GungnirL_3_1_Olive"]],
         ["nvg",       ["OPTRE_NVG"]],
         ["optics",    ["OPTRE_MA5_BUIS","CTGCY_MA5_Sight_2"]],
         ["muzzles",   []],
@@ -180,7 +180,7 @@ private _classPools = createHashMapFromArray [
     ["B_UNSCDF_Grenadier", createHashMapFromArray [
         ["headgear",  ["TCP_H_Helmet_CH43A_Olive", "TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_WatchCap_Olive","TCP_H_Helmet_ECH43A_Olive_Silver",
                        "TCP_H_booniehat_Olive","WOLFoT_TcP_UNSC_A_Boonie_Woodland_2"]],
-        ["vest",      ["TCP_V_M43A_GungnirS_1_Olive","TCP_V_M43A_GungnirS_2_Olive","TCP_V_M43A_GungnirS_3_Olive",]],
+        ["vest",      ["TCP_V_M43A_GungnirS_1_Olive","TCP_V_M43A_GungnirS_2_Olive","TCP_V_M43A_GungnirS_3_Olive"]],
         ["nvg",       ["OPTRE_NVG"]],
         ["optics",    ["OPTRE_MA5_BUIS","CTGCY_MA5_Sight_2"]],
         ["muzzles",   []],
@@ -192,7 +192,7 @@ private _classPools = createHashMapFromArray [
 
     ["B_UNSCDF_Marksman", createHashMapFromArray [
         ["headgear",  ["TCP_H_Helmet_CH43A_Olive"]],
-        ["vest",      ["TCP_V_M43A_GungnirS_1_Olive","TCP_V_M43A_GungnirS_2_Olive","TCP_V_M43A_GungnirS_3_Olive",]],
+        ["vest",      ["TCP_V_M43A_GungnirS_1_Olive","TCP_V_M43A_GungnirS_2_Olive","TCP_V_M43A_GungnirS_3_Olive"]],
         ["nvg",       []],
         ["optics",    []],
         ["muzzles",   []],
@@ -205,7 +205,7 @@ private _classPools = createHashMapFromArray [
     ["B_UNSCDF_Missile_Speacialist_AA", createHashMapFromArray [
         ["headgear",  ["TCP_H_Helmet_CH43A_Olive", "TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_WatchCap_Olive","TCP_H_Helmet_ECH43A_Olive_Silver",
                        "TCP_H_booniehat_Olive","WOLFoT_TcP_UNSC_A_Boonie_Woodland_2"]],
-        ["vest",      ["TCP_V_M43A_GungnirS_1_Olive","TCP_V_M43A_GungnirS_2_Olive","TCP_V_M43A_GungnirS_3_Olive",]],
+        ["vest",      ["TCP_V_M43A_GungnirS_1_Olive","TCP_V_M43A_GungnirS_2_Olive","TCP_V_M43A_GungnirS_3_Olive"]],
         ["nvg",       ["OPTRE_NVG"]],
         ["optics",    ["OPTRE_MA5_BUIS","CTGCY_MA5_Sight_2"]],
         ["muzzles",   []],
@@ -218,7 +218,7 @@ private _classPools = createHashMapFromArray [
     ["B_UNSCDF_Missile_Specialist_AT", createHashMapFromArray [
         ["headgear",  ["TCP_H_Helmet_CH43A_Olive", "TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_WatchCap_Olive","TCP_H_Helmet_ECH43A_Olive_Silver",
                        "TCP_H_booniehat_Olive","WOLFoT_TcP_UNSC_A_Boonie_Woodland_2"]],
-        ["vest",      ["TCP_V_M43A_GungnirS_1_Olive","TCP_V_M43A_GungnirS_2_Olive","TCP_V_M43A_GungnirS_3_Olive",]],
+        ["vest",      ["TCP_V_M43A_GungnirS_1_Olive","TCP_V_M43A_GungnirS_2_Olive","TCP_V_M43A_GungnirS_3_Olive"]],
         ["nvg",       ["OPTRE_NVG"]],
         ["optics",    ["OPTRE_MA5_BUIS","CTGCY_MA5_Sight_2"]],
         ["muzzles",   []],
@@ -243,7 +243,7 @@ private _classPools = createHashMapFromArray [
     ["B_UNSCDF_Rifleman_AT", createHashMapFromArray [
         ["headgear",  ["TCP_H_Helmet_CH43A_Olive", "TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_WatchCap_Olive","TCP_H_Helmet_ECH43A_Olive_Silver",
                        "TCP_H_booniehat_Olive","WOLFoT_TcP_UNSC_A_Boonie_Woodland_2"]],
-        ["vest",      ["TCP_V_M43A_GungnirS_1_Olive","TCP_V_M43A_GungnirS_2_Olive","TCP_V_M43A_GungnirS_3_Olive",]],
+        ["vest",      ["TCP_V_M43A_GungnirS_1_Olive","TCP_V_M43A_GungnirS_2_Olive","TCP_V_M43A_GungnirS_3_Olive"]],
         ["nvg",       ["OPTRE_NVG"]],
         ["optics",    ["OPTRE_MA5_BUIS","CTGCY_MA5_Sight_2"]],
         ["muzzles",   []],
@@ -261,13 +261,13 @@ private _classPools = createHashMapFromArray [
         ["muzzles",   []],
         ["pointers",  []],
         ["bipods",    []],
-        ["extras",    []],
+        ["extras",    []]
     ]],
 
     ["B_UNSCDF_Rifleman_Light", createHashMapFromArray [
         ["headgear",  ["TCP_H_Helmet_CH43A_Olive", "TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_WatchCap_Olive","TCP_H_Helmet_ECH43A_Olive_Silver",
                        "TCP_H_booniehat_Olive","WOLFoT_TcP_UNSC_A_Boonie_Woodland_2"]],
-        ["vest",      ["TCP_V_M43A_Light_1_Olive","TCP_V_M43A_Light_2_Olive","TCP_V_M43A_Light_3_Olive",]],
+        ["vest",      ["TCP_V_M43A_Light_1_Olive","TCP_V_M43A_Light_2_Olive","TCP_V_M43A_Light_3_Olive"]],
         ["nvg",       ["OPTRE_NVG"]],
         ["optics",    ["OPTRE_MA5_BUIS","CTGCY_MA5_Sight_2"]],
         ["muzzles",   []],
@@ -279,8 +279,8 @@ private _classPools = createHashMapFromArray [
 
     // UAV Operators — headgear/vest only, no weapon attachments
     ["B_UNSCDF_UAV_Operator_OQ_38_Wren", createHashMapFromArray [
-        ["headgear",  [["TCP_H_Helmet_CH43A_Olive", "TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_WatchCap_Olive","TCP_H_Helmet_ECH43A_Olive_Silver",
-                       "TCP_H_booniehat_Olive","WOLFoT_TcP_UNSC_A_Boonie_Woodland_2"]],]],
+        ["headgear",  ["TCP_H_Helmet_CH43A_Olive", "TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_WatchCap_Olive","TCP_H_Helmet_ECH43A_Olive_Silver",
+                       "TCP_H_booniehat_Olive","WOLFoT_TcP_UNSC_A_Boonie_Woodland_2"]],
         ["vest",      ["TCP_V_M43A_Light_1_Olive","TCP_V_M43A_Light_2_Olive", "TCP_V_M43A_Light_3_Olive"]],
         ["nvg",       ["OPTRE_NVG"]],
         ["optics",    ["OPTRE_MA5_BUIS","CTGCY_MA5_Sight_2"]],
@@ -288,7 +288,7 @@ private _classPools = createHashMapFromArray [
         ["pointers",  []],
         ["bipods",    []],
         ["extras",     ["ACE_MRE_BeefStew_Item", "ACE_MRE_ChikenTikkaMasala_Item", "ACE_MRE_ChickenHerbDumplings_Item", "ACE_MRE_CreamChickenSoup_Item",
-                       "ACE_MRE_CreamTomatoSoup_Item", "ACE_MRE_LambCurry_Item", "ACE_MRE_MeatballsPasta_Item", "ACE_MRE_SteakVegetables_Item "]
+                       "ACE_MRE_CreamTomatoSoup_Item", "ACE_MRE_LambCurry_Item", "ACE_MRE_MeatballsPasta_Item", "ACE_MRE_SteakVegetables_Item "]]
     ]],
 
     ["B_UNSCDF_UAV_Operator_OQ_40_Minibee", createHashMapFromArray [
@@ -313,14 +313,14 @@ private _classPools = createHashMapFromArray [
         ["muzzles",   []],
         ["pointers",  []],
         ["bipods",    []],
-        ["extras",    [ ["ACE_MRE_BeefStew_Item", "ACE_MRE_ChikenTikkaMasala_Item", "ACE_MRE_ChickenHerbDumplings_Item", "ACE_MRE_CreamChickenSoup_Item",
-                       "ACE_MRE_CreamTomatoSoup_Item", "ACE_MRE_LambCurry_Item", "ACE_MRE_MeatballsPasta_Item", "ACE_MRE_SteakVegetables_Item "]]]]
+        ["extras",    ["ACE_MRE_BeefStew_Item", "ACE_MRE_ChikenTikkaMasala_Item", "ACE_MRE_ChickenHerbDumplings_Item", "ACE_MRE_CreamChickenSoup_Item",
+                       "ACE_MRE_CreamTomatoSoup_Item", "ACE_MRE_LambCurry_Item", "ACE_MRE_MeatballsPasta_Item", "ACE_MRE_SteakVegetables_Item "]]
     ]],
 
     ["B_UNSCDF_Forward_Observer", createHashMapFromArray [
         ["headgear",  ["TCP_H_Helmet_CH43A_Olive", "TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_WatchCap_Olive","TCP_H_Helmet_ECH43A_Olive_Silver",
                        "TCP_H_booniehat_Olive","WOLFoT_TcP_UNSC_A_Boonie_Woodland_2"]],
-        ["vest",      ["TCP_V_M43A_GungnirS_1_Olive","TCP_V_M43A_GungnirS_2_Olive","TCP_V_M43A_GungnirS_3_Olive",]],
+        ["vest",      ["TCP_V_M43A_GungnirS_1_Olive","TCP_V_M43A_GungnirS_2_Olive","TCP_V_M43A_GungnirS_3_Olive"]],
         ["nvg",       ["OPTRE_NVG"]],
         ["optics",    ["OPTRE_MA5_BUIS","CTGCY_MA5_Sight_2"]],
         ["muzzles",   []],
