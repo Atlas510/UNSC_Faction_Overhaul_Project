@@ -51,76 +51,87 @@ private _classPools = createHashMapFromArray [
     // -----------------------------------------------------------------
 
     ["B_UNSCDF_Officer", createHashMapFromArray [
-        ["headgear",  ["TCP_H_PatrolCap_Olive","TCP_H_PatrolCap_Green"]],
-        ["vest",      ["TCP_V_M43A_Light_1_Olive","TCP_V_M43A_Light_2_Olive"]],
-        ["nvg",       []],
-        ["optics",    ["CTGCY_BR55_Scope","optic_Holosight"]],
+        ["headgear",  ["TCP_Patrol_Cap_Olive", "none"]],
+        ["vest",      ["TCP_V_M43A_Light_1_Olive","TCP_V_M43A_Light_2_Olive","TCP_V_M43A_Light_3_Olive","TCP_V_M43A_GungnirS_3_Olive" ]],
+        ["nvg",       ["OPTRE_NVG"]],
+        ["optics",    ["CTGCY_BR55_Scope_ACE","OPTRE_M12_Optic","OPTRE_M12_Optic_Green","OPTRE_M12_Optic_Red"]],
         ["muzzles",   []],
-        ["pointers",  ["acc_pointer_IR"]],
+        ["pointers",  ["OPTRE_BMR_Laser", "none"]],
         ["bipods",    []],
-        ["extras",    ["ACE_MapTools","ACE_Altimeter","ACE_EarPlugs"]]
+        ["extras",    ["ACE_MRE_BeefStew_Item", "ACE_MRE_ChikenTikkaMasala_Item", "ACE_MRE_ChickenHerbDumplings_Item", "ACE_MRE_CreamChickenSoup_Item",
+                       "ACE_MRE_CreamTomatoSoup_Item", "ACE_MRE_LambCurry_Item", "ACE_MRE_MeatballsPasta_Item", "ACE_MRE_SteakVegetables_Item " ]]
     ]],
 
     ["B_UNSCDF_Rifleman", createHashMapFromArray [
-        ["headgear",  ["TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Green","TCP_H_Helmet_CH43A_Tan"]],
-        ["vest",      ["TCP_V_M43A_GungnirS_3_Olive","TCP_V_M43A_GungnirS_2_Olive","TCP_V_M43A_BaseSec_2_Olive"]],
-        ["nvg",       ["OPTRE_NVG","NVGoggles"]],
-        ["optics",    ["OPTRE_MA5_BUIS","optic_Aco","optic_Hamr"]],
-        ["muzzles",   ["muzzle_snds_M"]],
-        ["pointers",  ["acc_pointer_IR","acc_flashlight"]],
+        ["headgear",  ["TCP_H_Helmet_CH43A_Olive", "TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_WatchCap_Olive","TCP_H_Helmet_ECH43A_Olive_Silver",
+                       "TCP_H_booniehat_Olive","WOLFoT_TcP_UNSC_A_Boonie_Woodland_2"]],
+        ["vest",      ["TCP_V_M43A_GungnirS_1_Olive","TCP_V_M43A_GungnirS_2_Olive","TCP_V_M43A_GungnirS_3_Olive",]],
+        ["nvg",       ["OPTRE_NVG"]],
+        ["optics",    ["OPTRE_MA5_BUIS","CTGCY_MA5_Sight_2"]],
+        ["muzzles",   []],
+        ["pointers",  []],
         ["bipods",    []],
-        ["extras",    ["ACE_Canteen","ACE_MapTools","ACE_EarPlugs","ACE_Flashlight_XL50"]]
+        ["extras",    ["ACE_MRE_BeefStew_Item", "ACE_MRE_ChikenTikkaMasala_Item", "ACE_MRE_ChickenHerbDumplings_Item", "ACE_MRE_CreamChickenSoup_Item",
+                       "ACE_MRE_CreamTomatoSoup_Item", "ACE_MRE_LambCurry_Item", "ACE_MRE_MeatballsPasta_Item", "ACE_MRE_SteakVegetables_Item "]]
     ]],
 
     ["B_UNSCDF_Squad_Leader", createHashMapFromArray [
-        ["headgear",  ["TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Green","TCP_H_Helmet_CH43A_Tan"]],
-        ["vest",      ["TCP_V_M43A_GungnirS_3_Olive","TCP_V_M43A_GungnirS_2_Olive"]],
-        ["nvg",       ["OPTRE_NVG","NVGoggles"]],
-        ["optics",    ["CTGCY_BR55_Scope","optic_Holosight","optic_ERCO_blk_F"]],
-        ["muzzles",   ["muzzle_snds_M"]],
-        ["pointers",  ["acc_pointer_IR","acc_flashlight"]],
+        ["headgear",  ["TCP_H_Helmet_CH43A_Olive", "TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_WatchCap_Olive","TCP_H_Helmet_ECH43A_Olive_Silver",
+                       "TCP_H_booniehat_Olive","WOLFoT_TcP_UNSC_A_Boonie_Woodland_2"]],
+        ["vest",      ["TCP_V_M43A_GungnirS_1_Olive","TCP_V_M43A_GungnirS_2_Olive","TCP_V_M43A_GungnirS_3_Olive",]],
+        ["nvg",       ["OPTRE_NVG"]],
+        ["optics",    ["CTGCY_BR55_Scope_ACE","OPTRE_M12_Optic","OPTRE_M12_Optic_Green","OPTRE_M12_Optic_Red"]],
+        ["muzzles",   []],
+        ["pointers",  []],
         ["bipods",    []],
-        ["extras",    ["ACE_Canteen","ACE_MapTools","ACE_EarPlugs","ACE_Chemlight_Orange"]]
+        ["extras",    ["ACE_MRE_BeefStew_Item", "ACE_MRE_ChikenTikkaMasala_Item", "ACE_MRE_ChickenHerbDumplings_Item", "ACE_MRE_CreamChickenSoup_Item",
+                       "ACE_MRE_CreamTomatoSoup_Item", "ACE_MRE_LambCurry_Item", "ACE_MRE_MeatballsPasta_Item", "ACE_MRE_SteakVegetables_Item "]]
     ]],
 
     ["B_UNSCDF_Team_Leader", createHashMapFromArray [
-        ["headgear",  ["TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Green","TCP_H_Helmet_CH43A_Tan"]],
-        ["vest",      ["TCP_V_M43A_GungnirS_3_Olive","TCP_V_M43A_GungnirS_2_Olive"]],
-        ["nvg",       ["OPTRE_NVG","NVGoggles"]],
-        ["optics",    ["CTGCY_BR55_Scope","optic_Holosight","optic_ERCO_blk_F"]],
-        ["muzzles",   ["muzzle_snds_M"]],
-        ["pointers",  ["acc_pointer_IR","acc_flashlight"]],
+        ["headgear",  ["TCP_H_Helmet_CH43A_Olive", "TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_WatchCap_Olive","TCP_H_Helmet_ECH43A_Olive_Silver",
+                       "TCP_H_booniehat_Olive","WOLFoT_TcP_UNSC_A_Boonie_Woodland_2"]],
+        ["vest",      ["TCP_V_M43A_GungnirS_1_Olive","TCP_V_M43A_GungnirS_2_Olive","TCP_V_M43A_GungnirS_3_Olive",]],
+        ["nvg",       ["OPTRE_NVG"]],
+        ["optics",    ["OPTRE_MA5_BUIS","CTGCY_MA5_Sight_2"]],
+        ["muzzles",   []],
+        ["pointers",  []],
         ["bipods",    []],
-        ["extras",    ["ACE_Canteen","ACE_MapTools","ACE_EarPlugs"]]
+        ["extras",    ["ACE_MRE_BeefStew_Item", "ACE_MRE_ChikenTikkaMasala_Item", "ACE_MRE_ChickenHerbDumplings_Item", "ACE_MRE_CreamChickenSoup_Item",
+                       "ACE_MRE_CreamTomatoSoup_Item", "ACE_MRE_LambCurry_Item", "ACE_MRE_MeatballsPasta_Item", "ACE_MRE_SteakVegetables_Item " ]]
     ]],
 
     ["B_UNSCDF_Ammo_Bearer", createHashMapFromArray [
-        ["headgear",  ["TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Green","TCP_H_Helmet_CH43A_Tan"]],
-        ["vest",      ["TCP_V_M43A_GungnirS_3_Olive","TCP_V_M43A_BaseSec_2_Olive"]],
-        ["nvg",       ["OPTRE_NVG","NVGoggles"]],
-        ["optics",    ["OPTRE_MA5_BUIS","optic_Aco"]],
+        ["headgear",  ["TCP_H_Helmet_CH43A_Olive", "TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_WatchCap_Olive","TCP_H_Helmet_ECH43A_Olive_Silver",
+                       "TCP_H_booniehat_Olive","WOLFoT_TcP_UNSC_A_Boonie_Woodland_2"]],
+        ["vest",      ["TCP_V_M43A_GungnirS_1_Olive","TCP_V_M43A_GungnirS_2_Olive","TCP_V_M43A_GungnirS_3_Olive",]],
+        ["nvg",       ["OPTRE_NVG"]],
+        ["optics",    ["OPTRE_MA5_BUIS","CTGCY_MA5_Sight_2"]],
         ["muzzles",   []],
-        ["pointers",  ["acc_pointer_IR","acc_flashlight"]],
+        ["pointers",  []],
         ["bipods",    []],
-        ["extras",    ["ACE_Canteen","ACE_EarPlugs","ACE_CableTie"]]
+        ["extras",     ["ACE_MRE_BeefStew_Item", "ACE_MRE_ChikenTikkaMasala_Item", "ACE_MRE_ChickenHerbDumplings_Item", "ACE_MRE_CreamChickenSoup_Item",
+                        "ACE_MRE_CreamTomatoSoup_Item", "ACE_MRE_LambCurry_Item", "ACE_MRE_MeatballsPasta_Item", "ACE_MRE_SteakVegetables_Item "]]
     ]],
 
     ["B_UNSCDF_Autorifleman_01", createHashMapFromArray [
-        ["headgear",  ["TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Green","TCP_H_Helmet_CH43A_Tan"]],
-        ["vest",      ["TCP_V_M43A_GungnirS_3_Olive","TCP_V_M43A_BaseSec_2_Olive"]],
+        ["headgear",  ["TCP_H_Helmet_CH43A_Olive", "TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_WatchCap_Olive","TCP_H_Helmet_ECH43A_Olive_Silver",
+                       "TCP_H_booniehat_Olive","WOLFoT_TcP_UNSC_A_Boonie_Woodland_2"]],
+        ["vest",      ["TCP_V_M43A_GungnirL_1_Olive","TCP_V_M43A_GungnirL_2_Olive","TCP_V_M43A_GungnirL_3_Olive",]],
         ["nvg",       ["OPTRE_NVG"]],
-        ["optics",    ["optic_Aco","optic_Hamr"]],
+        ["optics",    ["OPTRE_M73_SmartLink", "none"]],
         ["muzzles",   []],
-        ["pointers",  ["acc_pointer_IR"]],
+        ["pointers",  []],
         ["bipods",    []],
-        ["extras",    ["ACE_Canteen","ACE_EarPlugs"]]
+        ["extras",     ["ACE_MRE_BeefStew_Item", "ACE_MRE_ChikenTikkaMasala_Item", "ACE_MRE_ChickenHerbDumplings_Item", "ACE_MRE_CreamChickenSoup_Item",
+                        "ACE_MRE_CreamTomatoSoup_Item", "ACE_MRE_LambCurry_Item", "ACE_MRE_MeatballsPasta_Item", "ACE_MRE_SteakVegetables_Item "]]
     ]],
 
     // Corpsman — all arrays empty: no randomization applied
     ["B_UNSCDF_Corpsman", createHashMapFromArray [
         ["headgear",  []],
-        ["vest",      []],
-        ["nvg",       []],
+        ["vest",      ["TCP_V_M43A_GungnirS_1_Olive","TCP_V_M43A_GungnirS_2_Olive","TCP_V_M43A_GungnirS_3_Olive",]],
+        ["nvg",       ["OPTRE_NVG"]],
         ["optics",    []],
         ["muzzles",   []],
         ["pointers",  []],
@@ -141,140 +152,83 @@ private _classPools = createHashMapFromArray [
     ]],
 
     ["B_UNSCDF_Engineer", createHashMapFromArray [
-        ["headgear",  ["TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Green","TCP_H_Helmet_CH43A_Tan"]],
-        ["vest",      ["TCP_V_M43A_GungnirS_3_Olive","TCP_V_M43A_BaseSec_2_Olive"]],
-        ["nvg",       ["OPTRE_NVG","NVGoggles"]],
-        ["optics",    ["OPTRE_MA5_BUIS","optic_Aco"]],
+        ["headgear",  ["TCP_H_Helmet_CH43A_Olive", "TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_WatchCap_Olive","TCP_H_Helmet_ECH43A_Olive_Silver",
+                       "TCP_H_booniehat_Olive","WOLFoT_TcP_UNSC_A_Boonie_Woodland_2"]],
+        ["vest",      ["TCP_V_M43A_GungnirS_1_Olive","TCP_V_M43A_GungnirS_2_Olive","TCP_V_M43A_GungnirS_3_Olive",]],
+        ["nvg",       ["OPTRE_NVG"]],
+        ["optics",    ["OPTRE_MA5_BUIS","CTGCY_MA5_Sight_2"]],
         ["muzzles",   []],
-        ["pointers",  ["acc_pointer_IR","acc_flashlight"]],
+        ["pointers",  []],
         ["bipods",    []],
-        ["extras",    ["ACE_Canteen","ACE_EarPlugs","ACE_CableTie","ACE_Flashlight_XL50"]]
+        ["extras",     ["ACE_MRE_BeefStew_Item", "ACE_MRE_ChikenTikkaMasala_Item", "ACE_MRE_ChickenHerbDumplings_Item", "ACE_MRE_CreamChickenSoup_Item",
+                       "ACE_MRE_CreamTomatoSoup_Item", "ACE_MRE_LambCurry_Item", "ACE_MRE_MeatballsPasta_Item", "ACE_MRE_SteakVegetables_Item "]
     ]],
 
     ["B_UNSCDF_Explosive_Specialist", createHashMapFromArray [
-        ["headgear",  ["TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Green","TCP_H_Helmet_CH43A_Tan"]],
-        ["vest",      ["TCP_V_M43A_GungnirS_3_Olive","TCP_V_M43A_BaseSec_2_Olive"]],
-        ["nvg",       ["OPTRE_NVG","NVGoggles"]],
-        ["optics",    ["OPTRE_MA5_BUIS","optic_Aco"]],
+        ["headgear",  ["TCP_H_Helmet_CH43A_Olive", "TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_WatchCap_Olive","TCP_H_Helmet_ECH43A_Olive_Silver",
+                       "TCP_H_booniehat_Olive","WOLFoT_TcP_UNSC_A_Boonie_Woodland_2"]],
+        ["vest",      ["TCP_V_M43A_GungnirL_1_1_Olive","TCP_V_M43A_GungnirL_2_1_Olive","TCP_V_M43A_GungnirL_3_1_Olive",]],
+        ["nvg",       ["OPTRE_NVG"]],
+        ["optics",    ["OPTRE_MA5_BUIS","CTGCY_MA5_Sight_2"]],
         ["muzzles",   []],
-        ["pointers",  ["acc_pointer_IR","acc_flashlight"]],
+        ["pointers",  []],
         ["bipods",    []],
-        ["extras",    ["ACE_Canteen","ACE_EarPlugs","ACE_CableTie"]]
+        ["extras",    ["ACE_MRE_BeefStew_Item", "ACE_MRE_ChikenTikkaMasala_Item", "ACE_MRE_ChickenHerbDumplings_Item", "ACE_MRE_CreamChickenSoup_Item",
+                       "ACE_MRE_CreamTomatoSoup_Item", "ACE_MRE_LambCurry_Item", "ACE_MRE_MeatballsPasta_Item", "ACE_MRE_SteakVegetables_Item "]]
     ]],
 
     ["B_UNSCDF_Grenadier", createHashMapFromArray [
-        ["headgear",  ["TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Green","TCP_H_Helmet_CH43A_Tan"]],
-        ["vest",      ["TCP_V_M43A_GungnirS_3_Olive","TCP_V_M43A_GungnirS_2_Olive"]],
-        ["nvg",       ["OPTRE_NVG","NVGoggles"]],
-        ["optics",    ["OPTRE_MA5_BUIS","optic_Aco","optic_Hamr"]],
-        ["muzzles",   ["muzzle_snds_M"]],
-        ["pointers",  ["acc_pointer_IR","acc_flashlight"]],
+        ["headgear",  ["TCP_H_Helmet_CH43A_Olive", "TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_WatchCap_Olive","TCP_H_Helmet_ECH43A_Olive_Silver",
+                       "TCP_H_booniehat_Olive","WOLFoT_TcP_UNSC_A_Boonie_Woodland_2"]],
+        ["vest",      ["TCP_V_M43A_GungnirS_1_Olive","TCP_V_M43A_GungnirS_2_Olive","TCP_V_M43A_GungnirS_3_Olive",]],
+        ["nvg",       ["OPTRE_NVG"]],
+        ["optics",    ["OPTRE_MA5_BUIS","CTGCY_MA5_Sight_2"]],
+        ["muzzles",   []],
+        ["pointers",  []],
         ["bipods",    []],
-        ["extras",    ["ACE_Canteen","ACE_EarPlugs","ACE_MapTools"]]
+        ["extras",    ["ACE_MRE_BeefStew_Item", "ACE_MRE_ChikenTikkaMasala_Item", "ACE_MRE_ChickenHerbDumplings_Item", "ACE_MRE_CreamChickenSoup_Item",
+                       "ACE_MRE_CreamTomatoSoup_Item", "ACE_MRE_LambCurry_Item", "ACE_MRE_MeatballsPasta_Item", "ACE_MRE_SteakVegetables_Item "]]
     ]],
 
     ["B_UNSCDF_Marksman", createHashMapFromArray [
-        ["headgear",  ["TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Green"]],
-        ["vest",      ["TCP_V_M43A_GungnirS_3_Olive","TCP_V_M43A_BaseSec_2_Olive"]],
-        ["nvg",       ["OPTRE_NVG"]],
-        ["optics",    ["optic_ERCO_blk_F","optic_Hamr"]],
-        ["muzzles",   ["muzzle_snds_H"]],
-        ["pointers",  ["acc_pointer_IR"]],
+        ["headgear",  ["TCP_H_Helmet_CH43A_Olive"]],
+        ["vest",      ["TCP_V_M43A_GungnirS_1_Olive","TCP_V_M43A_GungnirS_2_Olive","TCP_V_M43A_GungnirS_3_Olive",]],
+        ["nvg",       []],
+        ["optics",    []],
+        ["muzzles",   []],
+        ["pointers",  []],
         ["bipods",    []],
-        ["extras",    ["ACE_EarPlugs","ACE_Flashlight_XL50"]]
+        ["extras",     ["ACE_MRE_BeefStew_Item", "ACE_MRE_ChikenTikkaMasala_Item", "ACE_MRE_ChickenHerbDumplings_Item", "ACE_MRE_CreamChickenSoup_Item",
+                       "ACE_MRE_CreamTomatoSoup_Item", "ACE_MRE_LambCurry_Item", "ACE_MRE_MeatballsPasta_Item", "ACE_MRE_SteakVegetables_Item "]]
     ]],
 
     ["B_UNSCDF_Missile_Speacialist_AA", createHashMapFromArray [
-        ["headgear",  ["TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Green","TCP_H_Helmet_CH43A_Tan"]],
-        ["vest",      ["TCP_V_M43A_GungnirS_3_Olive","TCP_V_M43A_BaseSec_2_Olive"]],
-        ["nvg",       ["OPTRE_NVG","NVGoggles"]],
-        ["optics",    ["OPTRE_MA5_BUIS","optic_Aco"]],
+        ["headgear",  ["TCP_H_Helmet_CH43A_Olive", "TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_WatchCap_Olive","TCP_H_Helmet_ECH43A_Olive_Silver",
+                       "TCP_H_booniehat_Olive","WOLFoT_TcP_UNSC_A_Boonie_Woodland_2"]],
+        ["vest",      ["TCP_V_M43A_GungnirS_1_Olive","TCP_V_M43A_GungnirS_2_Olive","TCP_V_M43A_GungnirS_3_Olive",]],
+        ["nvg",       ["OPTRE_NVG"]],
+        ["optics",    ["OPTRE_MA5_BUIS","CTGCY_MA5_Sight_2"]],
         ["muzzles",   []],
-        ["pointers",  ["acc_pointer_IR"]],
+        ["pointers",  []],
         ["bipods",    []],
-        ["extras",    ["ACE_Canteen","ACE_EarPlugs"]]
+        ["extras",     ["ACE_MRE_BeefStew_Item", "ACE_MRE_ChikenTikkaMasala_Item", "ACE_MRE_ChickenHerbDumplings_Item", "ACE_MRE_CreamChickenSoup_Item",
+                       "ACE_MRE_CreamTomatoSoup_Item", "ACE_MRE_LambCurry_Item", "ACE_MRE_MeatballsPasta_Item", "ACE_MRE_SteakVegetables_Item "]]
     ]],
 
     ["B_UNSCDF_Missile_Specialist_AT", createHashMapFromArray [
-        ["headgear",  ["TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Green","TCP_H_Helmet_CH43A_Tan"]],
-        ["vest",      ["TCP_V_M43A_GungnirS_3_Olive","TCP_V_M43A_BaseSec_2_Olive"]],
-        ["nvg",       ["OPTRE_NVG","NVGoggles"]],
-        ["optics",    ["OPTRE_MA5_BUIS","optic_Aco"]],
+        ["headgear",  ["TCP_H_Helmet_CH43A_Olive", "TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_WatchCap_Olive","TCP_H_Helmet_ECH43A_Olive_Silver",
+                       "TCP_H_booniehat_Olive","WOLFoT_TcP_UNSC_A_Boonie_Woodland_2"]],
+        ["vest",      ["TCP_V_M43A_GungnirS_1_Olive","TCP_V_M43A_GungnirS_2_Olive","TCP_V_M43A_GungnirS_3_Olive",]],
+        ["nvg",       ["OPTRE_NVG"]],
+        ["optics",    ["OPTRE_MA5_BUIS","CTGCY_MA5_Sight_2"]],
         ["muzzles",   []],
-        ["pointers",  ["acc_pointer_IR"]],
+        ["pointers",  []],
         ["bipods",    []],
-        ["extras",    ["ACE_Canteen","ACE_EarPlugs"]]
+        ["extras",     ["ACE_MRE_BeefStew_Item", "ACE_MRE_ChikenTikkaMasala_Item", "ACE_MRE_ChickenHerbDumplings_Item", "ACE_MRE_CreamChickenSoup_Item",
+                       "ACE_MRE_CreamTomatoSoup_Item", "ACE_MRE_LambCurry_Item", "ACE_MRE_MeatballsPasta_Item", "ACE_MRE_SteakVegetables_Item "]]
     ]],
 
     ["B_UNSCDF_Repair_Specialist", createHashMapFromArray [
-        ["headgear",  ["TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Green","TCP_H_Helmet_CH43A_Tan"]],
-        ["vest",      ["TCP_V_M43A_GungnirS_3_Olive","TCP_V_M43A_BaseSec_2_Olive"]],
-        ["nvg",       ["OPTRE_NVG","NVGoggles"]],
-        ["optics",    ["OPTRE_MA5_BUIS","optic_Aco"]],
-        ["muzzles",   []],
-        ["pointers",  ["acc_pointer_IR","acc_flashlight"]],
-        ["bipods",    []],
-        ["extras",    ["ACE_Canteen","ACE_EarPlugs","ACE_CableTie","ACE_Flashlight_XL50"]]
-    ]],
-
-    ["B_UNSCDF_Rifleman_AT", createHashMapFromArray [
-        ["headgear",  ["TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Green","TCP_H_Helmet_CH43A_Tan"]],
-        ["vest",      ["TCP_V_M43A_GungnirS_3_Olive","TCP_V_M43A_BaseSec_2_Olive"]],
-        ["nvg",       ["OPTRE_NVG","NVGoggles"]],
-        ["optics",    ["OPTRE_MA5_BUIS","optic_Aco"]],
-        ["muzzles",   ["muzzle_snds_M"]],
-        ["pointers",  ["acc_pointer_IR","acc_flashlight"]],
-        ["bipods",    []],
-        ["extras",    ["ACE_Canteen","ACE_EarPlugs"]]
-    ]],
-
-    ["B_UNSCDF_Rifleman_Unarmed", createHashMapFromArray [
-        ["headgear",  ["TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Green","TCP_H_Helmet_CH43A_Tan"]],
-        ["vest",      ["TCP_V_M43A_Light_1_Olive","TCP_V_M43A_Light_2_Olive"]],
-        ["nvg",       []],
-        ["optics",    []],
-        ["muzzles",   []],
-        ["pointers",  []],
-        ["bipods",    []],
-        ["extras",    ["ACE_Canteen","ACE_EarPlugs"]]
-    ]],
-
-    ["B_UNSCDF_Rifleman_Light", createHashMapFromArray [
-        ["headgear",  ["TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Green","TCP_H_Helmet_CH43A_Tan"]],
-        ["vest",      ["TCP_V_M43A_GungnirS_3_Olive","TCP_V_M43A_BaseSec_2_Olive"]],
-        ["nvg",       ["OPTRE_NVG","NVGoggles"]],
-        ["optics",    ["OPTRE_MA5_BUIS","optic_Aco"]],
-        ["muzzles",   ["muzzle_snds_M"]],
-        ["pointers",  ["acc_pointer_IR","acc_flashlight"]],
-        ["bipods",    []],
-        ["extras",    ["ACE_Canteen","ACE_EarPlugs"]]
-    ]],
-
-    // UAV Operators — headgear/vest only, no weapon attachments
-    ["B_UNSCDF_UAV_Operator_OQ_38_Wren", createHashMapFromArray [
-        ["headgear",  ["TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Green"]],
-        ["vest",      ["TCP_V_M43A_Light_1_Olive","TCP_V_M43A_Light_2_Olive"]],
-        ["nvg",       []],
-        ["optics",    []],
-        ["muzzles",   []],
-        ["pointers",  []],
-        ["bipods",    []],
-        ["extras",    ["ACE_MapTools","ACE_EarPlugs"]]
-    ]],
-
-    ["B_UNSCDF_UAV_Operator_OQ_40_Minibee", createHashMapFromArray [
-        ["headgear",  ["TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Green"]],
-        ["vest",      ["TCP_V_M43A_Light_1_Olive","TCP_V_M43A_Light_2_Olive"]],
-        ["nvg",       []],
-        ["optics",    []],
-        ["muzzles",   []],
-        ["pointers",  []],
-        ["bipods",    []],
-        ["extras",    ["ACE_MapTools","ACE_EarPlugs"]]
-    ]],
-
-    // Sniper — no randomization (specialized fixed gear)
-    ["B_UNSCDF_Sniper", createHashMapFromArray [
         ["headgear",  []],
         ["vest",      []],
         ["nvg",       []],
@@ -282,18 +236,98 @@ private _classPools = createHashMapFromArray [
         ["muzzles",   []],
         ["pointers",  []],
         ["bipods",    []],
-        ["extras",    []]
+        ["extras",     ["ACE_MRE_BeefStew_Item", "ACE_MRE_ChikenTikkaMasala_Item", "ACE_MRE_ChickenHerbDumplings_Item", "ACE_MRE_CreamChickenSoup_Item",
+                       "ACE_MRE_CreamTomatoSoup_Item", "ACE_MRE_LambCurry_Item", "ACE_MRE_MeatballsPasta_Item", "ACE_MRE_SteakVegetables_Item "]]
+    ]],
+
+    ["B_UNSCDF_Rifleman_AT", createHashMapFromArray [
+        ["headgear",  ["TCP_H_Helmet_CH43A_Olive", "TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_WatchCap_Olive","TCP_H_Helmet_ECH43A_Olive_Silver",
+                       "TCP_H_booniehat_Olive","WOLFoT_TcP_UNSC_A_Boonie_Woodland_2"]],
+        ["vest",      ["TCP_V_M43A_GungnirS_1_Olive","TCP_V_M43A_GungnirS_2_Olive","TCP_V_M43A_GungnirS_3_Olive",]],
+        ["nvg",       ["OPTRE_NVG"]],
+        ["optics",    ["OPTRE_MA5_BUIS","CTGCY_MA5_Sight_2"]],
+        ["muzzles",   []],
+        ["pointers",  []],
+        ["bipods",    []],
+        ["extras",     ["ACE_MRE_BeefStew_Item", "ACE_MRE_ChikenTikkaMasala_Item", "ACE_MRE_ChickenHerbDumplings_Item", "ACE_MRE_CreamChickenSoup_Item",
+                       "ACE_MRE_CreamTomatoSoup_Item", "ACE_MRE_LambCurry_Item", "ACE_MRE_MeatballsPasta_Item", "ACE_MRE_SteakVegetables_Item "]]
+    ]],
+
+    ["B_UNSCDF_Rifleman_Unarmed", createHashMapFromArray [
+        ["headgear",  []],
+        ["vest",      []],
+        ["nvg",       []],
+        ["optics",    []],
+        ["muzzles",   []],
+        ["pointers",  []],
+        ["bipods",    []],
+        ["extras",    []],
+    ]],
+
+    ["B_UNSCDF_Rifleman_Light", createHashMapFromArray [
+        ["headgear",  ["TCP_H_Helmet_CH43A_Olive", "TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_WatchCap_Olive","TCP_H_Helmet_ECH43A_Olive_Silver",
+                       "TCP_H_booniehat_Olive","WOLFoT_TcP_UNSC_A_Boonie_Woodland_2"]],
+        ["vest",      ["TCP_V_M43A_Light_1_Olive","TCP_V_M43A_Light_2_Olive","TCP_V_M43A_Light_3_Olive",]],
+        ["nvg",       ["OPTRE_NVG"]],
+        ["optics",    ["OPTRE_MA5_BUIS","CTGCY_MA5_Sight_2"]],
+        ["muzzles",   []],
+        ["pointers",  []],
+        ["bipods",    []],
+        ["extras",     ["ACE_MRE_BeefStew_Item", "ACE_MRE_ChikenTikkaMasala_Item", "ACE_MRE_ChickenHerbDumplings_Item", "ACE_MRE_CreamChickenSoup_Item",
+                       "ACE_MRE_CreamTomatoSoup_Item", "ACE_MRE_LambCurry_Item", "ACE_MRE_MeatballsPasta_Item", "ACE_MRE_SteakVegetables_Item "]]
+    ]],
+
+    // UAV Operators — headgear/vest only, no weapon attachments
+    ["B_UNSCDF_UAV_Operator_OQ_38_Wren", createHashMapFromArray [
+        ["headgear",  [["TCP_H_Helmet_CH43A_Olive", "TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_WatchCap_Olive","TCP_H_Helmet_ECH43A_Olive_Silver",
+                       "TCP_H_booniehat_Olive","WOLFoT_TcP_UNSC_A_Boonie_Woodland_2"]],]],
+        ["vest",      ["TCP_V_M43A_Light_1_Olive","TCP_V_M43A_Light_2_Olive", "TCP_V_M43A_Light_3_Olive"]],
+        ["nvg",       ["OPTRE_NVG"]],
+        ["optics",    ["OPTRE_MA5_BUIS","CTGCY_MA5_Sight_2"]],
+        ["muzzles",   []],
+        ["pointers",  []],
+        ["bipods",    []],
+        ["extras",     ["ACE_MRE_BeefStew_Item", "ACE_MRE_ChikenTikkaMasala_Item", "ACE_MRE_ChickenHerbDumplings_Item", "ACE_MRE_CreamChickenSoup_Item",
+                       "ACE_MRE_CreamTomatoSoup_Item", "ACE_MRE_LambCurry_Item", "ACE_MRE_MeatballsPasta_Item", "ACE_MRE_SteakVegetables_Item "]
+    ]],
+
+    ["B_UNSCDF_UAV_Operator_OQ_40_Minibee", createHashMapFromArray [
+        ["headgear",  ["TCP_H_Helmet_CH43A_Olive", "TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_WatchCap_Olive","TCP_H_Helmet_ECH43A_Olive_Silver",
+                       "TCP_H_booniehat_Olive","WOLFoT_TcP_UNSC_A_Boonie_Woodland_2"]],
+        ["vest",      ["TCP_V_M43A_Light_1_Olive","TCP_V_M43A_Light_2_Olive", "TCP_V_M43A_Light_3_Olive"]],
+        ["nvg",       []],
+        ["optics",    []],
+        ["muzzles",   []],
+        ["pointers",  []],
+        ["bipods",    []],
+        ["extras",     ["ACE_MRE_BeefStew_Item", "ACE_MRE_ChikenTikkaMasala_Item", "ACE_MRE_ChickenHerbDumplings_Item", "ACE_MRE_CreamChickenSoup_Item",
+                       "ACE_MRE_CreamTomatoSoup_Item", "ACE_MRE_LambCurry_Item", "ACE_MRE_MeatballsPasta_Item", "ACE_MRE_SteakVegetables_Item "]]
+    ]],
+
+    // Sniper — no randomization (specialized fixed gear)
+    ["B_UNSCDF_Sniper", createHashMapFromArray [
+        ["headgear",  []],
+        ["vest",      ["TCP_V_M43A_Light_1_Olive","TCP_V_M43A_Light_2_Olive", "TCP_V_M43A_Light_3_Olive"]],
+        ["nvg",       []],
+        ["optics",    []],
+        ["muzzles",   []],
+        ["pointers",  []],
+        ["bipods",    []],
+        ["extras",    [ ["ACE_MRE_BeefStew_Item", "ACE_MRE_ChikenTikkaMasala_Item", "ACE_MRE_ChickenHerbDumplings_Item", "ACE_MRE_CreamChickenSoup_Item",
+                       "ACE_MRE_CreamTomatoSoup_Item", "ACE_MRE_LambCurry_Item", "ACE_MRE_MeatballsPasta_Item", "ACE_MRE_SteakVegetables_Item "]]]]
     ]],
 
     ["B_UNSCDF_Forward_Observer", createHashMapFromArray [
-        ["headgear",  ["TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Green","TCP_H_Helmet_CH43A_Tan"]],
-        ["vest",      ["TCP_V_M43A_GungnirS_3_Olive","TCP_V_M43A_GungnirS_2_Olive"]],
-        ["nvg",       ["OPTRE_NVG","NVGoggles"]],
-        ["optics",    ["OPTRE_MA5_BUIS","optic_Aco"]],
+        ["headgear",  ["TCP_H_Helmet_CH43A_Olive", "TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_WatchCap_Olive","TCP_H_Helmet_ECH43A_Olive_Silver",
+                       "TCP_H_booniehat_Olive","WOLFoT_TcP_UNSC_A_Boonie_Woodland_2"]],
+        ["vest",      ["TCP_V_M43A_GungnirS_1_Olive","TCP_V_M43A_GungnirS_2_Olive","TCP_V_M43A_GungnirS_3_Olive",]],
+        ["nvg",       ["OPTRE_NVG"]],
+        ["optics",    ["OPTRE_MA5_BUIS","CTGCY_MA5_Sight_2"]],
         ["muzzles",   []],
-        ["pointers",  ["acc_pointer_IR"]],
+        ["pointers",  []],
         ["bipods",    []],
-        ["extras",    ["ACE_MapTools","ACE_EarPlugs","ACE_Altimeter"]]
+        ["extras",     ["ACE_MRE_BeefStew_Item", "ACE_MRE_ChikenTikkaMasala_Item", "ACE_MRE_ChickenHerbDumplings_Item", "ACE_MRE_CreamChickenSoup_Item",
+                       "ACE_MRE_CreamTomatoSoup_Item", "ACE_MRE_LambCurry_Item", "ACE_MRE_MeatballsPasta_Item", "ACE_MRE_SteakVegetables_Item "]]
     ]],
 
     // Pilot — no randomization
@@ -321,25 +355,29 @@ private _classPools = createHashMapFromArray [
     ]],
 
     ["B_UNSCDF_Heavy_Gunner", createHashMapFromArray [
-        ["headgear",  ["TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Green","TCP_H_Helmet_CH43A_Tan"]],
-        ["vest",      ["TCP_V_M43A_GungnirS_3_Olive","TCP_V_M43A_BaseSec_2_Olive"]],
+        ["headgear",  ["TCP_H_Helmet_CH43A_Olive", "TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_WatchCap_Olive","TCP_H_Helmet_ECH43A_Olive_Silver",
+                       "TCP_H_booniehat_Olive","WOLFoT_TcP_UNSC_A_Boonie_Woodland_2"]],
+        ["vest",      ["TCP_V_M43A_Light_1_Olive","TCP_V_M43A_Light_2_Olive", "TCP_V_M43A_Light_3_Olive"]],
         ["nvg",       ["OPTRE_NVG"]],
-        ["optics",    ["optic_Aco","optic_Hamr"]],
+        ["optics",    ["OPTRE_MA5_BUIS","CTGCY_MA5_Sight_2"]],
         ["muzzles",   []],
-        ["pointers",  ["acc_pointer_IR"]],
+        ["pointers",  []],
         ["bipods",    []],
-        ["extras",    ["ACE_Canteen","ACE_EarPlugs"]]
+        ["extras",     ["ACE_MRE_BeefStew_Item", "ACE_MRE_ChikenTikkaMasala_Item", "ACE_MRE_ChickenHerbDumplings_Item", "ACE_MRE_CreamChickenSoup_Item",
+                       "ACE_MRE_CreamTomatoSoup_Item", "ACE_MRE_LambCurry_Item", "ACE_MRE_MeatballsPasta_Item", "ACE_MRE_SteakVegetables_Item "]]
     ]],
 
     ["B_UNSCDF_Asst_Heavy_Gunner", createHashMapFromArray [
-        ["headgear",  ["TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Green","TCP_H_Helmet_CH43A_Tan"]],
-        ["vest",      ["TCP_V_M43A_GungnirS_3_Olive","TCP_V_M43A_BaseSec_2_Olive"]],
-        ["nvg",       ["OPTRE_NVG","NVGoggles"]],
-        ["optics",    ["OPTRE_MA5_BUIS","optic_Aco"]],
+        ["headgear",  ["TCP_H_Helmet_CH43A_Olive", "TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_WatchCap_Olive","TCP_H_Helmet_ECH43A_Olive_Silver",
+                       "TCP_H_booniehat_Olive","WOLFoT_TcP_UNSC_A_Boonie_Woodland_2"]],
+        ["vest",      ["TCP_V_M43A_Light_1_Olive","TCP_V_M43A_Light_2_Olive", "TCP_V_M43A_Light_3_Olive"]],
+        ["nvg",       ["OPTRE_NVG"]],
+        ["optics",    ["OPTRE_MA5_BUIS","CTGCY_MA5_Sight_2"]],
         ["muzzles",   []],
-        ["pointers",  ["acc_pointer_IR"]],
+        ["pointers",  []],
         ["bipods",    []],
-        ["extras",    ["ACE_Canteen","ACE_EarPlugs"]]
+        ["extras",     ["ACE_MRE_BeefStew_Item", "ACE_MRE_ChikenTikkaMasala_Item", "ACE_MRE_ChickenHerbDumplings_Item", "ACE_MRE_CreamChickenSoup_Item",
+                       "ACE_MRE_CreamTomatoSoup_Item", "ACE_MRE_LambCurry_Item", "ACE_MRE_MeatballsPasta_Item", "ACE_MRE_SteakVegetables_Item "]]
     ]],
 
     // -----------------------------------------------------------------
@@ -347,116 +385,139 @@ private _classPools = createHashMapFromArray [
     // -----------------------------------------------------------------
 
     ["B_UNSCDF_ODST_Rifleman", createHashMapFromArray [
-        ["headgear",  ["TCP_H_Helmet_ECH55D_Black_Silver","TCP_H_Helmet_ECH55D_Black_Gold","TCP_H_Helmet_ECH55D_Black_Black"]],
-        ["vest",      ["TCP_V_M43D_ODST_3_1_Black","TCP_V_M43D_ODST_3_2_Black","TCP_V_M43D_ODST_3_3_Black"]],
-        ["nvg",       ["OPTRE_NVG_Gen3","OPTRE_NVG"]],
-        ["optics",    ["CTGCY_BR55_Scope","optic_Holosight","optic_ERCO_blk_F"]],
-        ["muzzles",   ["muzzle_snds_H"]],
-        ["pointers",  ["acc_pointer_IR","acc_flashlight"]],
+        ["headgear",  []],
+        ["vest",      ["TCP_V_M43D_ODST_2_Black","TCP_V_M43D_ODST_3_Black", "TCP_V_M43D_ODST_4_Black"]],
+        ["nvg",       ["OPTRE_NVG", "OPTRE_NVG_CNM", "OPTRE_NVG_UL", "OPTRE_NVG_HUL", "OPTRE_NVG_HUL3", "OPTRE_NVG_HUL3_Gray", "OPTRE_NVG_HURS",
+                       "OPTRE_NVG_HUL_UAB_HURS", "OPTRE_NVG_HURS_CNM", "OPTRE_NVG_HURS_HUL", "OPTRE_NVG_UA_CNM", "OPTRE_NVG_UA_HUL", "OPTRE_NVG_UA_HURS", "OPTRE_NVG_UA_HURS_CNM", "OPTRE_NVG_UA_HURS_HUL",
+                       "OPTRE_NVG_UAB"]],
+        ["optics",    ["OPTRE_MA5_BUIS","CTGCY_MA5_Sight_2"]],
+        ["muzzles",   []],
+        ["pointers",  []],
         ["bipods",    []],
-        ["extras",    ["ACE_CableTie","ACE_Flashlight_XL50","ACE_EarPlugs","ACE_Chemlight_Orange"]]
+        ["extras",     ["ACE_MRE_BeefStew_Item", "ACE_MRE_ChikenTikkaMasala_Item", "ACE_MRE_ChickenHerbDumplings_Item", "ACE_MRE_CreamChickenSoup_Item",
+                       "ACE_MRE_CreamTomatoSoup_Item", "ACE_MRE_LambCurry_Item", "ACE_MRE_MeatballsPasta_Item", "ACE_MRE_SteakVegetables_Item "]]
     ]],
 
     ["B_UNSCDF_ODST_Team_Leader", createHashMapFromArray [
-        ["headgear",  ["TCP_H_Helmet_ECH55D_Black_Silver","TCP_H_Helmet_ECH55D_Black_Gold","TCP_H_Helmet_ECH55D_Black_Black"]],
-        ["vest",      ["TCP_V_M43D_ODST_3_1_Black","TCP_V_M43D_ODST_3_2_Black"]],
-        ["nvg",       ["OPTRE_NVG_Gen3","OPTRE_NVG"]],
-        ["optics",    ["CTGCY_BR55_Scope","optic_ERCO_blk_F"]],
-        ["muzzles",   ["muzzle_snds_H"]],
-        ["pointers",  ["acc_pointer_IR","acc_flashlight"]],
+        ["headgear",  []],
+        ["vest",      ["TCP_V_M43D_ODST_2_Black","TCP_V_M43D_ODST_3_Black", "TCP_V_M43D_ODST_4_Black"]],
+        ["nvg",       ["OPTRE_NVG", "OPTRE_NVG_CNM", "OPTRE_NVG_UL", "OPTRE_NVG_HUL", "OPTRE_NVG_HUL3", "OPTRE_NVG_HUL3_Gray", "OPTRE_NVG_HURS",
+                       "OPTRE_NVG_HUL_UAB_HURS", "OPTRE_NVG_HURS_CNM", "OPTRE_NVG_HURS_HUL", "OPTRE_NVG_UA_CNM", "OPTRE_NVG_UA_HUL", "OPTRE_NVG_UA_HURS", "OPTRE_NVG_UA_HURS_CNM", "OPTRE_NVG_UA_HURS_HUL",
+                       "OPTRE_NVG_UAB"]],
+        ["optics",    ["CTGCY_BR55_Scope_ACE","OPTRE_M12_Optic","OPTRE_M12_Optic_Green","OPTRE_M12_Optic_Red"]],
+        ["muzzles",   []],
+        ["pointers",  []],
         ["bipods",    []],
-        ["extras",    ["ACE_CableTie","ACE_EarPlugs","ACE_Chemlight_Orange","ACE_MapTools"]]
+        ["extras",     ["ACE_MRE_BeefStew_Item", "ACE_MRE_ChikenTikkaMasala_Item", "ACE_MRE_ChickenHerbDumplings_Item", "ACE_MRE_CreamChickenSoup_Item",
+                       "ACE_MRE_CreamTomatoSoup_Item", "ACE_MRE_LambCurry_Item", "ACE_MRE_MeatballsPasta_Item", "ACE_MRE_SteakVegetables_Item "]]
     ]],
 
     ["B_UNSCDF_ODST_Scout", createHashMapFromArray [
-        ["headgear",  ["TCP_H_Helmet_ECH55D_Black_Silver","TCP_H_Helmet_ECH55D_Black_Black"]],
-        ["vest",      ["TCP_V_M43D_ODST_3_1_Black","TCP_V_M43D_ODST_3_2_Black","TCP_V_M43D_ODST_3_3_Black"]],
-        ["nvg",       ["OPTRE_NVG_Gen3","OPTRE_NVG"]],
-        ["optics",    ["optic_ERCO_blk_F","optic_Holosight"]],
-        ["muzzles",   ["muzzle_snds_H"]],
-        ["pointers",  ["acc_pointer_IR"]],
+        ["headgear",  []],
+        ["vest",      ["TCP_V_M43D_ODST_2_Black","TCP_V_M43D_ODST_3_Black", "TCP_V_M43D_ODST_4_Black"]],
+        ["nvg",       ["OPTRE_NVG", "OPTRE_NVG_CNM", "OPTRE_NVG_UL", "OPTRE_NVG_HUL", "OPTRE_NVG_HUL3", "OPTRE_NVG_HUL3_Gray", "OPTRE_NVG_HURS",
+                       "OPTRE_NVG_HUL_UAB_HURS", "OPTRE_NVG_HURS_CNM", "OPTRE_NVG_HURS_HUL", "OPTRE_NVG_UA_CNM", "OPTRE_NVG_UA_HUL", "OPTRE_NVG_UA_HURS", "OPTRE_NVG_UA_HURS_CNM", "OPTRE_NVG_UA_HURS_HUL",
+                       "OPTRE_NVG_UAB"]],
+        ["optics",    ["CTGCY_SLSV_Scope", "CTGCY_SLSV_Sight", "CTGCY_SLSV_Sight_2", "none"]],
+        ["muzzles",   ["OPTRE_M7_Silencer"]],
+        ["pointers",  ["OPTRE_M7_Laser"]],
         ["bipods",    []],
-        ["extras",    ["ACE_CableTie","ACE_EarPlugs","ACE_Flashlight_XL50"]]
+        ["extras",     ["ACE_MRE_BeefStew_Item", "ACE_MRE_ChikenTikkaMasala_Item", "ACE_MRE_ChickenHerbDumplings_Item", "ACE_MRE_CreamChickenSoup_Item",
+                       "ACE_MRE_CreamTomatoSoup_Item", "ACE_MRE_LambCurry_Item", "ACE_MRE_MeatballsPasta_Item", "ACE_MRE_SteakVegetables_Item "]]
     ]],
 
-    // ODST Corpsman — no randomization (specialized fixed gear)
     ["B_UNSCDF_ODST_Corpsman", createHashMapFromArray [
         ["headgear",  []],
-        ["vest",      []],
-        ["nvg",       []],
-        ["optics",    []],
-        ["muzzles",   []],
-        ["pointers",  []],
+        ["vest",      ["TCP_V_M43D_ODST_2_Black","TCP_V_M43D_ODST_3_Black", "TCP_V_M43D_ODST_4_Black"]],
+        ["nvg",       ["OPTRE_NVG", "OPTRE_NVG_CNM", "OPTRE_NVG_UL", "OPTRE_NVG_HUL", "OPTRE_NVG_HUL3", "OPTRE_NVG_HUL3_Gray", "OPTRE_NVG_HURS",
+                       "OPTRE_NVG_HUL_UAB_HURS", "OPTRE_NVG_HURS_CNM", "OPTRE_NVG_HURS_HUL", "OPTRE_NVG_UA_CNM", "OPTRE_NVG_UA_HUL", "OPTRE_NVG_UA_HURS", "OPTRE_NVG_UA_HURS_CNM", "OPTRE_NVG_UA_HURS_HUL",
+                       "OPTRE_NVG_UAB"]],
+        ["optics",    ["CTGCY_SLSV_Scope", "CTGCY_SLSV_Sight", "CTGCY_SLSV_Sight_2", "none"]],
+        ["muzzles",   ["OPTRE_M7_Silencer"]],
+        ["pointers",  ["OPTRE_M7_Laser"]],
         ["bipods",    []],
         ["extras",    []]
     ]],
 
     ["B_UNSCDF_ODST_AT_Specialist", createHashMapFromArray [
-        ["headgear",  ["TCP_H_Helmet_ECH55D_Black_Silver","TCP_H_Helmet_ECH55D_Black_Gold","TCP_H_Helmet_ECH55D_Black_Black"]],
-        ["vest",      ["TCP_V_M43D_ODST_3_1_Black","TCP_V_M43D_ODST_3_2_Black"]],
-        ["nvg",       ["OPTRE_NVG_Gen3","OPTRE_NVG"]],
-        ["optics",    ["CTGCY_BR55_Scope","optic_Holosight"]],
-        ["muzzles",   ["muzzle_snds_H"]],
-        ["pointers",  ["acc_pointer_IR"]],
+        ["headgear",  []],
+        ["vest",      ["TCP_V_M43D_ODST_2_Black","TCP_V_M43D_ODST_3_Black", "TCP_V_M43D_ODST_4_Black"]],
+        ["nvg",       ["OPTRE_NVG", "OPTRE_NVG_CNM", "OPTRE_NVG_UL", "OPTRE_NVG_HUL", "OPTRE_NVG_HUL3", "OPTRE_NVG_HUL3_Gray", "OPTRE_NVG_HURS",
+                       "OPTRE_NVG_HUL_UAB_HURS", "OPTRE_NVG_HURS_CNM", "OPTRE_NVG_HURS_HUL", "OPTRE_NVG_UA_CNM", "OPTRE_NVG_UA_HUL", "OPTRE_NVG_UA_HURS", "OPTRE_NVG_UA_HURS_CNM", "OPTRE_NVG_UA_HURS_HUL",
+                       "OPTRE_NVG_UAB"]],
+        ["optics",    ["OPTRE_MA5_BUIS","CTGCY_MA5_Sight_2"]],
+        ["muzzles",   []],
+        ["pointers",  []],
         ["bipods",    []],
-        ["extras",    ["ACE_CableTie","ACE_EarPlugs"]]
+        ["extras",     ["ACE_MRE_BeefStew_Item", "ACE_MRE_ChikenTikkaMasala_Item", "ACE_MRE_ChickenHerbDumplings_Item", "ACE_MRE_CreamChickenSoup_Item",
+                       "ACE_MRE_CreamTomatoSoup_Item", "ACE_MRE_LambCurry_Item", "ACE_MRE_MeatballsPasta_Item", "ACE_MRE_SteakVegetables_Item "]]
     ]],
 
     ["B_UNSCDF_ODST_AA_Specialist", createHashMapFromArray [
-        ["headgear",  ["TCP_H_Helmet_ECH55D_Black_Silver","TCP_H_Helmet_ECH55D_Black_Gold","TCP_H_Helmet_ECH55D_Black_Black"]],
-        ["vest",      ["TCP_V_M43D_ODST_3_1_Black","TCP_V_M43D_ODST_3_2_Black"]],
-        ["nvg",       ["OPTRE_NVG_Gen3","OPTRE_NVG"]],
-        ["optics",    ["CTGCY_BR55_Scope","optic_Holosight"]],
-        ["muzzles",   ["muzzle_snds_H"]],
-        ["pointers",  ["acc_pointer_IR"]],
+        ["headgear",  []],
+        ["vest",      ["TCP_V_M43D_ODST_2_Black","TCP_V_M43D_ODST_3_Black", "TCP_V_M43D_ODST_4_Black"]],
+        ["nvg",       ["OPTRE_NVG", "OPTRE_NVG_CNM", "OPTRE_NVG_UL", "OPTRE_NVG_HUL", "OPTRE_NVG_HUL3", "OPTRE_NVG_HUL3_Gray", "OPTRE_NVG_HURS",
+                       "OPTRE_NVG_HUL_UAB_HURS", "OPTRE_NVG_HURS_CNM", "OPTRE_NVG_HURS_HUL", "OPTRE_NVG_UA_CNM", "OPTRE_NVG_UA_HUL", "OPTRE_NVG_UA_HURS", "OPTRE_NVG_UA_HURS_CNM", "OPTRE_NVG_UA_HURS_HUL",
+                       "OPTRE_NVG_UAB"]],
+        ["optics",    ["OPTRE_MA5_BUIS","CTGCY_MA5_Sight_2"]],
+        ["muzzles",   []],
+        ["pointers",  []],
         ["bipods",    []],
-        ["extras",    ["ACE_CableTie","ACE_EarPlugs"]]
+        ["extras",     ["ACE_MRE_BeefStew_Item", "ACE_MRE_ChikenTikkaMasala_Item", "ACE_MRE_ChickenHerbDumplings_Item", "ACE_MRE_CreamChickenSoup_Item",
+                       "ACE_MRE_CreamTomatoSoup_Item", "ACE_MRE_LambCurry_Item", "ACE_MRE_MeatballsPasta_Item", "ACE_MRE_SteakVegetables_Item "]]
     ]],
 
     ["B_UNSCDF_ODST_Marksman", createHashMapFromArray [
-        ["headgear",  ["TCP_H_Helmet_ECH55D_Black_Silver","TCP_H_Helmet_ECH55D_Black_Black"]],
-        ["vest",      ["TCP_V_M43D_ODST_3_1_Black","TCP_V_M43D_ODST_3_2_Black"]],
-        ["nvg",       ["OPTRE_NVG_Gen3"]],
-        ["optics",    ["optic_ERCO_blk_F"]],
-        ["muzzles",   ["muzzle_snds_H"]],
-        ["pointers",  ["acc_pointer_IR"]],
-        ["bipods",    []],
-        ["extras",    ["ACE_EarPlugs","ACE_Flashlight_XL50"]]
-    ]],
-
-    // ODST Sniper — no randomization
-    ["B_UNSCDF_ODST_Sniper", createHashMapFromArray [
         ["headgear",  []],
-        ["vest",      []],
-        ["nvg",       []],
+        ["vest",      ["TCP_V_M43D_SHARPSHOOTER_1_Black","TCP_V_M43D_SHARPSHOOTER_2_Black", "TCP_V_M43D_SHARPSHOOTER_3_Black", "TCP_V_M43D_SHARPSHOOTER_4_Black"]],
+        ["nvg",       ["OPTRE_NVG_MVI", "OPTRE_NVG_MVI_CNM", "OPTRE_NVG_MVI_HUL", "OPTRE_NVG_MVI_HURS", "OPTRE_NVG_MVI_UL"]],
         ["optics",    []],
         ["muzzles",   []],
         ["pointers",  []],
         ["bipods",    []],
-        ["extras",    []]
+        ["extras",     ["ACE_MRE_BeefStew_Item", "ACE_MRE_ChikenTikkaMasala_Item", "ACE_MRE_ChickenHerbDumplings_Item", "ACE_MRE_CreamChickenSoup_Item",
+                       "ACE_MRE_CreamTomatoSoup_Item", "ACE_MRE_LambCurry_Item", "ACE_MRE_MeatballsPasta_Item", "ACE_MRE_SteakVegetables_Item "]]
+    ]],
+
+    ["B_UNSCDF_ODST_Sniper", createHashMapFromArray [
+        ["headgear",  []],
+        ["vest",      ["TCP_V_M43D_SHARPSHOOTER_1_Black","TCP_V_M43D_SHARPSHOOTER_2_Black", "TCP_V_M43D_SHARPSHOOTER_3_Black", "TCP_V_M43D_SHARPSHOOTER_4_Black"]],
+        ["nvg",       ["OPTRE_NVG_MVI", "OPTRE_NVG_MVI_CNM", "OPTRE_NVG_MVI_HUL", "OPTRE_NVG_MVI_HURS", "OPTRE_NVG_MVI_UL"]],
+        ["optics",    []],
+        ["muzzles",   []],
+        ["pointers",  []],
+        ["bipods",    []],
+        ["extras",    ["ACE_MRE_BeefStew_Item", "ACE_MRE_ChikenTikkaMasala_Item", "ACE_MRE_ChickenHerbDumplings_Item", "ACE_MRE_CreamChickenSoup_Item",
+                       "ACE_MRE_CreamTomatoSoup_Item", "ACE_MRE_LambCurry_Item", "ACE_MRE_MeatballsPasta_Item", "ACE_MRE_SteakVegetables_Item "]]
     ]],
 
     ["B_UNSCDF_ODST_Breacher", createHashMapFromArray [
-        ["headgear",  ["TCP_H_Helmet_ECH55D_Black_Silver","TCP_H_Helmet_ECH55D_Black_Gold","TCP_H_Helmet_ECH55D_Black_Black"]],
-        ["vest",      ["TCP_V_M43D_ODST_3_1_Black","TCP_V_M43D_ODST_3_2_Black","TCP_V_M43D_ODST_3_3_Black"]],
-        ["nvg",       ["OPTRE_NVG_Gen3","OPTRE_NVG"]],
-        ["optics",    ["optic_Holosight","optic_ERCO_blk_F"]],
-        ["muzzles",   ["muzzle_snds_H"]],
-        ["pointers",  ["acc_pointer_IR","acc_flashlight"]],
+        ["headgear",  []],
+        ["vest",      ["TCP_V_M43D_ODST_2_Black","TCP_V_M43D_ODST_3_Black", "TCP_V_M43D_ODST_4_Black"]],
+        ["nvg",       ["OPTRE_NVG", "OPTRE_NVG_CNM", "OPTRE_NVG_UL", "OPTRE_NVG_HUL", "OPTRE_NVG_HUL3", "OPTRE_NVG_HUL3_Gray", "OPTRE_NVG_HURS",
+                       "OPTRE_NVG_HUL_UAB_HURS", "OPTRE_NVG_HURS_CNM", "OPTRE_NVG_HURS_HUL", "OPTRE_NVG_UA_CNM", "OPTRE_NVG_UA_HUL", "OPTRE_NVG_UA_HURS", "OPTRE_NVG_UA_HURS_CNM", "OPTRE_NVG_UA_HURS_HUL",
+                       "OPTRE_NVG_UAB"]],
+        ["optics",    ["none"]],
+        ["muzzles",   []],
+        ["pointers",  []],
         ["bipods",    []],
-        ["extras",    ["ACE_CableTie","ACE_EarPlugs","ACE_Chemlight_Orange"]]
+        ["extras",    ["ACE_MRE_BeefStew_Item", "ACE_MRE_ChikenTikkaMasala_Item", "ACE_MRE_ChickenHerbDumplings_Item", "ACE_MRE_CreamChickenSoup_Item",
+                       "ACE_MRE_CreamTomatoSoup_Item", "ACE_MRE_LambCurry_Item", "ACE_MRE_MeatballsPasta_Item", "ACE_MRE_SteakVegetables_Item "]]
     ]],
 
     ["B_UNSCDF_ODST_Autorifleman", createHashMapFromArray [
-        ["headgear",  ["TCP_H_Helmet_ECH55D_Black_Silver","TCP_H_Helmet_ECH55D_Black_Gold","TCP_H_Helmet_ECH55D_Black_Black"]],
-        ["vest",      ["TCP_V_M43D_ODST_3_1_Black","TCP_V_M43D_ODST_3_2_Black"]],
-        ["nvg",       ["OPTRE_NVG_Gen3","OPTRE_NVG"]],
-        ["optics",    ["optic_Holosight","optic_ERCO_blk_F"]],
+        ["headgear",  []],
+        ["vest",      ["TCP_V_M43D_ODST_2_Black","TCP_V_M43D_ODST_3_Black", "TCP_V_M43D_ODST_4_Black"]],
+        ["nvg",       ["OPTRE_NVG", "OPTRE_NVG_CNM", "OPTRE_NVG_UL", "OPTRE_NVG_HUL", "OPTRE_NVG_HUL3", "OPTRE_NVG_HUL3_Gray", "OPTRE_NVG_HURS",
+                       "OPTRE_NVG_HUL_UAB_HURS", "OPTRE_NVG_HURS_CNM", "OPTRE_NVG_HURS_HUL", "OPTRE_NVG_UA_CNM", "OPTRE_NVG_UA_HUL", "OPTRE_NVG_UA_HURS", "OPTRE_NVG_UA_HURS_CNM", "OPTRE_NVG_UA_HURS_HUL",
+                       "OPTRE_NVG_UAB"]],
+        ["optics",    ["OPTRE_M73_SmartLink", "none"]],
         ["muzzles",   []],
-        ["pointers",  ["acc_pointer_IR"]],
+        ["pointers",  []],
         ["bipods",    []],
-        ["extras",    ["ACE_CableTie","ACE_EarPlugs"]]
-    ]]
+        ["extras",     ["ACE_MRE_BeefStew_Item", "ACE_MRE_ChikenTikkaMasala_Item", "ACE_MRE_ChickenHerbDumplings_Item", "ACE_MRE_CreamChickenSoup_Item",
+                       "ACE_MRE_CreamTomatoSoup_Item", "ACE_MRE_LambCurry_Item", "ACE_MRE_MeatballsPasta_Item", "ACE_MRE_SteakVegetables_Item "]]
+    ]],
 
 ];
 
