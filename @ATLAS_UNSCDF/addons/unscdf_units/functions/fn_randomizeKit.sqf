@@ -498,14 +498,12 @@ if (_vest != "") then {
 };
 
 // =========================================================================
-// Randomize NVG — unlink any existing NVGs first, then assign new one
+// Randomize NVG — unlink any existing HMD first, then assign new one
 // =========================================================================
 private _nvg = [(_pool get "nvg")] call _fnc_pick;
 if (_nvg != "") then {
-    {
-        private _nvgClass = _x;
-        if (_unit linkedItems findIf { _x == _nvgClass } >= 0) then { _unit unlinkItem _nvgClass; };
-    } forEach ["OPTRE_NVG_Gen3","OPTRE_NVG","NVGoggles","NVGoggles_OPFOR","NVGoggles_INDEP"];
+    private _currentHmd = hmd _unit;
+    if (_currentHmd != "") then { _unit unlinkItem _currentHmd; };
     _unit linkItem _nvg;
 };
 
@@ -515,7 +513,7 @@ if (_nvg != "") then {
 private _pw = primaryWeapon _unit;
 if (_pw != "") then {
     // Strip all current attachments before applying random selections
-    { _unit removePrimaryWeaponItem _x; } forEach (primaryWeaponItems _unit);
+    { if (_x != "") then { _unit removePrimaryWeaponItem _x; }; } forEach (primaryWeaponItems _unit);
 
     // One random item per slot; skipped silently if that slot's array is empty
     {
