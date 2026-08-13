@@ -21,6 +21,7 @@
               "headgear"  — helmet classnames to pick from
               "vest"      — vest classnames to pick from
               "nvg"       — NVG classnames to pick from
+              "backpack"  — backpack classnames to pick from
               "optics"    — primary-weapon optic classnames
               "muzzles"   — primary-weapon suppressor/muzzle classnames
               "pointers"  — primary-weapon laser/flashlight classnames
@@ -31,6 +32,14 @@
           classname from _classPools entirely (or set all its arrays to []).
         - To add a new unit class, copy an existing block and change the key to
           the exact classname (case-sensitive).
+
+    Backpack note:
+        Use an empty array [] for "backpack" on any class whose backpack is
+        functional/role-specific (medic kit, UAV carrier, weapons bag, parachute,
+        ammo carrier, etc.) so its contents assigned by the loadout are preserved
+        unchanged.  General infantry classes receive a pool of cosmetically
+        interchangeable rucksacks; backpack contents are always transferred to the
+        newly selected pack automatically.
 */
 
 params ["_unit"];
@@ -54,6 +63,7 @@ private _classPools = createHashMapFromArray [
         ["headgear",  ["TCP_Patrol_Cap_Olive"]],
         ["vest",      ["TCP_V_M43A_Light_1_Olive","TCP_V_M43A_Light_2_Olive","TCP_V_M43A_Light_3_Olive","TCP_V_M43A_GungnirS_3_Olive" ]],
         ["nvg",       ["OPTRE_NVG"]],
+        ["backpack",  ["TCP_B_M43_Medium_Rucksack_Field_Olive","TCP_B_M2_Buttpack_Olive","TCP_B_Rifleman_5_M43_Medium_Rucksack_Olive_M43A"]],
         ["optics",    ["CTGCY_BR55_Scope_ACE","OPTRE_M12_Optic","OPTRE_M12_Optic_Green","OPTRE_M12_Optic_Red"]],
         ["muzzles",   []],
         ["pointers",  ["OPTRE_BMR_Laser"]],
@@ -67,6 +77,7 @@ private _classPools = createHashMapFromArray [
                        "TCP_H_booniehat_Olive","WOLFoT_TcP_UNSC_A_Boonie_Woodland_2"]],
         ["vest",      ["TCP_V_M43A_GungnirS_1_Olive","TCP_V_M43A_GungnirS_2_Olive","TCP_V_M43A_GungnirS_3_Olive"]],
         ["nvg",       ["OPTRE_NVG"]],
+        ["backpack",  ["TCP_B_M43_Medium_Rucksack_Field_Olive","TCP_B_M2_Buttpack_Olive","TCP_B_Rifleman_5_M43_Medium_Rucksack_Olive_M43A"]],
         ["optics",    ["OPTRE_MA5_BUIS","CTGCY_MA5_Sight_2"]],
         ["muzzles",   []],
         ["pointers",  []],
@@ -80,6 +91,7 @@ private _classPools = createHashMapFromArray [
                        "TCP_H_booniehat_Olive","WOLFoT_TcP_UNSC_A_Boonie_Woodland_2"]],
         ["vest",      ["TCP_V_M43A_GungnirS_1_Olive","TCP_V_M43A_GungnirS_2_Olive","TCP_V_M43A_GungnirS_3_Olive"]],
         ["nvg",       ["OPTRE_NVG"]],
+        ["backpack",  ["TCP_B_NCO_2_M43_Medium_Rucksack_Olive_M43A","TCP_B_M43_Medium_Rucksack_Field_Olive"]],
         ["optics",    ["CTGCY_BR55_Scope_ACE","OPTRE_M12_Optic","OPTRE_M12_Optic_Green","OPTRE_M12_Optic_Red"]],
         ["muzzles",   []],
         ["pointers",  []],
@@ -93,6 +105,7 @@ private _classPools = createHashMapFromArray [
                        "TCP_H_booniehat_Olive","WOLFoT_TcP_UNSC_A_Boonie_Woodland_2"]],
         ["vest",      ["TCP_V_M43A_GungnirS_1_Olive","TCP_V_M43A_GungnirS_2_Olive","TCP_V_M43A_GungnirS_3_Olive"]],
         ["nvg",       ["OPTRE_NVG"]],
+        ["backpack",  ["TCP_B_NCO_2_M43_Medium_Rucksack_Olive_M43A","TCP_B_M43_Medium_Rucksack_Field_Olive"]],
         ["optics",    ["OPTRE_MA5_BUIS","CTGCY_MA5_Sight_2"]],
         ["muzzles",   []],
         ["pointers",  []],
@@ -106,6 +119,7 @@ private _classPools = createHashMapFromArray [
                        "TCP_H_booniehat_Olive","WOLFoT_TcP_UNSC_A_Boonie_Woodland_2"]],
         ["vest",      ["TCP_V_M43A_GungnirS_1_Olive","TCP_V_M43A_GungnirS_2_Olive","TCP_V_M43A_GungnirS_3_Olive"]],
         ["nvg",       ["OPTRE_NVG"]],
+        ["backpack",  []],
         ["optics",    ["OPTRE_MA5_BUIS","CTGCY_MA5_Sight_2"]],
         ["muzzles",   []],
         ["pointers",  []],
@@ -119,6 +133,7 @@ private _classPools = createHashMapFromArray [
                        "TCP_H_booniehat_Olive","WOLFoT_TcP_UNSC_A_Boonie_Woodland_2"]],
         ["vest",      ["TCP_V_M43A_GungnirL_1_Olive","TCP_V_M43A_GungnirL_2_Olive","TCP_V_M43A_GungnirL_3_Olive"]],
         ["nvg",       ["OPTRE_NVG"]],
+        ["backpack",  []],
         ["optics",    ["OPTRE_M73_SmartLink", "none"]],
         ["muzzles",   []],
         ["pointers",  []],
@@ -132,6 +147,7 @@ private _classPools = createHashMapFromArray [
         ["headgear",  []],
         ["vest",      ["TCP_V_M43A_GungnirS_1_Olive","TCP_V_M43A_GungnirS_2_Olive","TCP_V_M43A_GungnirS_3_Olive"]],
         ["nvg",       ["OPTRE_NVG"]],
+        ["backpack",  []],
         ["optics",    []],
         ["muzzles",   []],
         ["pointers",  []],
@@ -144,6 +160,7 @@ private _classPools = createHashMapFromArray [
         ["headgear",  []],
         ["vest",      []],
         ["nvg",       []],
+        ["backpack",  []],
         ["optics",    []],
         ["muzzles",   []],
         ["pointers",  []],
@@ -156,6 +173,7 @@ private _classPools = createHashMapFromArray [
                        "TCP_H_booniehat_Olive","WOLFoT_TcP_UNSC_A_Boonie_Woodland_2"]],
         ["vest",      ["TCP_V_M43A_GungnirS_1_Olive","TCP_V_M43A_GungnirS_2_Olive","TCP_V_M43A_GungnirS_3_Olive"]],
         ["nvg",       ["OPTRE_NVG"]],
+        ["backpack",  ["TCP_B_M43_Medium_Rucksack_Field_Olive","TCP_B_M2_Buttpack_Olive"]],
         ["optics",    ["OPTRE_MA5_BUIS","CTGCY_MA5_Sight_2"]],
         ["muzzles",   []],
         ["pointers",  []],
@@ -169,6 +187,7 @@ private _classPools = createHashMapFromArray [
                        "TCP_H_booniehat_Olive","WOLFoT_TcP_UNSC_A_Boonie_Woodland_2"]],
         ["vest",      ["TCP_V_M43A_GungnirL_1_1_Olive","TCP_V_M43A_GungnirL_2_1_Olive","TCP_V_M43A_GungnirL_3_1_Olive"]],
         ["nvg",       ["OPTRE_NVG"]],
+        ["backpack",  []],
         ["optics",    ["OPTRE_MA5_BUIS","CTGCY_MA5_Sight_2"]],
         ["muzzles",   []],
         ["pointers",  []],
@@ -182,6 +201,7 @@ private _classPools = createHashMapFromArray [
                        "TCP_H_booniehat_Olive","WOLFoT_TcP_UNSC_A_Boonie_Woodland_2"]],
         ["vest",      ["TCP_V_M43A_GungnirS_1_Olive","TCP_V_M43A_GungnirS_2_Olive","TCP_V_M43A_GungnirS_3_Olive"]],
         ["nvg",       ["OPTRE_NVG"]],
+        ["backpack",  []],
         ["optics",    ["OPTRE_MA5_BUIS","CTGCY_MA5_Sight_2"]],
         ["muzzles",   []],
         ["pointers",  []],
@@ -194,6 +214,7 @@ private _classPools = createHashMapFromArray [
         ["headgear",  ["TCP_H_Helmet_CH43A_Olive"]],
         ["vest",      ["TCP_V_M43A_GungnirS_1_Olive","TCP_V_M43A_GungnirS_2_Olive","TCP_V_M43A_GungnirS_3_Olive"]],
         ["nvg",       []],
+        ["backpack",  ["TCP_B_M43_Medium_Rucksack_Field_Olive","TCP_B_M2_Buttpack_Olive","TCP_B_Rifleman_5_M43_Medium_Rucksack_Olive_M43A"]],
         ["optics",    []],
         ["muzzles",   []],
         ["pointers",  []],
@@ -207,6 +228,7 @@ private _classPools = createHashMapFromArray [
                        "TCP_H_booniehat_Olive","WOLFoT_TcP_UNSC_A_Boonie_Woodland_2"]],
         ["vest",      ["TCP_V_M43A_GungnirS_1_Olive","TCP_V_M43A_GungnirS_2_Olive","TCP_V_M43A_GungnirS_3_Olive"]],
         ["nvg",       ["OPTRE_NVG"]],
+        ["backpack",  []],
         ["optics",    ["OPTRE_MA5_BUIS","CTGCY_MA5_Sight_2"]],
         ["muzzles",   []],
         ["pointers",  []],
@@ -220,6 +242,7 @@ private _classPools = createHashMapFromArray [
                        "TCP_H_booniehat_Olive","WOLFoT_TcP_UNSC_A_Boonie_Woodland_2"]],
         ["vest",      ["TCP_V_M43A_GungnirS_1_Olive","TCP_V_M43A_GungnirS_2_Olive","TCP_V_M43A_GungnirS_3_Olive"]],
         ["nvg",       ["OPTRE_NVG"]],
+        ["backpack",  []],
         ["optics",    ["OPTRE_MA5_BUIS","CTGCY_MA5_Sight_2"]],
         ["muzzles",   []],
         ["pointers",  []],
@@ -232,6 +255,7 @@ private _classPools = createHashMapFromArray [
         ["headgear",  []],
         ["vest",      []],
         ["nvg",       []],
+        ["backpack",  []],
         ["optics",    []],
         ["muzzles",   []],
         ["pointers",  []],
@@ -245,6 +269,7 @@ private _classPools = createHashMapFromArray [
                        "TCP_H_booniehat_Olive","WOLFoT_TcP_UNSC_A_Boonie_Woodland_2"]],
         ["vest",      ["TCP_V_M43A_GungnirS_1_Olive","TCP_V_M43A_GungnirS_2_Olive","TCP_V_M43A_GungnirS_3_Olive"]],
         ["nvg",       ["OPTRE_NVG"]],
+        ["backpack",  []],
         ["optics",    ["OPTRE_MA5_BUIS","CTGCY_MA5_Sight_2"]],
         ["muzzles",   []],
         ["pointers",  []],
@@ -257,6 +282,7 @@ private _classPools = createHashMapFromArray [
         ["headgear",  []],
         ["vest",      []],
         ["nvg",       []],
+        ["backpack",  []],
         ["optics",    []],
         ["muzzles",   []],
         ["pointers",  []],
@@ -269,6 +295,7 @@ private _classPools = createHashMapFromArray [
                        "TCP_H_booniehat_Olive","WOLFoT_TcP_UNSC_A_Boonie_Woodland_2"]],
         ["vest",      ["TCP_V_M43A_Light_1_Olive","TCP_V_M43A_Light_2_Olive","TCP_V_M43A_Light_3_Olive"]],
         ["nvg",       ["OPTRE_NVG"]],
+        ["backpack",  ["TCP_B_M2_Buttpack_Olive","TCP_B_M43_Medium_Rucksack_Field_Olive"]],
         ["optics",    ["OPTRE_MA5_BUIS","CTGCY_MA5_Sight_2"]],
         ["muzzles",   []],
         ["pointers",  []],
@@ -283,6 +310,7 @@ private _classPools = createHashMapFromArray [
                        "TCP_H_booniehat_Olive","WOLFoT_TcP_UNSC_A_Boonie_Woodland_2"]],
         ["vest",      ["TCP_V_M43A_Light_1_Olive","TCP_V_M43A_Light_2_Olive", "TCP_V_M43A_Light_3_Olive"]],
         ["nvg",       ["OPTRE_NVG"]],
+        ["backpack",  []],
         ["optics",    ["OPTRE_MA5_BUIS","CTGCY_MA5_Sight_2"]],
         ["muzzles",   []],
         ["pointers",  []],
@@ -296,6 +324,7 @@ private _classPools = createHashMapFromArray [
                        "TCP_H_booniehat_Olive","WOLFoT_TcP_UNSC_A_Boonie_Woodland_2"]],
         ["vest",      ["TCP_V_M43A_Light_1_Olive","TCP_V_M43A_Light_2_Olive", "TCP_V_M43A_Light_3_Olive"]],
         ["nvg",       []],
+        ["backpack",  []],
         ["optics",    []],
         ["muzzles",   []],
         ["pointers",  []],
@@ -309,6 +338,7 @@ private _classPools = createHashMapFromArray [
         ["headgear",  []],
         ["vest",      ["TCP_V_M43A_Light_1_Olive","TCP_V_M43A_Light_2_Olive", "TCP_V_M43A_Light_3_Olive"]],
         ["nvg",       []],
+        ["backpack",  ["TCP_B_M43_Medium_Rucksack_Field_Olive","TCP_B_M2_Buttpack_Olive"]],
         ["optics",    []],
         ["muzzles",   []],
         ["pointers",  []],
@@ -322,6 +352,7 @@ private _classPools = createHashMapFromArray [
                        "TCP_H_booniehat_Olive","WOLFoT_TcP_UNSC_A_Boonie_Woodland_2"]],
         ["vest",      ["TCP_V_M43A_GungnirS_1_Olive","TCP_V_M43A_GungnirS_2_Olive","TCP_V_M43A_GungnirS_3_Olive"]],
         ["nvg",       ["OPTRE_NVG"]],
+        ["backpack",  ["TCP_B_M2_Buttpack_Olive","TCP_B_M43_Medium_Rucksack_Field_Olive"]],
         ["optics",    ["OPTRE_MA5_BUIS","CTGCY_MA5_Sight_2"]],
         ["muzzles",   []],
         ["pointers",  []],
@@ -335,6 +366,7 @@ private _classPools = createHashMapFromArray [
         ["headgear",  []],
         ["vest",      []],
         ["nvg",       []],
+        ["backpack",  []],
         ["optics",    []],
         ["muzzles",   []],
         ["pointers",  []],
@@ -347,6 +379,7 @@ private _classPools = createHashMapFromArray [
         ["headgear",  []],
         ["vest",      []],
         ["nvg",       []],
+        ["backpack",  []],
         ["optics",    []],
         ["muzzles",   []],
         ["pointers",  []],
@@ -359,6 +392,7 @@ private _classPools = createHashMapFromArray [
                        "TCP_H_booniehat_Olive","WOLFoT_TcP_UNSC_A_Boonie_Woodland_2"]],
         ["vest",      ["TCP_V_M43A_Light_1_Olive","TCP_V_M43A_Light_2_Olive", "TCP_V_M43A_Light_3_Olive"]],
         ["nvg",       ["OPTRE_NVG"]],
+        ["backpack",  []],
         ["optics",    ["OPTRE_MA5_BUIS","CTGCY_MA5_Sight_2"]],
         ["muzzles",   []],
         ["pointers",  []],
@@ -372,6 +406,7 @@ private _classPools = createHashMapFromArray [
                        "TCP_H_booniehat_Olive","WOLFoT_TcP_UNSC_A_Boonie_Woodland_2"]],
         ["vest",      ["TCP_V_M43A_Light_1_Olive","TCP_V_M43A_Light_2_Olive", "TCP_V_M43A_Light_3_Olive"]],
         ["nvg",       ["OPTRE_NVG"]],
+        ["backpack",  []],
         ["optics",    ["OPTRE_MA5_BUIS","CTGCY_MA5_Sight_2"]],
         ["muzzles",   []],
         ["pointers",  []],
@@ -390,6 +425,7 @@ private _classPools = createHashMapFromArray [
         ["nvg",       ["OPTRE_NVG", "OPTRE_NVG_CNM", "OPTRE_NVG_UL", "OPTRE_NVG_HUL", "OPTRE_NVG_HUL3", "OPTRE_NVG_HUL3_Gray", "OPTRE_NVG_HURS",
                        "OPTRE_NVG_HUL_UAB_HURS", "OPTRE_NVG_HURS_CNM", "OPTRE_NVG_HURS_HUL", "OPTRE_NVG_UA_CNM", "OPTRE_NVG_UA_HUL", "OPTRE_NVG_UA_HURS", "OPTRE_NVG_UA_HURS_CNM", "OPTRE_NVG_UA_HURS_HUL",
                        "OPTRE_NVG_UAB"]],
+        ["backpack",  ["TCP_B_EM39_MLBE_Hardcase_Black"]],
         ["optics",    ["OPTRE_MA5_BUIS","CTGCY_MA5_Sight_2"]],
         ["muzzles",   []],
         ["pointers",  ["OPTRE_BMR_Laser"]],
@@ -404,6 +440,7 @@ private _classPools = createHashMapFromArray [
         ["nvg",       ["OPTRE_NVG", "OPTRE_NVG_CNM", "OPTRE_NVG_UL", "OPTRE_NVG_HUL", "OPTRE_NVG_HUL3", "OPTRE_NVG_HUL3_Gray", "OPTRE_NVG_HURS",
                        "OPTRE_NVG_HUL_UAB_HURS", "OPTRE_NVG_HURS_CNM", "OPTRE_NVG_HURS_HUL", "OPTRE_NVG_UA_CNM", "OPTRE_NVG_UA_HUL", "OPTRE_NVG_UA_HURS", "OPTRE_NVG_UA_HURS_CNM", "OPTRE_NVG_UA_HURS_HUL",
                        "OPTRE_NVG_UAB"]],
+        ["backpack",  ["TCP_B_EM39_MLBE_Hardcase_Black"]],
         ["optics",    ["CTGCY_BR55_Scope_ACE","OPTRE_M12_Optic","OPTRE_M12_Optic_Green","OPTRE_M12_Optic_Red"]],
         ["muzzles",   []],
         ["pointers",  ["OPTRE_BMR_Laser"]],
@@ -418,6 +455,7 @@ private _classPools = createHashMapFromArray [
         ["nvg",       ["OPTRE_NVG", "OPTRE_NVG_CNM", "OPTRE_NVG_UL", "OPTRE_NVG_HUL", "OPTRE_NVG_HUL3", "OPTRE_NVG_HUL3_Gray", "OPTRE_NVG_HURS",
                        "OPTRE_NVG_HUL_UAB_HURS", "OPTRE_NVG_HURS_CNM", "OPTRE_NVG_HURS_HUL", "OPTRE_NVG_UA_CNM", "OPTRE_NVG_UA_HUL", "OPTRE_NVG_UA_HURS", "OPTRE_NVG_UA_HURS_CNM", "OPTRE_NVG_UA_HURS_HUL",
                        "OPTRE_NVG_UAB"]],
+        ["backpack",  ["TCP_B_EM39_MLBE_Hardcase_Black"]],
         ["optics",    ["CTGCY_SLSV_Scope", "CTGCY_SLSV_Sight", "CTGCY_SLSV_Sight_2", "none"]],
         ["muzzles",   ["OPTRE_M7_Silencer"]],
         ["pointers",  ["OPTRE_M7_Laser"]],
@@ -432,6 +470,7 @@ private _classPools = createHashMapFromArray [
         ["nvg",       ["OPTRE_NVG", "OPTRE_NVG_CNM", "OPTRE_NVG_UL", "OPTRE_NVG_HUL", "OPTRE_NVG_HUL3", "OPTRE_NVG_HUL3_Gray", "OPTRE_NVG_HURS",
                        "OPTRE_NVG_HUL_UAB_HURS", "OPTRE_NVG_HURS_CNM", "OPTRE_NVG_HURS_HUL", "OPTRE_NVG_UA_CNM", "OPTRE_NVG_UA_HUL", "OPTRE_NVG_UA_HURS", "OPTRE_NVG_UA_HURS_CNM", "OPTRE_NVG_UA_HURS_HUL",
                        "OPTRE_NVG_UAB"]],
+        ["backpack",  []],
         ["optics",    ["CTGCY_SLSV_Scope", "CTGCY_SLSV_Sight", "CTGCY_SLSV_Sight_2", "none"]],
         ["muzzles",   ["OPTRE_M7_Silencer"]],
         ["pointers",  ["OPTRE_M7_Laser"]],
@@ -445,6 +484,7 @@ private _classPools = createHashMapFromArray [
         ["nvg",       ["OPTRE_NVG", "OPTRE_NVG_CNM", "OPTRE_NVG_UL", "OPTRE_NVG_HUL", "OPTRE_NVG_HUL3", "OPTRE_NVG_HUL3_Gray", "OPTRE_NVG_HURS",
                        "OPTRE_NVG_HUL_UAB_HURS", "OPTRE_NVG_HURS_CNM", "OPTRE_NVG_HURS_HUL", "OPTRE_NVG_UA_CNM", "OPTRE_NVG_UA_HUL", "OPTRE_NVG_UA_HURS", "OPTRE_NVG_UA_HURS_CNM", "OPTRE_NVG_UA_HURS_HUL",
                        "OPTRE_NVG_UAB"]],
+        ["backpack",  []],
         ["optics",    ["OPTRE_MA5_BUIS","CTGCY_MA5_Sight_2"]],
         ["muzzles",   []],
         ["pointers",  ["OPTRE_BMR_Laser"]],
@@ -459,6 +499,7 @@ private _classPools = createHashMapFromArray [
         ["nvg",       ["OPTRE_NVG", "OPTRE_NVG_CNM", "OPTRE_NVG_UL", "OPTRE_NVG_HUL", "OPTRE_NVG_HUL3", "OPTRE_NVG_HUL3_Gray", "OPTRE_NVG_HURS",
                        "OPTRE_NVG_HUL_UAB_HURS", "OPTRE_NVG_HURS_CNM", "OPTRE_NVG_HURS_HUL", "OPTRE_NVG_UA_CNM", "OPTRE_NVG_UA_HUL", "OPTRE_NVG_UA_HURS", "OPTRE_NVG_UA_HURS_CNM", "OPTRE_NVG_UA_HURS_HUL",
                        "OPTRE_NVG_UAB"]],
+        ["backpack",  []],
         ["optics",    ["OPTRE_MA5_BUIS","CTGCY_MA5_Sight_2"]],
         ["muzzles",   []],
         ["pointers",  ["OPTRE_BMR_Laser"]],
@@ -471,6 +512,7 @@ private _classPools = createHashMapFromArray [
         ["headgear",  []],
         ["vest",      ["TCP_V_M43D_SHARPSHOOTER_1_Black","TCP_V_M43D_SHARPSHOOTER_2_Black", "TCP_V_M43D_SHARPSHOOTER_3_Black", "TCP_V_M43D_SHARPSHOOTER_4_Black"]],
         ["nvg",       ["OPTRE_NVG_MVI", "OPTRE_NVG_MVI_CNM", "OPTRE_NVG_MVI_HUL", "OPTRE_NVG_MVI_HURS", "OPTRE_NVG_MVI_UL"]],
+        ["backpack",  ["TCP_B_EM39_MLBE_Hardcase_Black"]],
         ["optics",    []],
         ["muzzles",   []],
         ["pointers",  ["OPTRE_BMR_Laser"]],
@@ -483,6 +525,7 @@ private _classPools = createHashMapFromArray [
         ["headgear",  []],
         ["vest",      ["TCP_V_M43D_SHARPSHOOTER_1_Black","TCP_V_M43D_SHARPSHOOTER_2_Black", "TCP_V_M43D_SHARPSHOOTER_3_Black", "TCP_V_M43D_SHARPSHOOTER_4_Black"]],
         ["nvg",       ["OPTRE_NVG_MVI", "OPTRE_NVG_MVI_CNM", "OPTRE_NVG_MVI_HUL", "OPTRE_NVG_MVI_HURS", "OPTRE_NVG_MVI_UL"]],
+        ["backpack",  ["TCP_B_EM39_MLBE_Hardcase_Black"]],
         ["optics",    []],
         ["muzzles",   []],
         ["pointers",  ["OPTRE_BMR_Laser"]],
@@ -497,6 +540,7 @@ private _classPools = createHashMapFromArray [
         ["nvg",       ["OPTRE_NVG", "OPTRE_NVG_CNM", "OPTRE_NVG_UL", "OPTRE_NVG_HUL", "OPTRE_NVG_HUL3", "OPTRE_NVG_HUL3_Gray", "OPTRE_NVG_HURS",
                        "OPTRE_NVG_HUL_UAB_HURS", "OPTRE_NVG_HURS_CNM", "OPTRE_NVG_HURS_HUL", "OPTRE_NVG_UA_CNM", "OPTRE_NVG_UA_HUL", "OPTRE_NVG_UA_HURS", "OPTRE_NVG_UA_HURS_CNM", "OPTRE_NVG_UA_HURS_HUL",
                        "OPTRE_NVG_UAB"]],
+        ["backpack",  []],
         ["optics",    ["none"]],
         ["muzzles",   []],
         ["pointers",  []],
@@ -511,6 +555,7 @@ private _classPools = createHashMapFromArray [
         ["nvg",       ["OPTRE_NVG", "OPTRE_NVG_CNM", "OPTRE_NVG_UL", "OPTRE_NVG_HUL", "OPTRE_NVG_HUL3", "OPTRE_NVG_HUL3_Gray", "OPTRE_NVG_HURS",
                        "OPTRE_NVG_HUL_UAB_HURS", "OPTRE_NVG_HURS_CNM", "OPTRE_NVG_HURS_HUL", "OPTRE_NVG_UA_CNM", "OPTRE_NVG_UA_HUL", "OPTRE_NVG_UA_HURS", "OPTRE_NVG_UA_HURS_CNM", "OPTRE_NVG_UA_HURS_HUL",
                        "OPTRE_NVG_UAB"]],
+        ["backpack",  []],
         ["optics",    ["OPTRE_M73_SmartLink", "none"]],
         ["muzzles",   []],
         ["pointers",  []],
@@ -566,6 +611,17 @@ if (_nvg != "") then {
     private _currentHmd = hmd _unit;
     if (_currentHmd != "") then { _unit unlinkItem _currentHmd; };
     _unit linkItem _nvg;
+};
+
+// =========================================================================
+// Randomize backpack — preserve backpack contents
+// =========================================================================
+private _bp = [(_pool get "backpack")] call _fnc_pick;
+if (_bp != "") then {
+    private _bpItems = backpackItems _unit;
+    removeBackpack _unit;
+    _unit addBackpack _bp;
+    { _unit addItemToBackpack _x; } forEach _bpItems;
 };
 
 // =========================================================================
