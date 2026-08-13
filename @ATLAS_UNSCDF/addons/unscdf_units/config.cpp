@@ -61,6 +61,35 @@ class CfgVehicleClasses
 	class B_ATLAS_UNSCDF_TUR       { displayName = "Turrets"; };
 };
 
+class CfgFunctions
+{
+	class ATLAS
+	{
+		tag = "ATLAS";
+		class Uniforms
+		{
+			class randomizeMarineUniform
+			{
+				file = "\unscdf_units\functions\fn_randomizeMarineUniform.sqf";
+			};
+
+			class randomizeODSTUniform
+			{
+				file = "\unscdf_units\functions\fn_randomizeODSTUniform.sqf";
+			};
+		};
+	};
+};
+
+// Macro defined in config.cpp (as requested)
+#define ATLAS_MARINE_UNIFORM_RAND_EH \
+class EventHandlers { \
+	class CBA_Extended_EventHandlers {}; \
+	class ALiVE_orbatCreator { \
+		init = "if (local (_this select 0)) then {_onSpawn = {_u = _this select 0; sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _u) >> 'backpack'); waituntil {sleep 0.2; backpack _u == _backpack}; if !(_u getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _u) >> 'ALiVE_orbatCreator_loadout'); _u setUnitLoadout _loadout; reload _u;}; [_u] call ATLAS_fnc_randomizeMarineUniform;}; _this spawn _onSpawn; (_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};"; \
+	}; \
+};
+
 class CfgVehicles
 {
 	#include "CfgVehicles_BaseImports.hpp"
@@ -68,6 +97,4 @@ class CfgVehicles
 	#include "CfgVehicles_Vehicles.hpp"
 };
 
-// IMPORTANT: CfgGroups.hpp already defines class CfgGroups, so include it directly.
 #include "CfgGroups.hpp"
-
