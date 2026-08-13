@@ -1,9 +1,3 @@
-/*
-	File: fn_randomizeMarineUniform.sqf
-	Usage:
-		[_unit] call ATLAS_fnc_randomizeMarineUniform;
-*/
-
 params ["_unit"];
 if (isNull _unit) exitWith {};
 if (!local _unit) exitWith {};
@@ -45,6 +39,4 @@ private _uniformItems = uniformItems _unit;
 removeUniform _unit;
 _unit forceAddUniform _newUniform;
 
-{
-	_unit addItemToUniform _x;
-} forEach _uniformItems;
+{ _unit addItemToUniform _x; } forEach _uniformItems;

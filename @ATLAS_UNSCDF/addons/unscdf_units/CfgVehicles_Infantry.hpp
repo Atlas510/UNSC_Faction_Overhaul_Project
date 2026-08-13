@@ -22,11 +22,11 @@
         ALiVE_orbatCreator_loadout[] = {{"CTGCY_BR55_CTGCY","","","CTGCY_BR55_Scope",{"CTGCY_36Rnd_95x40_Mag",36},{},""},{},{"TCP_hgun_Pistol_M6C2","","","TCP_optic_KFA_M6C2",{"TCP_12Rnd_127x30_52_Mag",12},{},"TCP_bipod_handGuard_M6G2_blk"},{"TCP_U_B_CBUU_TacShirt_HalfRoll_Bloused_Kneepads_Olive",{{"TCP_12Rnd_127x30_52_Mag",3,12}}},{"TCP_V_M43A_Light_1_Olive",{{"ACE_CableTie",2},{"ACE_fieldDressing",4},{"ACE_Canteen",1},{"ACE_EarPlugs",1},{"ACE_MapTools",1},{"ACE_Flashlight_XL50",1},{"ACE_tourniquet",1},{"CTGCY_36Rnd_95x40_Mag",7,36},{"Chemlight_blue",2,1},{"TCP_M21_SmokeRed",1,1},{"TCP_M21_Smoke",1,1},{"HandGrenade",1,1}}},{},"TCP_H_PatrolCap_Olive","TCP_G_TacticalGlasses_Gold",{"CTGCY_H120_BINOC","","","",{},{},""},{"ItemMap","","ItemRadio","ItemCompass","ACE_Altimeter",""}};
 
 
-        class EventHandlers {
+      class EventHandlers {
 	class CBA_Extended_EventHandlers {};
 
 	class ALiVE_orbatCreator {
-		init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0;sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack};if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout;reload _this};};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
+		init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0; sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack}; if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout; reload _this}; [_this] call ATLAS_fnc_randomizeMarineUniform; [_this] call ATLAS_fnc_randomizeKit;}; _this spawn _onSpawn; (_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
 	};
 };
 
@@ -63,7 +63,7 @@
 	class CBA_Extended_EventHandlers {};
 
 	class ALiVE_orbatCreator {
-		init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0;sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack};if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout;reload _this};};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
+		init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0; sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack}; if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout; reload _this}; [_this] call ATLAS_fnc_randomizeMarineUniform; [_this] call ATLAS_fnc_randomizeKit;}; _this spawn _onSpawn; (_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
 	};
 };
 
@@ -100,7 +100,7 @@
 	class CBA_Extended_EventHandlers {};
 
 	class ALiVE_orbatCreator {
-		init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0;sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack};if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout;reload _this};};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
+		init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0; sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack}; if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout; reload _this}; [_this] call ATLAS_fnc_randomizeMarineUniform; [_this] call ATLAS_fnc_randomizeKit;}; _this spawn _onSpawn; (_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
 	};
 };
 
@@ -139,7 +139,7 @@
 	class CBA_Extended_EventHandlers {};
 
 	class ALiVE_orbatCreator {
-		init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0;sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack};if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout;reload _this};};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
+		init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0; sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack}; if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout; reload _this}; [_this] call ATLAS_fnc_randomizeMarineUniform; [_this] call ATLAS_fnc_randomizeKit;}; _this spawn _onSpawn; (_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
 	};
 };
 
@@ -174,11 +174,11 @@
         ALiVE_orbatCreator_loadout[] = {{"CTGCY_MA5C_FL_CTGCY","","","OPTRE_MA5_BUIS",{"CTGCY_32Rnd_762x51_Mag",32},{},""},{},{"TCP_hgun_Pistol_M6G2","","","",{"TCP_8Rnd_127x30_52_Mag",8},{},"TCP_bipod_handGuard_M6G2"},{"TCP_U_B_CBUU_FieldTop_Full_Gloves_Kneepads_Woodland",{{"ACE_EarPlugs",1},{"ACE_fieldDressing",1},{"ACE_packingBandage",1},{"ACE_morphine",1},{"ACE_tourniquet",1},{"TCP_8Rnd_127x30_52_Mag",3,8}}},{"TCP_V_M43A_GungnirS_3_Olive",{{"ACE_fieldDressing",4},{"ACE_CableTie",2},{"ACE_Canteen",1},{"ACE_EarPlugs",1},{"ACE_MRE_BeefStew",1},{"ACE_tourniquet",1},{"TCP_M9R_Frag",1,1},{"TCP_M21_Smoke",1,1},{"Chemlight_green",1,1},{"CTGCY_32Rnd_762x51_Mag",8,32},{"Chemlight_red",1,1}}},{"TCP_B_Ammo_Bearer_1_M43_Medium_Rucksack_Olive_M43A",{{"CTGCY_32Rnd_762x51_Mag",15,32},{"HandGrenade",3,1},{"TCP_M21_Smoke",3,1}}},"TCP_H_Helmet_CH43A_Olive","TCP_G_TacticalGlasses_Black_DP",{},{"ItemMap","ItemGPS","TCP_ANPRC55","ItemCompass","TCP_Watch",""}};
 
 
-        class EventHandlers {
+       class EventHandlers {
 	class CBA_Extended_EventHandlers {};
 
 	class ALiVE_orbatCreator {
-		init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0;sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack};if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout;reload _this};};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
+		init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0; sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack}; if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout; reload _this}; [_this] call ATLAS_fnc_randomizeMarineUniform; [_this] call ATLAS_fnc_randomizeKit;}; _this spawn _onSpawn; (_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
 	};
 };
 
@@ -213,11 +213,11 @@
         ALiVE_orbatCreator_loadout[] = {{"CTGCY_M73_CTGCY","","","CTGCY_M73_Sight",{"CTGCY_100Rnd_95x40_Mag",100},{},""},{},{"TCP_hgun_Pistol_M6G2","","","",{"TCP_8Rnd_127x30_52_Mag",8},{},"TCP_bipod_handGuard_M6G2"},{"TCP_U_B_CBUU_FieldTop_Full_Gloves_Kneepads_Woodland",{{"ACE_EarPlugs",1},{"ACE_fieldDressing",1},{"ACE_packingBandage",1},{"ACE_morphine",1},{"ACE_tourniquet",1},{"TCP_8Rnd_127x30_52_Mag",3,8}}},{"TCP_V_M43A_GungnirL_3_Olive",{{"ACE_fieldDressing",4},{"ACE_CableTie",2},{"ACE_Canteen",1},{"ACE_EarPlugs",1},{"ACE_MRE_BeefStew",1},{"ACE_tourniquet",1},{"TCP_M9R_Frag",1,1},{"TCP_M21_Smoke",1,1},{"Chemlight_green",1,1},{"Chemlight_red",1,1},{"CTGCY_100Rnd_95x40_Mag",2,100}}},{"TCP_B_Autorifleman_1_M43_Medium_Rucksack_Olive_M43A",{{"CTGCY_100Rnd_95x40_Mag",6,100}}},"TCP_H_Helmet_CH43A_Olive","TCP_G_TacticalGlasses_Black_DP",{},{"ItemMap","ItemGPS","TCP_ANPRC55","ItemCompass","TCP_Watch",""}};
 
 
-        class EventHandlers {
+       class EventHandlers {
 	class CBA_Extended_EventHandlers {};
 
 	class ALiVE_orbatCreator {
-		init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0;sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack};if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout;reload _this};};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
+		init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0; sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack}; if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout; reload _this}; [_this] call ATLAS_fnc_randomizeMarineUniform; [_this] call ATLAS_fnc_randomizeKit;}; _this spawn _onSpawn; (_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
 	};
 };
 
@@ -256,7 +256,7 @@
 	class CBA_Extended_EventHandlers {};
 
 	class ALiVE_orbatCreator {
-		init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0;sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack};if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout;reload _this};};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
+		init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0; sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack}; if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout; reload _this}; [_this] call ATLAS_fnc_randomizeMarineUniform; [_this] call ATLAS_fnc_randomizeKit;}; _this spawn _onSpawn; (_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
 	};
 };
 
@@ -293,7 +293,7 @@
 	class CBA_Extended_EventHandlers {};
 
 	class ALiVE_orbatCreator {
-		init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0;sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack};if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout;reload _this};};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
+		init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0; sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack}; if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout; reload _this}; [_this] call ATLAS_fnc_randomizeMarineUniform; [_this] call ATLAS_fnc_randomizeKit;}; _this spawn _onSpawn; (_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
 	};
 };
 
@@ -326,11 +326,11 @@
         ALiVE_orbatCreator_loadout[] = {{"CTGCY_MA5C_FL_CTGCY","","","OPTRE_MA5_BUIS",{"CTGCY_32Rnd_762x51_Mag",32},{},""},{},{"TCP_hgun_Pistol_M6G2","","","",{"TCP_8Rnd_127x30_52_Mag",8},{},"TCP_bipod_handGuard_M6G2"},{"TCP_U_B_CBUU_FieldTop_Full_Gloves_Kneepads_Woodland",{{"ACE_EarPlugs",1},{"ACE_fieldDressing",1},{"ACE_packingBandage",1},{"ACE_morphine",1},{"ACE_tourniquet",1},{"TCP_8Rnd_127x30_52_Mag",3,8}}},{"TCP_V_M43A_GungnirS_3_Olive",{{"ACE_fieldDressing",4},{"ACE_CableTie",2},{"ACE_Canteen",1},{"ACE_EarPlugs",1},{"ACE_MRE_BeefStew",1},{"ACE_tourniquet",1},{"TCP_M9R_Frag",1,1},{"TCP_M21_Smoke",1,1},{"Chemlight_green",1,1},{"CTGCY_32Rnd_762x51_Mag",8,32},{"Chemlight_red",1,1}}},{},"TCP_H_Helmet_CH43A_Olive","TCP_G_TacticalGlasses_Black_DP",{},{"ItemMap","ItemGPS","TCP_ANPRC55","ItemCompass","TCP_Watch",""}};
 
 
-        class EventHandlers {
+       class EventHandlers {
 	class CBA_Extended_EventHandlers {};
 
 	class ALiVE_orbatCreator {
-		init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0;sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack};if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout;reload _this};};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
+		init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0; sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack}; if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout; reload _this}; [_this] call ATLAS_fnc_randomizeMarineUniform; [_this] call ATLAS_fnc_randomizeKit;}; _this spawn _onSpawn; (_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
 	};
 };
 
@@ -365,11 +365,11 @@
         ALiVE_orbatCreator_loadout[] = {{"CTGCY_MA5C_FL_CTGCY","","","OPTRE_MA5_BUIS",{"CTGCY_32Rnd_762x51_Mag",32},{},""},{},{"TCP_hgun_Pistol_M6G2","","","",{"TCP_8Rnd_127x30_52_Mag",8},{},"TCP_bipod_handGuard_M6G2"},{"TCP_U_B_CBUU_FieldTop_Full_Gloves_Kneepads_Woodland",{{"ACE_EarPlugs",1},{"ACE_fieldDressing",1},{"ACE_packingBandage",1},{"ACE_morphine",1},{"ACE_tourniquet",1},{"TCP_8Rnd_127x30_52_Mag",3,8}}},{"TCP_V_M43A_GungnirL_3_2_Olive",{{"ACE_fieldDressing",4},{"ACE_CableTie",2},{"ACE_Canteen",1},{"ACE_EarPlugs",1},{"ACE_MRE_BeefStew",1},{"ACE_tourniquet",1},{"TCP_M9R_Frag",1,1},{"TCP_M21_Smoke",1,1},{"Chemlight_green",1,1},{"CTGCY_32Rnd_762x51_Mag",8,32},{"Chemlight_red",1,1}}},{"TCP_B_Engineer_1_M43_Medium_Rucksack_Olive_M43A",{{"ACE_Clacker",1},{"MineDetector",1},{"ACE_DefusalKit",1},{"M168_Remote_Mag",1,1},{"C12_Remote_Mag",2,1}}},"TCP_H_Helmet_CH43A_Olive","TCP_G_TacticalGlasses_Black_DP",{},{"ItemMap","ItemGPS","TCP_ANPRC55","ItemCompass","TCP_Watch",""}};
 
 
-        class EventHandlers {
+       class EventHandlers {
 	class CBA_Extended_EventHandlers {};
 
 	class ALiVE_orbatCreator {
-		init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0;sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack};if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout;reload _this};};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
+		init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0; sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack}; if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout; reload _this}; [_this] call ATLAS_fnc_randomizeMarineUniform; [_this] call ATLAS_fnc_randomizeKit;}; _this spawn _onSpawn; (_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
 	};
 };
 
@@ -404,11 +404,11 @@
         ALiVE_orbatCreator_loadout[] = {{"CTGCY_MA5C_GL_CTGCY","","","OPTRE_MA5_BUIS",{"CTGCY_32Rnd_762x51_Mag",32},{"1Rnd_HE_Grenade_shell",1},""},{},{"TCP_hgun_Pistol_M6G2","","","",{"TCP_8Rnd_127x30_52_Mag",8},{},"TCP_bipod_handGuard_M6G2"},{"TCP_U_B_CBUU_FieldTop_Full_Gloves_Kneepads_Woodland",{{"ACE_EarPlugs",1},{"ACE_fieldDressing",1},{"ACE_packingBandage",1},{"ACE_morphine",1},{"ACE_tourniquet",1},{"TCP_8Rnd_127x30_52_Mag",3,8},{"CTGCY_32Rnd_762x51_Mag",1,32},{"1Rnd_HE_Grenade_shell",1,1}}},{"TCP_V_M43A_GungnirS_3_Olive",{{"ACE_fieldDressing",4},{"ACE_CableTie",2},{"ACE_Canteen",1},{"ACE_EarPlugs",1},{"ACE_MRE_BeefStew",1},{"ACE_tourniquet",1},{"TCP_M9R_Frag",1,1},{"TCP_M21_Smoke",1,1},{"Chemlight_green",1,1},{"Chemlight_red",1,1},{"CTGCY_32Rnd_762x51_Mag",2,32}}},{"TCP_B_Grenadier_2_M43_Medium_Rucksack_Olive_M43A",{{"1Rnd_HE_Grenade_shell",8,1},{"OPTRE_1Rnd_Smoke_Grenade_shell",4,1},{"ACE_40mm_Flare_white",4,1},{"TCP_M9R_Frag",2,1},{"TCP_M21_Smoke",2,1}}},"TCP_H_Helmet_CH43A_Olive","TCP_G_TacticalGlasses_Black_DP",{},{"ItemMap","ItemGPS","TCP_ANPRC55","ItemCompass","TCP_Watch",""}};
 
 
-        class EventHandlers {
+      class EventHandlers {
 	class CBA_Extended_EventHandlers {};
 
 	class ALiVE_orbatCreator {
-		init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0;sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack};if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout;reload _this};};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
+		init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0; sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack}; if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout; reload _this}; [_this] call ATLAS_fnc_randomizeMarineUniform; [_this] call ATLAS_fnc_randomizeKit;}; _this spawn _onSpawn; (_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
 	};
 };
 
@@ -441,11 +441,11 @@
         ALiVE_orbatCreator_loadout[] = {{"CTGCY_M395_CTGCY","","","CTGCY_EVOSD_Scope_ACE",{"CTGCY_15Rnd_M762x51_Mag",15},{},""},{},{"TCP_hgun_Pistol_M6G2","","","",{"TCP_8Rnd_127x30_52_Mag",8},{},"TCP_bipod_handGuard_M6G2"},{"TCP_U_B_CBUU_FieldTop_Full_Gloves_Kneepads_Woodland",{{"ACE_EarPlugs",1},{"ACE_fieldDressing",1},{"ACE_packingBandage",1},{"ACE_morphine",1},{"ACE_tourniquet",1},{"TCP_8Rnd_127x30_52_Mag",3,8}}},{"TCP_V_M43A_Pads_3_Olive",{{"ACE_fieldDressing",4},{"ACE_CableTie",2},{"ACE_Canteen",1},{"ACE_EarPlugs",1},{"ACE_MRE_BeefStew",1},{"ACE_tourniquet",1},{"TCP_M21_Smoke",1,1},{"Chemlight_green",1,1},{"Chemlight_red",1,1},{"CTGCY_15Rnd_M762x51_Mag",9,15},{"TCP_M9R_Frag",1,1}}},{},"TCP_H_Helmet_CH43A_Olive","TCP_G_TacticalGlasses_Black_DP",{},{"ItemMap","ItemGPS","TCP_ANPRC55","ItemCompass","TCP_Watch",""}};
 
 
-        class EventHandlers {
+       class EventHandlers {
 	class CBA_Extended_EventHandlers {};
 
 	class ALiVE_orbatCreator {
-		init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0;sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack};if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout;reload _this};};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
+		init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0; sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack}; if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout; reload _this}; [_this] call ATLAS_fnc_randomizeMarineUniform; [_this] call ATLAS_fnc_randomizeKit;}; _this spawn _onSpawn; (_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
 	};
 };
 
@@ -480,11 +480,11 @@
         ALiVE_orbatCreator_loadout[] = {{"CTGCY_MA5C_FL_CTGCY","","","OPTRE_MA5_BUIS",{"CTGCY_32Rnd_762x51_Mag",32},{},""},{"CTGCY_M41_CTGCY","","","",{"CTGCY_M19_2Rnd_HEAT",2},{},""},{"TCP_hgun_Pistol_M6G2","","","",{"TCP_8Rnd_127x30_52_Mag",8},{},"TCP_bipod_handGuard_M6G2"},{"TCP_U_B_CBUU_FieldTop_Full_Gloves_Kneepads_Woodland",{{"ACE_EarPlugs",1},{"ACE_fieldDressing",1},{"ACE_packingBandage",1},{"ACE_morphine",1},{"ACE_tourniquet",1},{"TCP_8Rnd_127x30_52_Mag",3,8}}},{"TCP_V_M43A_GungnirS_3_Olive",{{"ACE_fieldDressing",4},{"ACE_CableTie",2},{"ACE_Canteen",1},{"ACE_EarPlugs",1},{"ACE_MRE_BeefStew",1},{"ACE_tourniquet",1},{"TCP_M9R_Frag",1,1},{"TCP_M21_Smoke",1,1},{"Chemlight_green",1,1},{"CTGCY_32Rnd_762x51_Mag",8,32},{"Chemlight_red",1,1}}},{"TCP_B_Rifleman_5_M43_Medium_Rucksack_Olive_M43A",{{"CTGCY_M19_2Rnd_GHEATAA",3,2}}},"TCP_H_Helmet_CH43A_Olive","TCP_G_TacticalGlasses_Black_DP",{},{"ItemMap","ItemGPS","TCP_ANPRC55","ItemCompass","TCP_Watch",""}};
 
 
-        class EventHandlers {
+       class EventHandlers {
 	class CBA_Extended_EventHandlers {};
 
 	class ALiVE_orbatCreator {
-		init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0;sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack};if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout;reload _this};};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
+		init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0; sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack}; if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout; reload _this}; [_this] call ATLAS_fnc_randomizeMarineUniform; [_this] call ATLAS_fnc_randomizeKit;}; _this spawn _onSpawn; (_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
 	};
 };
 
@@ -523,7 +523,7 @@
 	class CBA_Extended_EventHandlers {};
 
 	class ALiVE_orbatCreator {
-		init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0;sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack};if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout;reload _this};};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
+		init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0; sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack}; if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout; reload _this}; [_this] call ATLAS_fnc_randomizeMarineUniform; [_this] call ATLAS_fnc_randomizeKit;}; _this spawn _onSpawn; (_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
 	};
 };
 
@@ -562,7 +562,7 @@
 	class CBA_Extended_EventHandlers {};
 
 	class ALiVE_orbatCreator {
-		init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0;sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack};if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout;reload _this};};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
+		init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0; sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack}; if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout; reload _this}; [_this] call ATLAS_fnc_randomizeMarineUniform; [_this] call ATLAS_fnc_randomizeKit;}; _this spawn _onSpawn; (_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
 	};
 };
 
@@ -601,7 +601,7 @@
 	class CBA_Extended_EventHandlers {};
 
 	class ALiVE_orbatCreator {
-		init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0;sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack};if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout;reload _this};};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
+		init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0; sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack}; if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout; reload _this}; [_this] call ATLAS_fnc_randomizeMarineUniform; [_this] call ATLAS_fnc_randomizeKit;}; _this spawn _onSpawn; (_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
 	};
 };
 
@@ -634,11 +634,11 @@
         ALiVE_orbatCreator_loadout[] = {{"TCP_U_B_CBUU_FieldTop_Full_Gloves_Kneepads_Woodland",{{"ACE_EarPlugs",1},{"ACE_fieldDressing",1},{"ACE_packingBandage",1},{"ACE_morphine",1},{"ACE_tourniquet",1},{"TCP_8Rnd_127x30_52_Mag",3,8}}},{"TCP_V_M43A_GungnirS_3_Olive",{{"ACE_fieldDressing",4},{"ACE_CableTie",2},{"ACE_Canteen",1},{"ACE_EarPlugs",1},{"ACE_MRE_BeefStew",1},{"ACE_tourniquet",1},{"TCP_M9R_Frag",1,1},{"TCP_M21_Smoke",1,1},{"Chemlight_green",1,1},{"CTGCY_32Rnd_762x51_Mag",8,32},{"Chemlight_red",1,1}}},{},"TCP_H_Helmet_CH43A_Olive","TCP_G_TacticalGlasses_Black_DP",{},{"ItemMap","ItemGPS","TCP_ANPRC55","ItemCompass","TCP_Watch",""}};
 
 
-        class EventHandlers {
+       class EventHandlers {
 	class CBA_Extended_EventHandlers {};
 
 	class ALiVE_orbatCreator {
-		init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0;sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack};if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout;reload _this};};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
+		init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0; sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack}; if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout; reload _this}; [_this] call ATLAS_fnc_randomizeMarineUniform; [_this] call ATLAS_fnc_randomizeKit;}; _this spawn _onSpawn; (_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
 	};
 };
 
@@ -671,11 +671,11 @@
         ALiVE_orbatCreator_loadout[] = {{"CTGCY_MA5C_FL_CTGCY","","","OPTRE_MA5_BUIS",{"CTGCY_32Rnd_762x51_Mag",32},{},""},{},{},{"TCP_U_B_CBUU_FieldTop_Full_Gloves_Kneepads_Woodland",{{"ACE_EarPlugs",1},{"ACE_fieldDressing",1},{"ACE_packingBandage",1},{"ACE_morphine",1},{"ACE_tourniquet",1}}},{"TCP_V_M43A_Light_Olive",{{"ACE_fieldDressing",4},{"ACE_CableTie",2},{"ACE_Canteen",1},{"ACE_EarPlugs",1},{"ACE_MRE_BeefStew",1},{"ACE_tourniquet",1},{"TCP_M9R_Frag",1,1},{"TCP_M21_Smoke",1,1},{"Chemlight_green",1,1},{"CTGCY_32Rnd_762x51_Mag",8,32},{"Chemlight_red",1,1}}},{},"TCP_H_UtilityCover_Olive","TCP_G_TacticalGlasses_Black_DP",{},{"ItemMap","ItemGPS","TCP_ANPRC55","ItemCompass","TCP_Watch",""}};
 
 
-     class EventHandlers {
+        class EventHandlers {
 	class CBA_Extended_EventHandlers {};
 
 	class ALiVE_orbatCreator {
-		init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0;sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack};if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout;reload _this};};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
+		init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0; sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack}; if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout; reload _this}; [_this] call ATLAS_fnc_randomizeMarineUniform; [_this] call ATLAS_fnc_randomizeKit;}; _this spawn _onSpawn; (_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
 	};
 };
 
@@ -715,7 +715,7 @@
 	class CBA_Extended_EventHandlers {};
 
 	class ALiVE_orbatCreator {
-		init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0;sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack};if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout;reload _this};};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
+		init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0; sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack}; if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout; reload _this}; [_this] call ATLAS_fnc_randomizeMarineUniform; [_this] call ATLAS_fnc_randomizeKit;}; _this spawn _onSpawn; (_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
 	};
 };
 
@@ -754,7 +754,7 @@
 	class CBA_Extended_EventHandlers {};
 
 	class ALiVE_orbatCreator {
-		init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0;sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack};if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout;reload _this};};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
+		init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0; sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack}; if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout; reload _this}; [_this] call ATLAS_fnc_randomizeMarineUniform; [_this] call ATLAS_fnc_randomizeKit;}; _this spawn _onSpawn; (_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
 	};
 };
 
@@ -791,7 +791,7 @@
 	class CBA_Extended_EventHandlers {};
 
 	class ALiVE_orbatCreator {
-		init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0;sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack};if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout;reload _this};};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
+		init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0; sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack}; if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout; reload _this}; [_this] call ATLAS_fnc_randomizeMarineUniform; [_this] call ATLAS_fnc_randomizeKit;}; _this spawn _onSpawn; (_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
 	};
 };
 
@@ -826,11 +826,11 @@
         ALiVE_orbatCreator_loadout[] = {{"CTGCY_VK78_CTGCY","","","CTGCY_VK78_Sight",{"CTGCY_20Rnd_65x48_Mag",20},{},""},{},{"TCP_hgun_Pistol_M6G2","","","",{"TCP_8Rnd_127x30_52_Mag",8},{},"TCP_bipod_handGuard_M6G2"},{"TCP_U_B_CBUU_FieldTop_Full_Gloves_Kneepads_Woodland",{{"ACE_EarPlugs",1},{"ACE_fieldDressing",1},{"ACE_packingBandage",1},{"ACE_morphine",1},{"ACE_tourniquet",1},{"TCP_8Rnd_127x30_52_Mag",3,8},{"CTGCY_20Rnd_65x48_Mag",1,20}}},{"TCP_V_M43A_Light_3_Olive",{{"ACE_fieldDressing",4},{"ACE_CableTie",2},{"ACE_Canteen",1},{"ACE_EarPlugs",1},{"ACE_MRE_BeefStew",1},{"ACE_tourniquet",1},{"TCP_M9R_Frag",1,1},{"TCP_M21_Smoke",1,1},{"Chemlight_green",1,1},{"Chemlight_red",1,1},{"CTGCY_20Rnd_65x48_Mag",2,20}}},{"TCP_B_M2_Buttpack_Olive",{{"ACE_SpottingScope",1},{"ACE_RangeCard",1}}},"TCP_H_PatrolCap_Olive","TCP_G_TacticalGlasses_Black_DP",{"CTGCY_H155_LD","","","",{"Laserbatteries",1},{},""},{"ItemMap","ItemGPS","TCP_ANPRC55","ItemCompass","TCP_Watch",""}};
 
 
-        class EventHandlers {
+       class EventHandlers {
 	class CBA_Extended_EventHandlers {};
 
 	class ALiVE_orbatCreator {
-		init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0;sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack};if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout;reload _this};};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
+		init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0; sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack}; if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout; reload _this}; [_this] call ATLAS_fnc_randomizeMarineUniform; [_this] call ATLAS_fnc_randomizeKit;}; _this spawn _onSpawn; (_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
 	};
 };
 
@@ -869,7 +869,7 @@
 	class CBA_Extended_EventHandlers {};
 
 	class ALiVE_orbatCreator {
-		init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0;sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack};if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout;reload _this};};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
+		init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0;sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack};if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout;reload _this}; [_this] call ATLAS_fnc_randomizeMarineUniform; [_this] call ATLAS_fnc_randomizeKit;};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
 	};
 };
 
@@ -909,7 +909,7 @@
 	class CBA_Extended_EventHandlers {};
 
 	class ALiVE_orbatCreator {
-		init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0;sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack};if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout;reload _this};};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
+		init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0;sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack};if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout;reload _this}; [_this] call ATLAS_fnc_randomizeMarineUniform; [_this] call ATLAS_fnc_randomizeKit;};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
 	};
 };
 
@@ -949,7 +949,7 @@
 	class CBA_Extended_EventHandlers {};
 
 	class ALiVE_orbatCreator {
-		init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0;sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack};if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout;reload _this};};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
+		init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0; sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack}; if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout; reload _this}; [_this] call ATLAS_fnc_randomizeMarineUniform; [_this] call ATLAS_fnc_randomizeKit;}; _this spawn _onSpawn; (_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
 	};
 };
 
@@ -988,7 +988,7 @@
 	class CBA_Extended_EventHandlers {};
 
 	class ALiVE_orbatCreator {
-		init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0;sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack};if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout;reload _this};};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
+		init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0; sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack}; if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout; reload _this}; [_this] call ATLAS_fnc_randomizeMarineUniform; [_this] call ATLAS_fnc_randomizeKit;}; _this spawn _onSpawn; (_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
 	};
 };
 
@@ -1040,7 +1040,7 @@ class B_UNSCDF_ODST_Rifleman : TCP_B_UNSC_MC_ODST_Soldier {
 		class CBA_Extended_EventHandlers {};
 
 		class ALiVE_orbatCreator {
-			init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0;sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack};if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout;reload _this};};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
+			init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0; sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack}; if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout; reload _this}; [_this] call ATLAS_fnc_randomizeODSTUniform; [_this] call ATLAS_fnc_randomizeKit;}; _this spawn _onSpawn; (_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
 		};
 	};
 
@@ -1089,7 +1089,7 @@ class B_UNSCDF_ODST_Team_Leader : TCP_B_UNSC_MC_ODST_Soldier {
 		class CBA_Extended_EventHandlers {};
 
 		class ALiVE_orbatCreator {
-			init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0;sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack};if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout;reload _this};};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
+			init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0; sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack}; if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout; reload _this}; [_this] call ATLAS_fnc_randomizeODSTUniform; [_this] call ATLAS_fnc_randomizeKit;}; _this spawn _onSpawn; (_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
 		};
 	};
 
@@ -1138,7 +1138,7 @@ class B_UNSCDF_ODST_Scout : TCP_B_UNSC_MC_ODST_Soldier {
 		class CBA_Extended_EventHandlers {};
 
 		class ALiVE_orbatCreator {
-			init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0;sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack};if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout;reload _this};};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
+			init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0; sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack}; if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout; reload _this}; [_this] call ATLAS_fnc_randomizeODSTUniform; [_this] call ATLAS_fnc_randomizeKit;}; _this spawn _onSpawn; (_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
 		};
 	};
 
@@ -1190,7 +1190,7 @@ class B_UNSCDF_ODST_Corpsman : TCP_B_UNSC_MC_ODST_Soldier {
 		class CBA_Extended_EventHandlers {};
 
 		class ALiVE_orbatCreator {
-			init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0;sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack};if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout;reload _this};};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
+			init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0; sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack}; if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout; reload _this}; [_this] call ATLAS_fnc_randomizeODSTUniform; [_this] call ATLAS_fnc_randomizeKit;}; _this spawn _onSpawn; (_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
 		};
 	};
 
@@ -1241,7 +1241,7 @@ class B_UNSCDF_ODST_AT_Specialist : TCP_B_UNSC_MC_ODST_Soldier {
 		class CBA_Extended_EventHandlers {};
 
 		class ALiVE_orbatCreator {
-			init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0;sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack};if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout;reload _this};};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
+			init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0; sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack}; if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout; reload _this}; [_this] call ATLAS_fnc_randomizeODSTUniform; [_this] call ATLAS_fnc_randomizeKit;}; _this spawn _onSpawn; (_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
 		};
 	};
 
@@ -1292,7 +1292,7 @@ class B_UNSCDF_ODST_AA_Specialist : TCP_B_UNSC_MC_ODST_Soldier {
 		class CBA_Extended_EventHandlers {};
 
 		class ALiVE_orbatCreator {
-			init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0;sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack};if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout;reload _this};};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
+			init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0; sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack}; if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout; reload _this}; [_this] call ATLAS_fnc_randomizeODSTUniform; [_this] call ATLAS_fnc_randomizeKit;}; _this spawn _onSpawn; (_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
 		};
 	};
 
@@ -1341,7 +1341,7 @@ class B_UNSCDF_ODST_Marksman : TCP_B_UNSC_MC_ODST_Soldier {
 		class CBA_Extended_EventHandlers {};
 
 		class ALiVE_orbatCreator {
-			init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0;sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack};if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout;reload _this};};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
+			init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0; sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack}; if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout; reload _this}; [_this] call ATLAS_fnc_randomizeODSTUniform; [_this] call ATLAS_fnc_randomizeKit;}; _this spawn _onSpawn; (_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
 		};
 	};
 
@@ -1390,7 +1390,7 @@ class B_UNSCDF_ODST_Sniper : TCP_B_UNSC_MC_ODST_Soldier {
 		class CBA_Extended_EventHandlers {};
 
 		class ALiVE_orbatCreator {
-			init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0;sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack};if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout;reload _this};};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
+			init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0; sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack}; if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout; reload _this}; [_this] call ATLAS_fnc_randomizeODSTUniform; [_this] call ATLAS_fnc_randomizeKit;}; _this spawn _onSpawn; (_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
 		};
 	};
 
@@ -1443,7 +1443,7 @@ class B_UNSCDF_ODST_Breacher : TCP_B_UNSC_MC_ODST_Soldier {
 		class CBA_Extended_EventHandlers {};
 
 		class ALiVE_orbatCreator {
-			init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0;sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack};if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout;reload _this};};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
+			init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0; sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack}; if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout; reload _this}; [_this] call ATLAS_fnc_randomizeODSTUniform; [_this] call ATLAS_fnc_randomizeKit;}; _this spawn _onSpawn; (_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
 		};
 	};
 
@@ -1494,7 +1494,7 @@ class B_UNSCDF_ODST_Autorifleman : TCP_B_UNSC_MC_ODST_Soldier {
 		class CBA_Extended_EventHandlers {};
 
 		class ALiVE_orbatCreator {
-			init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0;sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack};if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout;reload _this};};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
+			init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0; sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack}; if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout; reload _this}; [_this] call ATLAS_fnc_randomizeODSTUniform; [_this] call ATLAS_fnc_randomizeKit;}; _this spawn _onSpawn; (_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
 		};
 	};
 
