@@ -3,12 +3,11 @@
     Author: Atlas
 
     Description:
-        Role-aware equipment randomization for UNSCDF soldiers.
-        Randomizes headgear, vest, NVGs, primary weapon attachments,
-        and a small set of optional inventory items.
-        Separate pools are maintained for ODST and Marine branches.
-        Specialized roles (corpsman, pilot, aircrew, sniper, etc.) are
-        exempt and retain their fixed loadout gear.
+        Per-class equipment randomization for UNSCDF soldiers.
+        Each unit class has its own individually tunable pool of headgear,
+        vest, NVGs, primary weapon attachments, and optional inventory extras.
+        A class with no entry in the pool map (or whose entry is an empty
+        HashMap) receives no randomization and keeps its assigned gear intact.
 
     Usage:
         [_unit] call ATLAS_fnc_randomizeKit;
@@ -16,213 +15,525 @@
     Parameters:
         _unit - The unit to randomize <OBJECT>
 
-    How to extend:
-        - Add classnames to the pool arrays below (headgear, vest, nvg,
-          optics, muzzles, pointers, bipods, extras).
-        - Add keyword substrings to _exemptTypes or _exemptDisplayNames
-          to exclude additional roles from randomization.
-        - ODST detection uses a classname substring check ("odst"); adjust
-          _isODST if your naming convention changes.
+    How to extend / fine-tune:
+        - Find the entry for the class you want to adjust in _classPools below.
+        - Edit the arrays under any category key:
+              "headgear"  — helmet classnames to pick from
+              "vest"      — vest classnames to pick from
+              "nvg"       — NVG classnames to pick from
+              "optics"    — primary-weapon optic classnames
+              "muzzles"   — primary-weapon suppressor/muzzle classnames
+              "pointers"  — primary-weapon laser/flashlight classnames
+              "bipods"    — primary-weapon bipod classnames
+              "extras"    — inventory items (1-2 added at random, no duplicates)
+        - An empty array [] for any key means that category is skipped.
+        - To make a class fully exempt from randomization, simply omit its
+          classname from _classPools entirely (or set all its arrays to []).
+        - To add a new unit class, copy an existing block and change the key to
+          the exact classname (case-sensitive).
 */
 
 params ["_unit"];
 if (isNull _unit) exitWith {};
 if (!local _unit) exitWith {};
 
-// -------------------------------------------------------------------------
-// Exemption check
-// Units whose class name OR display name contains any of these substrings
-// will skip all randomization and keep their assigned gear.
-// Add new role keywords here to protect additional specialist classes.
-// -------------------------------------------------------------------------
-private _exemptTypes = [
-    "corpsman",
-    "medic",
-    "pilot",
-    "aircrew",
-    "helicrew",
-    "sniper",
-    "recon"
-];
+// =========================================================================
+// Per-class pool definitions
+// Key   = exact unit classname (case-sensitive, must match typeOf _unit)
+// Value = HashMap of category → array of classnames
+//
+// Classes not listed here are untouched (fully exempt by omission).
+// =========================================================================
+private _classPools = createHashMapFromArray [
 
-private _unitType = toLowerANSI (typeOf _unit);
-private _unitDisplay = toLowerANSI (getText (configFile >> "CfgVehicles" >> (typeOf _unit) >> "displayName"));
+    // -----------------------------------------------------------------
+    // MARINES
+    // -----------------------------------------------------------------
 
-private _isExempt = false;
-{
-    if ((_unitType find _x) >= 0 || (_unitDisplay find _x) >= 0) exitWith { _isExempt = true; };
-} forEach _exemptTypes;
+    ["B_UNSCDF_Officer", createHashMapFromArray [
+        ["headgear",  ["TCP_H_PatrolCap_Olive","TCP_H_PatrolCap_Green"]],
+        ["vest",      ["TCP_V_M43A_Light_1_Olive","TCP_V_M43A_Light_2_Olive"]],
+        ["nvg",       []],
+        ["optics",    ["CTGCY_BR55_Scope","optic_Holosight"]],
+        ["muzzles",   []],
+        ["pointers",  ["acc_pointer_IR"]],
+        ["bipods",    []],
+        ["extras",    ["ACE_MapTools","ACE_Altimeter","ACE_EarPlugs"]]
+    ]],
 
-if (_isExempt) exitWith {};
+    ["B_UNSCDF_Rifleman", createHashMapFromArray [
+        ["headgear",  ["TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Green","TCP_H_Helmet_CH43A_Tan"]],
+        ["vest",      ["TCP_V_M43A_GungnirS_3_Olive","TCP_V_M43A_GungnirS_2_Olive","TCP_V_M43A_BaseSec_2_Olive"]],
+        ["nvg",       ["OPTRE_NVG","NVGoggles"]],
+        ["optics",    ["OPTRE_MA5_BUIS","optic_Aco","optic_Hamr"]],
+        ["muzzles",   ["muzzle_snds_M"]],
+        ["pointers",  ["acc_pointer_IR","acc_flashlight"]],
+        ["bipods",    []],
+        ["extras",    ["ACE_Canteen","ACE_MapTools","ACE_EarPlugs","ACE_Flashlight_XL50"]]
+    ]],
 
-// -------------------------------------------------------------------------
-// Branch detection — ODST vs Marine
-// Detection uses the unit's classname. Adjust the substring if needed.
-// -------------------------------------------------------------------------
-private _isODST = (_unitType find "odst") >= 0;
+    ["B_UNSCDF_Squad_Leader", createHashMapFromArray [
+        ["headgear",  ["TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Green","TCP_H_Helmet_CH43A_Tan"]],
+        ["vest",      ["TCP_V_M43A_GungnirS_3_Olive","TCP_V_M43A_GungnirS_2_Olive"]],
+        ["nvg",       ["OPTRE_NVG","NVGoggles"]],
+        ["optics",    ["CTGCY_BR55_Scope","optic_Holosight","optic_ERCO_blk_F"]],
+        ["muzzles",   ["muzzle_snds_M"]],
+        ["pointers",  ["acc_pointer_IR","acc_flashlight"]],
+        ["bipods",    []],
+        ["extras",    ["ACE_Canteen","ACE_MapTools","ACE_EarPlugs","ACE_Chemlight_Orange"]]
+    ]],
 
-// -------------------------------------------------------------------------
-// Equipment pools — edit classnames here to tailor available gear.
-// An empty sub-array ("[]") means that category is skipped for that branch.
-// -------------------------------------------------------------------------
+    ["B_UNSCDF_Team_Leader", createHashMapFromArray [
+        ["headgear",  ["TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Green","TCP_H_Helmet_CH43A_Tan"]],
+        ["vest",      ["TCP_V_M43A_GungnirS_3_Olive","TCP_V_M43A_GungnirS_2_Olive"]],
+        ["nvg",       ["OPTRE_NVG","NVGoggles"]],
+        ["optics",    ["CTGCY_BR55_Scope","optic_Holosight","optic_ERCO_blk_F"]],
+        ["muzzles",   ["muzzle_snds_M"]],
+        ["pointers",  ["acc_pointer_IR","acc_flashlight"]],
+        ["bipods",    []],
+        ["extras",    ["ACE_Canteen","ACE_MapTools","ACE_EarPlugs"]]
+    ]],
 
-// --- ODST pools ---
-private _poolsODST = createHashMapFromArray [
-    // Headgear variants; add/remove helmet classnames as desired
-    ["headgear", [
-        "TCP_H_Helmet_ECH55D_Black_Silver",
-        "TCP_H_Helmet_ECH55D_Black_Gold",
-        "TCP_H_Helmet_ECH55D_Black_Black"
+    ["B_UNSCDF_Ammo_Bearer", createHashMapFromArray [
+        ["headgear",  ["TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Green","TCP_H_Helmet_CH43A_Tan"]],
+        ["vest",      ["TCP_V_M43A_GungnirS_3_Olive","TCP_V_M43A_BaseSec_2_Olive"]],
+        ["nvg",       ["OPTRE_NVG","NVGoggles"]],
+        ["optics",    ["OPTRE_MA5_BUIS","optic_Aco"]],
+        ["muzzles",   []],
+        ["pointers",  ["acc_pointer_IR","acc_flashlight"]],
+        ["bipods",    []],
+        ["extras",    ["ACE_Canteen","ACE_EarPlugs","ACE_CableTie"]]
     ]],
-    // Vest variants
-    ["vest", [
-        "TCP_V_M43D_ODST_3_1_Black",
-        "TCP_V_M43D_ODST_3_2_Black",
-        "TCP_V_M43D_ODST_3_3_Black"
+
+    ["B_UNSCDF_Autorifleman_01", createHashMapFromArray [
+        ["headgear",  ["TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Green","TCP_H_Helmet_CH43A_Tan"]],
+        ["vest",      ["TCP_V_M43A_GungnirS_3_Olive","TCP_V_M43A_BaseSec_2_Olive"]],
+        ["nvg",       ["OPTRE_NVG"]],
+        ["optics",    ["optic_Aco","optic_Hamr"]],
+        ["muzzles",   []],
+        ["pointers",  ["acc_pointer_IR"]],
+        ["bipods",    []],
+        ["extras",    ["ACE_Canteen","ACE_EarPlugs"]]
     ]],
-    // NVG options
-    ["nvg", [
-        "OPTRE_NVG_Gen3",
-        "OPTRE_NVG"
+
+    // Corpsman — all arrays empty: no randomization applied
+    ["B_UNSCDF_Corpsman", createHashMapFromArray [
+        ["headgear",  []],
+        ["vest",      []],
+        ["nvg",       []],
+        ["optics",    []],
+        ["muzzles",   []],
+        ["pointers",  []],
+        ["bipods",    []],
+        ["extras",    []]
     ]],
-    // Primary weapon optics
-    ["optics", [
-        "CTGCY_BR55_Scope",
-        "optic_Holosight",
-        "optic_ERCO_blk_F"
+
+    // Crewman — all arrays empty
+    ["B_UNSCDF_Crewman", createHashMapFromArray [
+        ["headgear",  []],
+        ["vest",      []],
+        ["nvg",       []],
+        ["optics",    []],
+        ["muzzles",   []],
+        ["pointers",  []],
+        ["bipods",    []],
+        ["extras",    []]
     ]],
-    // Suppressors/muzzle devices
-    ["muzzles", [
-        "muzzle_snds_H"
+
+    ["B_UNSCDF_Engineer", createHashMapFromArray [
+        ["headgear",  ["TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Green","TCP_H_Helmet_CH43A_Tan"]],
+        ["vest",      ["TCP_V_M43A_GungnirS_3_Olive","TCP_V_M43A_BaseSec_2_Olive"]],
+        ["nvg",       ["OPTRE_NVG","NVGoggles"]],
+        ["optics",    ["OPTRE_MA5_BUIS","optic_Aco"]],
+        ["muzzles",   []],
+        ["pointers",  ["acc_pointer_IR","acc_flashlight"]],
+        ["bipods",    []],
+        ["extras",    ["ACE_Canteen","ACE_EarPlugs","ACE_CableTie","ACE_Flashlight_XL50"]]
     ]],
-    // Laser/flashlight pointers
-    ["pointers", [
-        "acc_pointer_IR",
-        "acc_flashlight"
+
+    ["B_UNSCDF_Explosive_Specialist", createHashMapFromArray [
+        ["headgear",  ["TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Green","TCP_H_Helmet_CH43A_Tan"]],
+        ["vest",      ["TCP_V_M43A_GungnirS_3_Olive","TCP_V_M43A_BaseSec_2_Olive"]],
+        ["nvg",       ["OPTRE_NVG","NVGoggles"]],
+        ["optics",    ["OPTRE_MA5_BUIS","optic_Aco"]],
+        ["muzzles",   []],
+        ["pointers",  ["acc_pointer_IR","acc_flashlight"]],
+        ["bipods",    []],
+        ["extras",    ["ACE_Canteen","ACE_EarPlugs","ACE_CableTie"]]
     ]],
-    // Bipods
-    ["bipods", [
-        "TCP_bipod_handGuard_M6G2_blk"
+
+    ["B_UNSCDF_Grenadier", createHashMapFromArray [
+        ["headgear",  ["TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Green","TCP_H_Helmet_CH43A_Tan"]],
+        ["vest",      ["TCP_V_M43A_GungnirS_3_Olive","TCP_V_M43A_GungnirS_2_Olive"]],
+        ["nvg",       ["OPTRE_NVG","NVGoggles"]],
+        ["optics",    ["OPTRE_MA5_BUIS","optic_Aco","optic_Hamr"]],
+        ["muzzles",   ["muzzle_snds_M"]],
+        ["pointers",  ["acc_pointer_IR","acc_flashlight"]],
+        ["bipods",    []],
+        ["extras",    ["ACE_Canteen","ACE_EarPlugs","ACE_MapTools"]]
     ]],
-    // Optional inventory extras (1-2 items added at random)
-    ["extras", [
-        "ACE_CableTie",
-        "ACE_Flashlight_XL50",
-        "ACE_EarPlugs",
-        "ACE_Chemlight_Orange"
+
+    ["B_UNSCDF_Marksman", createHashMapFromArray [
+        ["headgear",  ["TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Green"]],
+        ["vest",      ["TCP_V_M43A_GungnirS_3_Olive","TCP_V_M43A_BaseSec_2_Olive"]],
+        ["nvg",       ["OPTRE_NVG"]],
+        ["optics",    ["optic_ERCO_blk_F","optic_Hamr"]],
+        ["muzzles",   ["muzzle_snds_H"]],
+        ["pointers",  ["acc_pointer_IR"]],
+        ["bipods",    []],
+        ["extras",    ["ACE_EarPlugs","ACE_Flashlight_XL50"]]
+    ]],
+
+    ["B_UNSCDF_Missile_Speacialist_AA", createHashMapFromArray [
+        ["headgear",  ["TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Green","TCP_H_Helmet_CH43A_Tan"]],
+        ["vest",      ["TCP_V_M43A_GungnirS_3_Olive","TCP_V_M43A_BaseSec_2_Olive"]],
+        ["nvg",       ["OPTRE_NVG","NVGoggles"]],
+        ["optics",    ["OPTRE_MA5_BUIS","optic_Aco"]],
+        ["muzzles",   []],
+        ["pointers",  ["acc_pointer_IR"]],
+        ["bipods",    []],
+        ["extras",    ["ACE_Canteen","ACE_EarPlugs"]]
+    ]],
+
+    ["B_UNSCDF_Missile_Specialist_AT", createHashMapFromArray [
+        ["headgear",  ["TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Green","TCP_H_Helmet_CH43A_Tan"]],
+        ["vest",      ["TCP_V_M43A_GungnirS_3_Olive","TCP_V_M43A_BaseSec_2_Olive"]],
+        ["nvg",       ["OPTRE_NVG","NVGoggles"]],
+        ["optics",    ["OPTRE_MA5_BUIS","optic_Aco"]],
+        ["muzzles",   []],
+        ["pointers",  ["acc_pointer_IR"]],
+        ["bipods",    []],
+        ["extras",    ["ACE_Canteen","ACE_EarPlugs"]]
+    ]],
+
+    ["B_UNSCDF_Repair_Specialist", createHashMapFromArray [
+        ["headgear",  ["TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Green","TCP_H_Helmet_CH43A_Tan"]],
+        ["vest",      ["TCP_V_M43A_GungnirS_3_Olive","TCP_V_M43A_BaseSec_2_Olive"]],
+        ["nvg",       ["OPTRE_NVG","NVGoggles"]],
+        ["optics",    ["OPTRE_MA5_BUIS","optic_Aco"]],
+        ["muzzles",   []],
+        ["pointers",  ["acc_pointer_IR","acc_flashlight"]],
+        ["bipods",    []],
+        ["extras",    ["ACE_Canteen","ACE_EarPlugs","ACE_CableTie","ACE_Flashlight_XL50"]]
+    ]],
+
+    ["B_UNSCDF_Rifleman_AT", createHashMapFromArray [
+        ["headgear",  ["TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Green","TCP_H_Helmet_CH43A_Tan"]],
+        ["vest",      ["TCP_V_M43A_GungnirS_3_Olive","TCP_V_M43A_BaseSec_2_Olive"]],
+        ["nvg",       ["OPTRE_NVG","NVGoggles"]],
+        ["optics",    ["OPTRE_MA5_BUIS","optic_Aco"]],
+        ["muzzles",   ["muzzle_snds_M"]],
+        ["pointers",  ["acc_pointer_IR","acc_flashlight"]],
+        ["bipods",    []],
+        ["extras",    ["ACE_Canteen","ACE_EarPlugs"]]
+    ]],
+
+    ["B_UNSCDF_Rifleman_Unarmed", createHashMapFromArray [
+        ["headgear",  ["TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Green","TCP_H_Helmet_CH43A_Tan"]],
+        ["vest",      ["TCP_V_M43A_Light_1_Olive","TCP_V_M43A_Light_2_Olive"]],
+        ["nvg",       []],
+        ["optics",    []],
+        ["muzzles",   []],
+        ["pointers",  []],
+        ["bipods",    []],
+        ["extras",    ["ACE_Canteen","ACE_EarPlugs"]]
+    ]],
+
+    ["B_UNSCDF_Rifleman_Light", createHashMapFromArray [
+        ["headgear",  ["TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Green","TCP_H_Helmet_CH43A_Tan"]],
+        ["vest",      ["TCP_V_M43A_GungnirS_3_Olive","TCP_V_M43A_BaseSec_2_Olive"]],
+        ["nvg",       ["OPTRE_NVG","NVGoggles"]],
+        ["optics",    ["OPTRE_MA5_BUIS","optic_Aco"]],
+        ["muzzles",   ["muzzle_snds_M"]],
+        ["pointers",  ["acc_pointer_IR","acc_flashlight"]],
+        ["bipods",    []],
+        ["extras",    ["ACE_Canteen","ACE_EarPlugs"]]
+    ]],
+
+    // UAV Operators — headgear/vest only, no weapon attachments
+    ["B_UNSCDF_UAV_Operator_OQ_38_Wren", createHashMapFromArray [
+        ["headgear",  ["TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Green"]],
+        ["vest",      ["TCP_V_M43A_Light_1_Olive","TCP_V_M43A_Light_2_Olive"]],
+        ["nvg",       []],
+        ["optics",    []],
+        ["muzzles",   []],
+        ["pointers",  []],
+        ["bipods",    []],
+        ["extras",    ["ACE_MapTools","ACE_EarPlugs"]]
+    ]],
+
+    ["B_UNSCDF_UAV_Operator_OQ_40_Minibee", createHashMapFromArray [
+        ["headgear",  ["TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Green"]],
+        ["vest",      ["TCP_V_M43A_Light_1_Olive","TCP_V_M43A_Light_2_Olive"]],
+        ["nvg",       []],
+        ["optics",    []],
+        ["muzzles",   []],
+        ["pointers",  []],
+        ["bipods",    []],
+        ["extras",    ["ACE_MapTools","ACE_EarPlugs"]]
+    ]],
+
+    // Sniper — no randomization (specialized fixed gear)
+    ["B_UNSCDF_Sniper", createHashMapFromArray [
+        ["headgear",  []],
+        ["vest",      []],
+        ["nvg",       []],
+        ["optics",    []],
+        ["muzzles",   []],
+        ["pointers",  []],
+        ["bipods",    []],
+        ["extras",    []]
+    ]],
+
+    ["B_UNSCDF_Forward_Observer", createHashMapFromArray [
+        ["headgear",  ["TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Green","TCP_H_Helmet_CH43A_Tan"]],
+        ["vest",      ["TCP_V_M43A_GungnirS_3_Olive","TCP_V_M43A_GungnirS_2_Olive"]],
+        ["nvg",       ["OPTRE_NVG","NVGoggles"]],
+        ["optics",    ["OPTRE_MA5_BUIS","optic_Aco"]],
+        ["muzzles",   []],
+        ["pointers",  ["acc_pointer_IR"]],
+        ["bipods",    []],
+        ["extras",    ["ACE_MapTools","ACE_EarPlugs","ACE_Altimeter"]]
+    ]],
+
+    // Pilot — no randomization
+    ["B_UNSCDF_Marine_Pilot", createHashMapFromArray [
+        ["headgear",  []],
+        ["vest",      []],
+        ["nvg",       []],
+        ["optics",    []],
+        ["muzzles",   []],
+        ["pointers",  []],
+        ["bipods",    []],
+        ["extras",    []]
+    ]],
+
+    // Aircrewman — no randomization
+    ["B_UNSCDF_Marine_Aircrewman", createHashMapFromArray [
+        ["headgear",  []],
+        ["vest",      []],
+        ["nvg",       []],
+        ["optics",    []],
+        ["muzzles",   []],
+        ["pointers",  []],
+        ["bipods",    []],
+        ["extras",    []]
+    ]],
+
+    ["B_UNSCDF_Heavy_Gunner", createHashMapFromArray [
+        ["headgear",  ["TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Green","TCP_H_Helmet_CH43A_Tan"]],
+        ["vest",      ["TCP_V_M43A_GungnirS_3_Olive","TCP_V_M43A_BaseSec_2_Olive"]],
+        ["nvg",       ["OPTRE_NVG"]],
+        ["optics",    ["optic_Aco","optic_Hamr"]],
+        ["muzzles",   []],
+        ["pointers",  ["acc_pointer_IR"]],
+        ["bipods",    []],
+        ["extras",    ["ACE_Canteen","ACE_EarPlugs"]]
+    ]],
+
+    ["B_UNSCDF_Asst_Heavy_Gunner", createHashMapFromArray [
+        ["headgear",  ["TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Green","TCP_H_Helmet_CH43A_Tan"]],
+        ["vest",      ["TCP_V_M43A_GungnirS_3_Olive","TCP_V_M43A_BaseSec_2_Olive"]],
+        ["nvg",       ["OPTRE_NVG","NVGoggles"]],
+        ["optics",    ["OPTRE_MA5_BUIS","optic_Aco"]],
+        ["muzzles",   []],
+        ["pointers",  ["acc_pointer_IR"]],
+        ["bipods",    []],
+        ["extras",    ["ACE_Canteen","ACE_EarPlugs"]]
+    ]],
+
+    // -----------------------------------------------------------------
+    // ODST
+    // -----------------------------------------------------------------
+
+    ["B_UNSCDF_ODST_Rifleman", createHashMapFromArray [
+        ["headgear",  ["TCP_H_Helmet_ECH55D_Black_Silver","TCP_H_Helmet_ECH55D_Black_Gold","TCP_H_Helmet_ECH55D_Black_Black"]],
+        ["vest",      ["TCP_V_M43D_ODST_3_1_Black","TCP_V_M43D_ODST_3_2_Black","TCP_V_M43D_ODST_3_3_Black"]],
+        ["nvg",       ["OPTRE_NVG_Gen3","OPTRE_NVG"]],
+        ["optics",    ["CTGCY_BR55_Scope","optic_Holosight","optic_ERCO_blk_F"]],
+        ["muzzles",   ["muzzle_snds_H"]],
+        ["pointers",  ["acc_pointer_IR","acc_flashlight"]],
+        ["bipods",    []],
+        ["extras",    ["ACE_CableTie","ACE_Flashlight_XL50","ACE_EarPlugs","ACE_Chemlight_Orange"]]
+    ]],
+
+    ["B_UNSCDF_ODST_Team_Leader", createHashMapFromArray [
+        ["headgear",  ["TCP_H_Helmet_ECH55D_Black_Silver","TCP_H_Helmet_ECH55D_Black_Gold","TCP_H_Helmet_ECH55D_Black_Black"]],
+        ["vest",      ["TCP_V_M43D_ODST_3_1_Black","TCP_V_M43D_ODST_3_2_Black"]],
+        ["nvg",       ["OPTRE_NVG_Gen3","OPTRE_NVG"]],
+        ["optics",    ["CTGCY_BR55_Scope","optic_ERCO_blk_F"]],
+        ["muzzles",   ["muzzle_snds_H"]],
+        ["pointers",  ["acc_pointer_IR","acc_flashlight"]],
+        ["bipods",    []],
+        ["extras",    ["ACE_CableTie","ACE_EarPlugs","ACE_Chemlight_Orange","ACE_MapTools"]]
+    ]],
+
+    ["B_UNSCDF_ODST_Scout", createHashMapFromArray [
+        ["headgear",  ["TCP_H_Helmet_ECH55D_Black_Silver","TCP_H_Helmet_ECH55D_Black_Black"]],
+        ["vest",      ["TCP_V_M43D_ODST_3_1_Black","TCP_V_M43D_ODST_3_2_Black","TCP_V_M43D_ODST_3_3_Black"]],
+        ["nvg",       ["OPTRE_NVG_Gen3","OPTRE_NVG"]],
+        ["optics",    ["optic_ERCO_blk_F","optic_Holosight"]],
+        ["muzzles",   ["muzzle_snds_H"]],
+        ["pointers",  ["acc_pointer_IR"]],
+        ["bipods",    []],
+        ["extras",    ["ACE_CableTie","ACE_EarPlugs","ACE_Flashlight_XL50"]]
+    ]],
+
+    // ODST Corpsman — no randomization (specialized fixed gear)
+    ["B_UNSCDF_ODST_Corpsman", createHashMapFromArray [
+        ["headgear",  []],
+        ["vest",      []],
+        ["nvg",       []],
+        ["optics",    []],
+        ["muzzles",   []],
+        ["pointers",  []],
+        ["bipods",    []],
+        ["extras",    []]
+    ]],
+
+    ["B_UNSCDF_ODST_AT_Specialist", createHashMapFromArray [
+        ["headgear",  ["TCP_H_Helmet_ECH55D_Black_Silver","TCP_H_Helmet_ECH55D_Black_Gold","TCP_H_Helmet_ECH55D_Black_Black"]],
+        ["vest",      ["TCP_V_M43D_ODST_3_1_Black","TCP_V_M43D_ODST_3_2_Black"]],
+        ["nvg",       ["OPTRE_NVG_Gen3","OPTRE_NVG"]],
+        ["optics",    ["CTGCY_BR55_Scope","optic_Holosight"]],
+        ["muzzles",   ["muzzle_snds_H"]],
+        ["pointers",  ["acc_pointer_IR"]],
+        ["bipods",    []],
+        ["extras",    ["ACE_CableTie","ACE_EarPlugs"]]
+    ]],
+
+    ["B_UNSCDF_ODST_AA_Specialist", createHashMapFromArray [
+        ["headgear",  ["TCP_H_Helmet_ECH55D_Black_Silver","TCP_H_Helmet_ECH55D_Black_Gold","TCP_H_Helmet_ECH55D_Black_Black"]],
+        ["vest",      ["TCP_V_M43D_ODST_3_1_Black","TCP_V_M43D_ODST_3_2_Black"]],
+        ["nvg",       ["OPTRE_NVG_Gen3","OPTRE_NVG"]],
+        ["optics",    ["CTGCY_BR55_Scope","optic_Holosight"]],
+        ["muzzles",   ["muzzle_snds_H"]],
+        ["pointers",  ["acc_pointer_IR"]],
+        ["bipods",    []],
+        ["extras",    ["ACE_CableTie","ACE_EarPlugs"]]
+    ]],
+
+    ["B_UNSCDF_ODST_Marksman", createHashMapFromArray [
+        ["headgear",  ["TCP_H_Helmet_ECH55D_Black_Silver","TCP_H_Helmet_ECH55D_Black_Black"]],
+        ["vest",      ["TCP_V_M43D_ODST_3_1_Black","TCP_V_M43D_ODST_3_2_Black"]],
+        ["nvg",       ["OPTRE_NVG_Gen3"]],
+        ["optics",    ["optic_ERCO_blk_F"]],
+        ["muzzles",   ["muzzle_snds_H"]],
+        ["pointers",  ["acc_pointer_IR"]],
+        ["bipods",    []],
+        ["extras",    ["ACE_EarPlugs","ACE_Flashlight_XL50"]]
+    ]],
+
+    // ODST Sniper — no randomization
+    ["B_UNSCDF_ODST_Sniper", createHashMapFromArray [
+        ["headgear",  []],
+        ["vest",      []],
+        ["nvg",       []],
+        ["optics",    []],
+        ["muzzles",   []],
+        ["pointers",  []],
+        ["bipods",    []],
+        ["extras",    []]
+    ]],
+
+    ["B_UNSCDF_ODST_Breacher", createHashMapFromArray [
+        ["headgear",  ["TCP_H_Helmet_ECH55D_Black_Silver","TCP_H_Helmet_ECH55D_Black_Gold","TCP_H_Helmet_ECH55D_Black_Black"]],
+        ["vest",      ["TCP_V_M43D_ODST_3_1_Black","TCP_V_M43D_ODST_3_2_Black","TCP_V_M43D_ODST_3_3_Black"]],
+        ["nvg",       ["OPTRE_NVG_Gen3","OPTRE_NVG"]],
+        ["optics",    ["optic_Holosight","optic_ERCO_blk_F"]],
+        ["muzzles",   ["muzzle_snds_H"]],
+        ["pointers",  ["acc_pointer_IR","acc_flashlight"]],
+        ["bipods",    []],
+        ["extras",    ["ACE_CableTie","ACE_EarPlugs","ACE_Chemlight_Orange"]]
+    ]],
+
+    ["B_UNSCDF_ODST_Autorifleman", createHashMapFromArray [
+        ["headgear",  ["TCP_H_Helmet_ECH55D_Black_Silver","TCP_H_Helmet_ECH55D_Black_Gold","TCP_H_Helmet_ECH55D_Black_Black"]],
+        ["vest",      ["TCP_V_M43D_ODST_3_1_Black","TCP_V_M43D_ODST_3_2_Black"]],
+        ["nvg",       ["OPTRE_NVG_Gen3","OPTRE_NVG"]],
+        ["optics",    ["optic_Holosight","optic_ERCO_blk_F"]],
+        ["muzzles",   []],
+        ["pointers",  ["acc_pointer_IR"]],
+        ["bipods",    []],
+        ["extras",    ["ACE_CableTie","ACE_EarPlugs"]]
     ]]
+
 ];
 
-// --- Marine pools ---
-private _poolsMarine = createHashMapFromArray [
-    // Headgear variants
-    ["headgear", [
-        "TCP_H_Helmet_CH43A_Olive",
-        "TCP_H_Helmet_CH43A_Green",
-        "TCP_H_Helmet_CH43A_Tan"
-    ]],
-    // Vest variants
-    ["vest", [
-        "TCP_V_M43A_GungnirS_3_Olive",
-        "TCP_V_M43A_GungnirS_2_Olive",
-        "TCP_V_M43A_BaseSec_2_Olive"
-    ]],
-    // NVG options
-    ["nvg", [
-        "OPTRE_NVG",
-        "NVGoggles"
-    ]],
-    // Primary weapon optics
-    ["optics", [
-        "OPTRE_MA5_BUIS",
-        "optic_Aco",
-        "optic_Hamr"
-    ]],
-    // Suppressors/muzzle devices
-    ["muzzles", [
-        "muzzle_snds_M"
-    ]],
-    // Laser/flashlight pointers
-    ["pointers", [
-        "acc_pointer_IR",
-        "acc_flashlight"
-    ]],
-    // Bipods — empty array means none assigned for Marines
-    ["bipods", []],
-    // Optional inventory extras
-    ["extras", [
-        "ACE_Canteen",
-        "ACE_MapTools",
-        "ACE_EarPlugs",
-        "ACE_Flashlight_XL50"
-    ]]
-];
+// =========================================================================
+// Lookup this unit's pool — exit cleanly if no entry exists
+// =========================================================================
+private _unitClass = typeOf _unit;
+if !(_unitClass in _classPools) exitWith {};
 
-private _pool = if (_isODST) then {_poolsODST} else {_poolsMarine};
+private _pool = _classPools get _unitClass;
 
-// -------------------------------------------------------------------------
-// Helper: pick a random element from an array; returns "" if empty.
-// -------------------------------------------------------------------------
+// =========================================================================
+// Helper: pick a random element from an array; returns "" if array is empty.
+// =========================================================================
 private _fnc_pick = {
     params ["_arr"];
     if (_arr isEqualTo []) exitWith {""};
     selectRandom _arr
 };
 
-// -------------------------------------------------------------------------
+// =========================================================================
 // Randomize headgear
-// -------------------------------------------------------------------------
-removeHeadgear _unit;
+// =========================================================================
 private _hg = [(_pool get "headgear")] call _fnc_pick;
-if (_hg != "") then { _unit addHeadgear _hg; };
+if (_hg != "") then {
+    removeHeadgear _unit;
+    _unit addHeadgear _hg;
+};
 
-// -------------------------------------------------------------------------
+// =========================================================================
 // Randomize vest — preserve vest contents
-// -------------------------------------------------------------------------
-private _vestItems = vestItems _unit;
-removeVest _unit;
+// =========================================================================
 private _vest = [(_pool get "vest")] call _fnc_pick;
 if (_vest != "") then {
+    private _vestItems = vestItems _unit;
+    removeVest _unit;
     _unit addVest _vest;
     { _unit addItemToVest _x; } forEach _vestItems;
 };
 
-// -------------------------------------------------------------------------
-// Randomize NVG — unlink any existing NVGs before assigning new one
-// -------------------------------------------------------------------------
-{
-    private _nvgClass = _x;
-    if (_unit linkedItems findIf { _x == _nvgClass } >= 0) then { _unit unlinkItem _nvgClass; };
-} forEach ["OPTRE_NVG_Gen3","OPTRE_NVG","NVGoggles","NVGoggles_OPFOR","NVGoggles_INDEP"];
+// =========================================================================
+// Randomize NVG — unlink any existing NVGs first, then assign new one
+// =========================================================================
 private _nvg = [(_pool get "nvg")] call _fnc_pick;
-if (_nvg != "") then { _unit linkItem _nvg; };
+if (_nvg != "") then {
+    {
+        private _nvgClass = _x;
+        if (_unit linkedItems findIf { _x == _nvgClass } >= 0) then { _unit unlinkItem _nvgClass; };
+    } forEach ["OPTRE_NVG_Gen3","OPTRE_NVG","NVGoggles","NVGoggles_OPFOR","NVGoggles_INDEP"];
+    _unit linkItem _nvg;
+};
 
-// -------------------------------------------------------------------------
-// Randomize primary weapon attachments (per-unit, not shared state)
-// Strips all existing attachments then reapplies a random selection.
-// -------------------------------------------------------------------------
+// =========================================================================
+// Randomize primary weapon attachments (per-unit, clean slate each time)
+// =========================================================================
 private _pw = primaryWeapon _unit;
 if (_pw != "") then {
-    // Remove current attachments so the random pick is always applied clean
+    // Strip all current attachments before applying random selections
     { _unit removePrimaryWeaponItem _x; } forEach (primaryWeaponItems _unit);
 
-    // Apply one random item from each attachment slot pool (skips empty pools)
+    // One random item per slot; skipped silently if that slot's array is empty
     {
         private _item = [(_pool get _x)] call _fnc_pick;
         if (_item != "") then { _unit addPrimaryWeaponItem _item; };
     } forEach ["optics","muzzles","pointers","bipods"];
 };
 
-// -------------------------------------------------------------------------
+// =========================================================================
 // Add 1-2 random extras to inventory (no duplicates within one pass)
-// -------------------------------------------------------------------------
+// =========================================================================
 private _extras = +(_pool get "extras");
 if !(_extras isEqualTo []) then {
-    private _count = 1 min (count _extras) max 0;
-    _count = _count + floor random (2 min (count _extras));
+    private _available = count _extras;
+    private _count = (1 + floor random 2) min _available;
     for "_i" from 1 to _count do {
         private _idx = floor random (count _extras);
         _unit addItem (_extras select _idx);
-        _extras deleteAt _idx; // prevent duplicates within this pass
+        _extras deleteAt _idx;
     };
 };
