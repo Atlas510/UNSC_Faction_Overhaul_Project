@@ -3,7 +3,7 @@
     Author: Atlas
 
     Description:
-        Per-class equipment randomization for UNSCDF soldiers.
+        Per-class equipment randomization for UNSCMC soldiers.
         Each unit class has its own individually tunable pool of headgear,
         vest, NVGs, primary weapon attachments, and optional inventory extras.
         A class with no entry in the pool map (or whose entry is an empty
@@ -50,7 +50,7 @@ private _classPools = createHashMapFromArray [
     // MARINES
     // -----------------------------------------------------------------
 
-    ["B_UNSCDF_Officer", createHashMapFromArray [
+    ["B_UNSCMC_Officer", createHashMapFromArray [
         ["headgear",  ["TCP_Patrol_Cap_Olive"]],
         ["vest",      ["TCP_V_M43A_Light_1_Olive","TCP_V_M43A_Light_2_Olive","TCP_V_M43A_Light_3_Olive","TCP_V_M43A_GungnirS_3_Olive" ]],
         ["nvg",       ["OPTRE_NVG"]],
@@ -62,7 +62,7 @@ private _classPools = createHashMapFromArray [
                        "ACE_MRE_CreamTomatoSoup_Item", "ACE_MRE_LambCurry_Item", "ACE_MRE_MeatballsPasta_Item", "ACE_MRE_SteakVegetables_Item " ]]
     ]],
 
-    ["B_UNSCDF_Rifleman", createHashMapFromArray [
+    ["B_UNSCMC_Rifleman", createHashMapFromArray [
         ["headgear",  ["TCP_H_Helmet_CH43A_Olive", "TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_WatchCap_Olive","TCP_H_Helmet_ECH43A_Olive_Silver",
                        "TCP_H_booniehat_Olive","WOLFoT_TcP_UNSC_A_Boonie_Woodland_2"]],
         ["vest",      ["TCP_V_M43A_GungnirS_1_Olive","TCP_V_M43A_GungnirS_2_Olive","TCP_V_M43A_GungnirS_3_Olive"]],
@@ -75,7 +75,7 @@ private _classPools = createHashMapFromArray [
                        "ACE_MRE_CreamTomatoSoup_Item", "ACE_MRE_LambCurry_Item", "ACE_MRE_MeatballsPasta_Item", "ACE_MRE_SteakVegetables_Item "]]
     ]],
 
-    ["B_UNSCDF_Squad_Leader", createHashMapFromArray [
+    ["B_UNSCMC_Squad_Leader", createHashMapFromArray [
         ["headgear",  ["TCP_H_Helmet_CH43A_Olive", "TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_WatchCap_Olive","TCP_H_Helmet_ECH43A_Olive_Silver",
                        "TCP_H_booniehat_Olive","WOLFoT_TcP_UNSC_A_Boonie_Woodland_2"]],
         ["vest",      ["TCP_V_M43A_GungnirS_1_Olive","TCP_V_M43A_GungnirS_2_Olive","TCP_V_M43A_GungnirS_3_Olive"]],
@@ -88,7 +88,7 @@ private _classPools = createHashMapFromArray [
                        "ACE_MRE_CreamTomatoSoup_Item", "ACE_MRE_LambCurry_Item", "ACE_MRE_MeatballsPasta_Item", "ACE_MRE_SteakVegetables_Item "]]
     ]],
 
-    ["B_UNSCDF_Team_Leader", createHashMapFromArray [
+    ["B_UNSCMC_Team_Leader", createHashMapFromArray [
         ["headgear",  ["TCP_H_Helmet_CH43A_Olive", "TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_WatchCap_Olive","TCP_H_Helmet_ECH43A_Olive_Silver",
                        "TCP_H_booniehat_Olive","WOLFoT_TcP_UNSC_A_Boonie_Woodland_2"]],
         ["vest",      ["TCP_V_M43A_GungnirS_1_Olive","TCP_V_M43A_GungnirS_2_Olive","TCP_V_M43A_GungnirS_3_Olive"]],
@@ -101,7 +101,7 @@ private _classPools = createHashMapFromArray [
                        "ACE_MRE_CreamTomatoSoup_Item", "ACE_MRE_LambCurry_Item", "ACE_MRE_MeatballsPasta_Item", "ACE_MRE_SteakVegetables_Item " ]]
     ]],
 
-    ["B_UNSCDF_Ammo_Bearer", createHashMapFromArray [
+    ["B_UNSCMC_Ammo_Bearer", createHashMapFromArray [
         ["headgear",  ["TCP_H_Helmet_CH43A_Olive", "TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_WatchCap_Olive","TCP_H_Helmet_ECH43A_Olive_Silver",
                        "TCP_H_booniehat_Olive","WOLFoT_TcP_UNSC_A_Boonie_Woodland_2"]],
         ["vest",      ["TCP_V_M43A_GungnirS_1_Olive","TCP_V_M43A_GungnirS_2_Olive","TCP_V_M43A_GungnirS_3_Olive"]],
@@ -114,7 +114,7 @@ private _classPools = createHashMapFromArray [
                         "ACE_MRE_CreamTomatoSoup_Item", "ACE_MRE_LambCurry_Item", "ACE_MRE_MeatballsPasta_Item", "ACE_MRE_SteakVegetables_Item "]]
     ]],
 
-    ["B_UNSCDF_Autorifleman_01", createHashMapFromArray [
+    ["B_UNSCMC_Autorifleman_01", createHashMapFromArray [
         ["headgear",  ["TCP_H_Helmet_CH43A_Olive", "TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_WatchCap_Olive","TCP_H_Helmet_ECH43A_Olive_Silver",
                        "TCP_H_booniehat_Olive","WOLFoT_TcP_UNSC_A_Boonie_Woodland_2"]],
         ["vest",      ["TCP_V_M43A_GungnirL_1_Olive","TCP_V_M43A_GungnirL_2_Olive","TCP_V_M43A_GungnirL_3_Olive"]],
@@ -128,7 +128,7 @@ private _classPools = createHashMapFromArray [
     ]],
 
     // Corpsman — all arrays empty: no randomization applied
-    ["B_UNSCDF_Corpsman", createHashMapFromArray [
+    ["B_UNSCMC_Corpsman", createHashMapFromArray [
         ["headgear",  []],
         ["vest",      ["TCP_V_M43A_GungnirS_1_Olive","TCP_V_M43A_GungnirS_2_Olive","TCP_V_M43A_GungnirS_3_Olive"]],
         ["nvg",       ["OPTRE_NVG"]],
@@ -140,7 +140,7 @@ private _classPools = createHashMapFromArray [
     ]],
 
     // Crewman — all arrays empty
-    ["B_UNSCDF_Crewman", createHashMapFromArray [
+    ["B_UNSCMC_Crewman", createHashMapFromArray [
         ["headgear",  []],
         ["vest",      []],
         ["nvg",       []],
@@ -151,7 +151,7 @@ private _classPools = createHashMapFromArray [
         ["extras",    []]
     ]],
 
-    ["B_UNSCDF_Engineer", createHashMapFromArray [
+    ["B_UNSCMC_Engineer", createHashMapFromArray [
         ["headgear",  ["TCP_H_Helmet_CH43A_Olive", "TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_WatchCap_Olive","TCP_H_Helmet_ECH43A_Olive_Silver",
                        "TCP_H_booniehat_Olive","WOLFoT_TcP_UNSC_A_Boonie_Woodland_2"]],
         ["vest",      ["TCP_V_M43A_GungnirS_1_Olive","TCP_V_M43A_GungnirS_2_Olive","TCP_V_M43A_GungnirS_3_Olive"]],
@@ -164,7 +164,7 @@ private _classPools = createHashMapFromArray [
                        "ACE_MRE_CreamTomatoSoup_Item", "ACE_MRE_LambCurry_Item", "ACE_MRE_MeatballsPasta_Item", "ACE_MRE_SteakVegetables_Item "]]
     ]],
 
-    ["B_UNSCDF_Explosive_Specialist", createHashMapFromArray [
+    ["B_UNSCMC_Explosive_Specialist", createHashMapFromArray [
         ["headgear",  ["TCP_H_Helmet_CH43A_Olive", "TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_WatchCap_Olive","TCP_H_Helmet_ECH43A_Olive_Silver",
                        "TCP_H_booniehat_Olive","WOLFoT_TcP_UNSC_A_Boonie_Woodland_2"]],
         ["vest",      ["TCP_V_M43A_GungnirL_1_1_Olive","TCP_V_M43A_GungnirL_2_1_Olive","TCP_V_M43A_GungnirL_3_1_Olive"]],
@@ -177,7 +177,7 @@ private _classPools = createHashMapFromArray [
                        "ACE_MRE_CreamTomatoSoup_Item", "ACE_MRE_LambCurry_Item", "ACE_MRE_MeatballsPasta_Item", "ACE_MRE_SteakVegetables_Item "]]
     ]],
 
-    ["B_UNSCDF_Grenadier", createHashMapFromArray [
+    ["B_UNSCMC_Grenadier", createHashMapFromArray [
         ["headgear",  ["TCP_H_Helmet_CH43A_Olive", "TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_WatchCap_Olive","TCP_H_Helmet_ECH43A_Olive_Silver",
                        "TCP_H_booniehat_Olive","WOLFoT_TcP_UNSC_A_Boonie_Woodland_2"]],
         ["vest",      ["TCP_V_M43A_GungnirS_1_Olive","TCP_V_M43A_GungnirS_2_Olive","TCP_V_M43A_GungnirS_3_Olive"]],
@@ -190,7 +190,7 @@ private _classPools = createHashMapFromArray [
                        "ACE_MRE_CreamTomatoSoup_Item", "ACE_MRE_LambCurry_Item", "ACE_MRE_MeatballsPasta_Item", "ACE_MRE_SteakVegetables_Item "]]
     ]],
 
-    ["B_UNSCDF_Marksman", createHashMapFromArray [
+    ["B_UNSCMC_Marksman", createHashMapFromArray [
         ["headgear",  ["TCP_H_Helmet_CH43A_Olive"]],
         ["vest",      ["TCP_V_M43A_GungnirS_1_Olive","TCP_V_M43A_GungnirS_2_Olive","TCP_V_M43A_GungnirS_3_Olive"]],
         ["nvg",       []],
@@ -202,7 +202,7 @@ private _classPools = createHashMapFromArray [
                        "ACE_MRE_CreamTomatoSoup_Item", "ACE_MRE_LambCurry_Item", "ACE_MRE_MeatballsPasta_Item", "ACE_MRE_SteakVegetables_Item "]]
     ]],
 
-    ["B_UNSCDF_Missile_Speacialist_AA", createHashMapFromArray [
+    ["B_UNSCMC_Missile_Speacialist_AA", createHashMapFromArray [
         ["headgear",  ["TCP_H_Helmet_CH43A_Olive", "TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_WatchCap_Olive","TCP_H_Helmet_ECH43A_Olive_Silver",
                        "TCP_H_booniehat_Olive","WOLFoT_TcP_UNSC_A_Boonie_Woodland_2"]],
         ["vest",      ["TCP_V_M43A_GungnirS_1_Olive","TCP_V_M43A_GungnirS_2_Olive","TCP_V_M43A_GungnirS_3_Olive"]],
@@ -215,7 +215,7 @@ private _classPools = createHashMapFromArray [
                        "ACE_MRE_CreamTomatoSoup_Item", "ACE_MRE_LambCurry_Item", "ACE_MRE_MeatballsPasta_Item", "ACE_MRE_SteakVegetables_Item "]]
     ]],
 
-    ["B_UNSCDF_Missile_Specialist_AT", createHashMapFromArray [
+    ["B_UNSCMC_Missile_Specialist_AT", createHashMapFromArray [
         ["headgear",  ["TCP_H_Helmet_CH43A_Olive", "TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_WatchCap_Olive","TCP_H_Helmet_ECH43A_Olive_Silver",
                        "TCP_H_booniehat_Olive","WOLFoT_TcP_UNSC_A_Boonie_Woodland_2"]],
         ["vest",      ["TCP_V_M43A_GungnirS_1_Olive","TCP_V_M43A_GungnirS_2_Olive","TCP_V_M43A_GungnirS_3_Olive"]],
@@ -228,7 +228,7 @@ private _classPools = createHashMapFromArray [
                        "ACE_MRE_CreamTomatoSoup_Item", "ACE_MRE_LambCurry_Item", "ACE_MRE_MeatballsPasta_Item", "ACE_MRE_SteakVegetables_Item "]]
     ]],
 
-    ["B_UNSCDF_Repair_Specialist", createHashMapFromArray [
+    ["B_UNSCMC_Repair_Specialist", createHashMapFromArray [
         ["headgear",  []],
         ["vest",      []],
         ["nvg",       []],
@@ -240,7 +240,7 @@ private _classPools = createHashMapFromArray [
                        "ACE_MRE_CreamTomatoSoup_Item", "ACE_MRE_LambCurry_Item", "ACE_MRE_MeatballsPasta_Item", "ACE_MRE_SteakVegetables_Item "]]
     ]],
 
-    ["B_UNSCDF_Rifleman_AT", createHashMapFromArray [
+    ["B_UNSCMC_Rifleman_AT", createHashMapFromArray [
         ["headgear",  ["TCP_H_Helmet_CH43A_Olive", "TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_WatchCap_Olive","TCP_H_Helmet_ECH43A_Olive_Silver",
                        "TCP_H_booniehat_Olive","WOLFoT_TcP_UNSC_A_Boonie_Woodland_2"]],
         ["vest",      ["TCP_V_M43A_GungnirS_1_Olive","TCP_V_M43A_GungnirS_2_Olive","TCP_V_M43A_GungnirS_3_Olive"]],
@@ -253,7 +253,7 @@ private _classPools = createHashMapFromArray [
                        "ACE_MRE_CreamTomatoSoup_Item", "ACE_MRE_LambCurry_Item", "ACE_MRE_MeatballsPasta_Item", "ACE_MRE_SteakVegetables_Item "]]
     ]],
 
-    ["B_UNSCDF_Rifleman_Unarmed", createHashMapFromArray [
+    ["B_UNSCMC_Rifleman_Unarmed", createHashMapFromArray [
         ["headgear",  []],
         ["vest",      []],
         ["nvg",       []],
@@ -264,7 +264,7 @@ private _classPools = createHashMapFromArray [
         ["extras",    []]
     ]],
 
-    ["B_UNSCDF_Rifleman_Light", createHashMapFromArray [
+    ["B_UNSCMC_Rifleman_Light", createHashMapFromArray [
         ["headgear",  ["TCP_H_Helmet_CH43A_Olive", "TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_WatchCap_Olive","TCP_H_Helmet_ECH43A_Olive_Silver",
                        "TCP_H_booniehat_Olive","WOLFoT_TcP_UNSC_A_Boonie_Woodland_2"]],
         ["vest",      ["TCP_V_M43A_Light_1_Olive","TCP_V_M43A_Light_2_Olive","TCP_V_M43A_Light_3_Olive"]],
@@ -278,7 +278,7 @@ private _classPools = createHashMapFromArray [
     ]],
 
     // UAV Operators — headgear/vest only, no weapon attachments
-    ["B_UNSCDF_UAV_Operator_OQ_38_Wren", createHashMapFromArray [
+    ["B_UNSCMC_UAV_Operator_OQ_38_Wren", createHashMapFromArray [
         ["headgear",  ["TCP_H_Helmet_CH43A_Olive", "TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_WatchCap_Olive","TCP_H_Helmet_ECH43A_Olive_Silver",
                        "TCP_H_booniehat_Olive","WOLFoT_TcP_UNSC_A_Boonie_Woodland_2"]],
         ["vest",      ["TCP_V_M43A_Light_1_Olive","TCP_V_M43A_Light_2_Olive", "TCP_V_M43A_Light_3_Olive"]],
@@ -291,7 +291,7 @@ private _classPools = createHashMapFromArray [
                        "ACE_MRE_CreamTomatoSoup_Item", "ACE_MRE_LambCurry_Item", "ACE_MRE_MeatballsPasta_Item", "ACE_MRE_SteakVegetables_Item "]]
     ]],
 
-    ["B_UNSCDF_UAV_Operator_OQ_40_Minibee", createHashMapFromArray [
+    ["B_UNSCMC_UAV_Operator_OQ_40_Minibee", createHashMapFromArray [
         ["headgear",  ["TCP_H_Helmet_CH43A_Olive", "TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_WatchCap_Olive","TCP_H_Helmet_ECH43A_Olive_Silver",
                        "TCP_H_booniehat_Olive","WOLFoT_TcP_UNSC_A_Boonie_Woodland_2"]],
         ["vest",      ["TCP_V_M43A_Light_1_Olive","TCP_V_M43A_Light_2_Olive", "TCP_V_M43A_Light_3_Olive"]],
@@ -305,7 +305,7 @@ private _classPools = createHashMapFromArray [
     ]],
 
     // Sniper — no randomization (specialized fixed gear)
-    ["B_UNSCDF_Sniper", createHashMapFromArray [
+    ["B_UNSCMC_Sniper", createHashMapFromArray [
         ["headgear",  []],
         ["vest",      ["TCP_V_M43A_Light_1_Olive","TCP_V_M43A_Light_2_Olive", "TCP_V_M43A_Light_3_Olive"]],
         ["nvg",       []],
@@ -317,7 +317,7 @@ private _classPools = createHashMapFromArray [
                        "ACE_MRE_CreamTomatoSoup_Item", "ACE_MRE_LambCurry_Item", "ACE_MRE_MeatballsPasta_Item", "ACE_MRE_SteakVegetables_Item "]]
     ]],
 
-    ["B_UNSCDF_Forward_Observer", createHashMapFromArray [
+    ["B_UNSCMC_Forward_Observer", createHashMapFromArray [
         ["headgear",  ["TCP_H_Helmet_CH43A_Olive", "TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_WatchCap_Olive","TCP_H_Helmet_ECH43A_Olive_Silver",
                        "TCP_H_booniehat_Olive","WOLFoT_TcP_UNSC_A_Boonie_Woodland_2"]],
         ["vest",      ["TCP_V_M43A_GungnirS_1_Olive","TCP_V_M43A_GungnirS_2_Olive","TCP_V_M43A_GungnirS_3_Olive"]],
@@ -331,7 +331,7 @@ private _classPools = createHashMapFromArray [
     ]],
 
     // Pilot — no randomization
-    ["B_UNSCDF_Marine_Pilot", createHashMapFromArray [
+    ["B_UNSCMC_Marine_Pilot", createHashMapFromArray [
         ["headgear",  []],
         ["vest",      []],
         ["nvg",       []],
@@ -343,7 +343,7 @@ private _classPools = createHashMapFromArray [
     ]],
 
     // Aircrewman — no randomization
-    ["B_UNSCDF_Marine_Aircrewman", createHashMapFromArray [
+    ["B_UNSCMC_Marine_Aircrewman", createHashMapFromArray [
         ["headgear",  []],
         ["vest",      []],
         ["nvg",       []],
@@ -354,7 +354,7 @@ private _classPools = createHashMapFromArray [
         ["extras",    []]
     ]],
 
-    ["B_UNSCDF_Heavy_Gunner", createHashMapFromArray [
+    ["B_UNSCMC_Heavy_Gunner", createHashMapFromArray [
         ["headgear",  ["TCP_H_Helmet_CH43A_Olive", "TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_WatchCap_Olive","TCP_H_Helmet_ECH43A_Olive_Silver",
                        "TCP_H_booniehat_Olive","WOLFoT_TcP_UNSC_A_Boonie_Woodland_2"]],
         ["vest",      ["TCP_V_M43A_Light_1_Olive","TCP_V_M43A_Light_2_Olive", "TCP_V_M43A_Light_3_Olive"]],
@@ -367,7 +367,7 @@ private _classPools = createHashMapFromArray [
                        "ACE_MRE_CreamTomatoSoup_Item", "ACE_MRE_LambCurry_Item", "ACE_MRE_MeatballsPasta_Item", "ACE_MRE_SteakVegetables_Item "]]
     ]],
 
-    ["B_UNSCDF_Asst_Heavy_Gunner", createHashMapFromArray [
+    ["B_UNSCMC_Asst_Heavy_Gunner", createHashMapFromArray [
         ["headgear",  ["TCP_H_Helmet_CH43A_Olive", "TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_Helmet_CH43A_Olive","TCP_H_WatchCap_Olive","TCP_H_Helmet_ECH43A_Olive_Silver",
                        "TCP_H_booniehat_Olive","WOLFoT_TcP_UNSC_A_Boonie_Woodland_2"]],
         ["vest",      ["TCP_V_M43A_Light_1_Olive","TCP_V_M43A_Light_2_Olive", "TCP_V_M43A_Light_3_Olive"]],
@@ -384,7 +384,7 @@ private _classPools = createHashMapFromArray [
     // ODST
     // -----------------------------------------------------------------
 
-    ["B_UNSCDF_ODST_Rifleman", createHashMapFromArray [
+    ["B_UNSCMC_ODST_Rifleman", createHashMapFromArray [
         ["headgear",  []],
         ["vest",      ["TCP_V_M43D_ODST_2_Black","TCP_V_M43D_ODST_3_Black", "TCP_V_M43D_ODST_4_Black"]],
         ["nvg",       ["OPTRE_NVG", "OPTRE_NVG_CNM", "OPTRE_NVG_UL", "OPTRE_NVG_HUL", "OPTRE_NVG_HUL3", "OPTRE_NVG_HUL3_Gray", "OPTRE_NVG_HURS",
@@ -398,7 +398,7 @@ private _classPools = createHashMapFromArray [
                        "ACE_MRE_CreamTomatoSoup_Item", "ACE_MRE_LambCurry_Item", "ACE_MRE_MeatballsPasta_Item", "ACE_MRE_SteakVegetables_Item "]]
     ]],
 
-    ["B_UNSCDF_ODST_Team_Leader", createHashMapFromArray [
+    ["B_UNSCMC_ODST_Team_Leader", createHashMapFromArray [
         ["headgear",  []],
         ["vest",      ["TCP_V_M43D_ODST_2_Black","TCP_V_M43D_ODST_3_Black", "TCP_V_M43D_ODST_4_Black"]],
         ["nvg",       ["OPTRE_NVG", "OPTRE_NVG_CNM", "OPTRE_NVG_UL", "OPTRE_NVG_HUL", "OPTRE_NVG_HUL3", "OPTRE_NVG_HUL3_Gray", "OPTRE_NVG_HURS",
@@ -412,7 +412,7 @@ private _classPools = createHashMapFromArray [
                        "ACE_MRE_CreamTomatoSoup_Item", "ACE_MRE_LambCurry_Item", "ACE_MRE_MeatballsPasta_Item", "ACE_MRE_SteakVegetables_Item "]]
     ]],
 
-    ["B_UNSCDF_ODST_Scout", createHashMapFromArray [
+    ["B_UNSCMC_ODST_Scout", createHashMapFromArray [
         ["headgear",  []],
         ["vest",      ["TCP_V_M43D_ODST_2_Black","TCP_V_M43D_ODST_3_Black", "TCP_V_M43D_ODST_4_Black"]],
         ["nvg",       ["OPTRE_NVG", "OPTRE_NVG_CNM", "OPTRE_NVG_UL", "OPTRE_NVG_HUL", "OPTRE_NVG_HUL3", "OPTRE_NVG_HUL3_Gray", "OPTRE_NVG_HURS",
@@ -426,7 +426,7 @@ private _classPools = createHashMapFromArray [
                        "ACE_MRE_CreamTomatoSoup_Item", "ACE_MRE_LambCurry_Item", "ACE_MRE_MeatballsPasta_Item", "ACE_MRE_SteakVegetables_Item "]]
     ]],
 
-    ["B_UNSCDF_ODST_Corpsman", createHashMapFromArray [
+    ["B_UNSCMC_ODST_Corpsman", createHashMapFromArray [
         ["headgear",  []],
         ["vest",      ["TCP_V_M43D_ODST_2_Black","TCP_V_M43D_ODST_3_Black", "TCP_V_M43D_ODST_4_Black"]],
         ["nvg",       ["OPTRE_NVG", "OPTRE_NVG_CNM", "OPTRE_NVG_UL", "OPTRE_NVG_HUL", "OPTRE_NVG_HUL3", "OPTRE_NVG_HUL3_Gray", "OPTRE_NVG_HURS",
@@ -439,7 +439,7 @@ private _classPools = createHashMapFromArray [
         ["extras",    []]
     ]],
 
-    ["B_UNSCDF_ODST_AT_Specialist", createHashMapFromArray [
+    ["B_UNSCMC_ODST_AT_Specialist", createHashMapFromArray [
         ["headgear",  []],
         ["vest",      ["TCP_V_M43D_ODST_2_Black","TCP_V_M43D_ODST_3_Black", "TCP_V_M43D_ODST_4_Black"]],
         ["nvg",       ["OPTRE_NVG", "OPTRE_NVG_CNM", "OPTRE_NVG_UL", "OPTRE_NVG_HUL", "OPTRE_NVG_HUL3", "OPTRE_NVG_HUL3_Gray", "OPTRE_NVG_HURS",
@@ -453,7 +453,7 @@ private _classPools = createHashMapFromArray [
                        "ACE_MRE_CreamTomatoSoup_Item", "ACE_MRE_LambCurry_Item", "ACE_MRE_MeatballsPasta_Item", "ACE_MRE_SteakVegetables_Item "]]
     ]],
 
-    ["B_UNSCDF_ODST_AA_Specialist", createHashMapFromArray [
+    ["B_UNSCMC_ODST_AA_Specialist", createHashMapFromArray [
         ["headgear",  []],
         ["vest",      ["TCP_V_M43D_ODST_2_Black","TCP_V_M43D_ODST_3_Black", "TCP_V_M43D_ODST_4_Black"]],
         ["nvg",       ["OPTRE_NVG", "OPTRE_NVG_CNM", "OPTRE_NVG_UL", "OPTRE_NVG_HUL", "OPTRE_NVG_HUL3", "OPTRE_NVG_HUL3_Gray", "OPTRE_NVG_HURS",
@@ -467,7 +467,7 @@ private _classPools = createHashMapFromArray [
                        "ACE_MRE_CreamTomatoSoup_Item", "ACE_MRE_LambCurry_Item", "ACE_MRE_MeatballsPasta_Item", "ACE_MRE_SteakVegetables_Item "]]
     ]],
 
-    ["B_UNSCDF_ODST_Marksman", createHashMapFromArray [
+    ["B_UNSCMC_ODST_Marksman", createHashMapFromArray [
         ["headgear",  []],
         ["vest",      ["TCP_V_M43D_SHARPSHOOTER_1_Black","TCP_V_M43D_SHARPSHOOTER_2_Black", "TCP_V_M43D_SHARPSHOOTER_3_Black", "TCP_V_M43D_SHARPSHOOTER_4_Black"]],
         ["nvg",       ["OPTRE_NVG_MVI", "OPTRE_NVG_MVI_CNM", "OPTRE_NVG_MVI_HUL", "OPTRE_NVG_MVI_HURS", "OPTRE_NVG_MVI_UL"]],
@@ -479,7 +479,7 @@ private _classPools = createHashMapFromArray [
                        "ACE_MRE_CreamTomatoSoup_Item", "ACE_MRE_LambCurry_Item", "ACE_MRE_MeatballsPasta_Item", "ACE_MRE_SteakVegetables_Item "]]
     ]],
 
-    ["B_UNSCDF_ODST_Sniper", createHashMapFromArray [
+    ["B_UNSCMC_ODST_Sniper", createHashMapFromArray [
         ["headgear",  []],
         ["vest",      ["TCP_V_M43D_SHARPSHOOTER_1_Black","TCP_V_M43D_SHARPSHOOTER_2_Black", "TCP_V_M43D_SHARPSHOOTER_3_Black", "TCP_V_M43D_SHARPSHOOTER_4_Black"]],
         ["nvg",       ["OPTRE_NVG_MVI", "OPTRE_NVG_MVI_CNM", "OPTRE_NVG_MVI_HUL", "OPTRE_NVG_MVI_HURS", "OPTRE_NVG_MVI_UL"]],
@@ -491,7 +491,7 @@ private _classPools = createHashMapFromArray [
                        "ACE_MRE_CreamTomatoSoup_Item", "ACE_MRE_LambCurry_Item", "ACE_MRE_MeatballsPasta_Item", "ACE_MRE_SteakVegetables_Item "]]
     ]],
 
-    ["B_UNSCDF_ODST_Breacher", createHashMapFromArray [
+    ["B_UNSCMC_ODST_Breacher", createHashMapFromArray [
         ["headgear",  []],
         ["vest",      ["TCP_V_M43D_ODST_2_Black","TCP_V_M43D_ODST_3_Black", "TCP_V_M43D_ODST_4_Black"]],
         ["nvg",       ["OPTRE_NVG", "OPTRE_NVG_CNM", "OPTRE_NVG_UL", "OPTRE_NVG_HUL", "OPTRE_NVG_HUL3", "OPTRE_NVG_HUL3_Gray", "OPTRE_NVG_HURS",
@@ -505,7 +505,7 @@ private _classPools = createHashMapFromArray [
                        "ACE_MRE_CreamTomatoSoup_Item", "ACE_MRE_LambCurry_Item", "ACE_MRE_MeatballsPasta_Item", "ACE_MRE_SteakVegetables_Item "]]
     ]],
 
-    ["B_UNSCDF_ODST_Autorifleman", createHashMapFromArray [
+    ["B_UNSCMC_ODST_Autorifleman", createHashMapFromArray [
         ["headgear",  []],
         ["vest",      ["TCP_V_M43D_ODST_2_Black","TCP_V_M43D_ODST_3_Black", "TCP_V_M43D_ODST_4_Black"]],
         ["nvg",       ["OPTRE_NVG", "OPTRE_NVG_CNM", "OPTRE_NVG_UL", "OPTRE_NVG_HUL", "OPTRE_NVG_HUL3", "OPTRE_NVG_HUL3_Gray", "OPTRE_NVG_HURS",

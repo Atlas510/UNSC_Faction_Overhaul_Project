@@ -1,9 +1,9 @@
 class CfgPatches
 {
-	class B_ATLAS_UNSCDF
+	class B_ATLAS_UNSCMC
 	{
 		author = "Atlas";
-		name = "UNSCDF Units";
+		name = "UNSCMC Units";
 		requiredVersion = 0.1;
 
 		requiredAddons[] =
@@ -25,7 +25,7 @@ class CfgPatches
 
 class CfgFactionClasses
 {
-	class B_ATLAS_UNSCDF
+	class B_ATLAS_UNSCMC
 	{
 		displayName = "United Nations Space Command";
 		priority = 2;
@@ -36,11 +36,11 @@ class CfgFactionClasses
 
 class CfgEditorSubcategories
 {
-	class UNSCDF_Infantry_Marines
+	class UNSCMC_Infantry_Marines
 	{
 		displayName = "Men (Marines)";
 	};
-	class UNSCDF_Infantry_ODST
+	class UNSCMC_Infantry_ODST
 	{
 		displayName = "Men (ODST)";
 	};
@@ -48,17 +48,17 @@ class CfgEditorSubcategories
 
 class CfgVehicleClasses
 {
-	class B_ATLAS_UNSCDF_INF       { displayName = "Men"; };
-	class B_ATLAS_UNSCDF_INF_ODST  { displayName = "Men (ODST)"; };
-	class B_ATLAS_UNSCDF_MOT       { displayName = "Cars"; };
-	class B_ATLAS_UNSCDF_MECH      { displayName = "IFVs"; };
-	class B_ATLAS_UNSCDF_ARMR      { displayName = "Tanks"; };
-	class B_ATLAS_UNSCDF_ARTY      { displayName = "Artillery"; };
+	class B_ATLAS_UNSCMC_INF       { displayName = "Men"; };
+	class B_ATLAS_UNSCMC_INF_ODST  { displayName = "Men (ODST)"; };
+	class B_ATLAS_UNSCMC_MOT       { displayName = "Cars"; };
+	class B_ATLAS_UNSCMC_MECH      { displayName = "IFVs"; };
+	class B_ATLAS_UNSCMC_ARMR      { displayName = "Tanks"; };
+	class B_ATLAS_UNSCMC_ARTY      { displayName = "Artillery"; };
 	class M705_MLRS_Viper          { displayName = "Artillery"; };
-	class B_ATLAS_UNSCDF_NAV       { displayName = "Boats"; };
-	class B_ATLAS_UNSCDF_AIR       { displayName = "Helicopters"; };
-	class B_ATLAS_UNSCDF_DRN       { displayName = "Drones"; };
-	class B_ATLAS_UNSCDF_TUR       { displayName = "Turrets"; };
+	class B_ATLAS_UNSCMC_NAV       { displayName = "Boats"; };
+	class B_ATLAS_UNSCMC_AIR       { displayName = "Helicopters"; };
+	class B_ATLAS_UNSCMC_DRN       { displayName = "Drones"; };
+	class B_ATLAS_UNSCMC_TUR       { displayName = "Turrets"; };
 };
 
 class CfgFunctions
