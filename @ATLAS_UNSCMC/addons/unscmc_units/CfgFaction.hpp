@@ -1,6 +1,6 @@
 class CfgFactionClasses
 {
-	class B_ATLAS_UNSCDF
+	class B_ATLAS_UNSCMC
 	{
 		displayName = "United Nations Space Command";
 		priority = 2;

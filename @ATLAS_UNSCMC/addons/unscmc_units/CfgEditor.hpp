@@ -1,10 +1,10 @@
 class CfgEditorSubcategories
 {
-	class UNSCDF_Infantry_Marines
+	class UNSCMC_Infantry_Marines
 	{
 		displayName = "Men (Marines)";
 	};
-	class UNSCDF_Infantry_ODST
+	class UNSCMC_Infantry_ODST
 	{
 		displayName = "Men (ODST)";
 	};
@@ -12,15 +12,15 @@ class CfgEditorSubcategories
 
 class CfgVehicleClasses
 {
-	class B_ATLAS_UNSCDF_INF
+	class B_ATLAS_UNSCMC_INF
 	{
 		displayName = "Men";
 	};
-	class B_ATLAS_UNSCDF_INF_ODST
+	class B_ATLAS_UNSCMC_INF_ODST
 	{
 		displayName = "Men (ODST)";
 	};
-	class B_ATLAS_UNSCDF_ARTY
+	class B_ATLAS_UNSCMC_ARTY
 	{
 		displayName = "Artillery";
 	};
