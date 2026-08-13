@@ -77,6 +77,11 @@ class CfgFunctions
 			{
 				file = "\unscdf_units\functions\fn_randomizeODSTUniform.sqf";
 			};
+
+			class randomizeKit
+			{
+				file = "\unscdf_units\functions\fn_randomizeKit.sqf";
+			};
 		};
 	};
 };
