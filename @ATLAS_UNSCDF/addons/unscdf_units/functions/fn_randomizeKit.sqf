@@ -51,12 +51,12 @@ private _classPools = createHashMapFromArray [
     // -----------------------------------------------------------------
 
     ["B_UNSCDF_Officer", createHashMapFromArray [
-        ["headgear",  ["TCP_Patrol_Cap_Olive", "none"]],
+        ["headgear",  ["TCP_Patrol_Cap_Olive"]],
         ["vest",      ["TCP_V_M43A_Light_1_Olive","TCP_V_M43A_Light_2_Olive","TCP_V_M43A_Light_3_Olive","TCP_V_M43A_GungnirS_3_Olive" ]],
         ["nvg",       ["OPTRE_NVG"]],
         ["optics",    ["CTGCY_BR55_Scope_ACE","OPTRE_M12_Optic","OPTRE_M12_Optic_Green","OPTRE_M12_Optic_Red"]],
         ["muzzles",   []],
-        ["pointers",  ["OPTRE_BMR_Laser", "none"]],
+        ["pointers",  ["OPTRE_BMR_Laser"]],
         ["bipods",    []],
         ["extras",    ["ACE_MRE_BeefStew_Item", "ACE_MRE_ChikenTikkaMasala_Item", "ACE_MRE_ChickenHerbDumplings_Item", "ACE_MRE_CreamChickenSoup_Item",
                        "ACE_MRE_CreamTomatoSoup_Item", "ACE_MRE_LambCurry_Item", "ACE_MRE_MeatballsPasta_Item", "ACE_MRE_SteakVegetables_Item " ]]
@@ -392,7 +392,7 @@ private _classPools = createHashMapFromArray [
                        "OPTRE_NVG_UAB"]],
         ["optics",    ["OPTRE_MA5_BUIS","CTGCY_MA5_Sight_2"]],
         ["muzzles",   []],
-        ["pointers",  []],
+        ["pointers",  ["OPTRE_BMR_Laser"]],
         ["bipods",    []],
         ["extras",     ["ACE_MRE_BeefStew_Item", "ACE_MRE_ChikenTikkaMasala_Item", "ACE_MRE_ChickenHerbDumplings_Item", "ACE_MRE_CreamChickenSoup_Item",
                        "ACE_MRE_CreamTomatoSoup_Item", "ACE_MRE_LambCurry_Item", "ACE_MRE_MeatballsPasta_Item", "ACE_MRE_SteakVegetables_Item "]]
@@ -406,7 +406,7 @@ private _classPools = createHashMapFromArray [
                        "OPTRE_NVG_UAB"]],
         ["optics",    ["CTGCY_BR55_Scope_ACE","OPTRE_M12_Optic","OPTRE_M12_Optic_Green","OPTRE_M12_Optic_Red"]],
         ["muzzles",   []],
-        ["pointers",  []],
+        ["pointers",  ["OPTRE_BMR_Laser"]],
         ["bipods",    []],
         ["extras",     ["ACE_MRE_BeefStew_Item", "ACE_MRE_ChikenTikkaMasala_Item", "ACE_MRE_ChickenHerbDumplings_Item", "ACE_MRE_CreamChickenSoup_Item",
                        "ACE_MRE_CreamTomatoSoup_Item", "ACE_MRE_LambCurry_Item", "ACE_MRE_MeatballsPasta_Item", "ACE_MRE_SteakVegetables_Item "]]
@@ -447,7 +447,7 @@ private _classPools = createHashMapFromArray [
                        "OPTRE_NVG_UAB"]],
         ["optics",    ["OPTRE_MA5_BUIS","CTGCY_MA5_Sight_2"]],
         ["muzzles",   []],
-        ["pointers",  []],
+        ["pointers",  ["OPTRE_BMR_Laser"]],
         ["bipods",    []],
         ["extras",     ["ACE_MRE_BeefStew_Item", "ACE_MRE_ChikenTikkaMasala_Item", "ACE_MRE_ChickenHerbDumplings_Item", "ACE_MRE_CreamChickenSoup_Item",
                        "ACE_MRE_CreamTomatoSoup_Item", "ACE_MRE_LambCurry_Item", "ACE_MRE_MeatballsPasta_Item", "ACE_MRE_SteakVegetables_Item "]]
@@ -461,7 +461,7 @@ private _classPools = createHashMapFromArray [
                        "OPTRE_NVG_UAB"]],
         ["optics",    ["OPTRE_MA5_BUIS","CTGCY_MA5_Sight_2"]],
         ["muzzles",   []],
-        ["pointers",  []],
+        ["pointers",  ["OPTRE_BMR_Laser"]],
         ["bipods",    []],
         ["extras",     ["ACE_MRE_BeefStew_Item", "ACE_MRE_ChikenTikkaMasala_Item", "ACE_MRE_ChickenHerbDumplings_Item", "ACE_MRE_CreamChickenSoup_Item",
                        "ACE_MRE_CreamTomatoSoup_Item", "ACE_MRE_LambCurry_Item", "ACE_MRE_MeatballsPasta_Item", "ACE_MRE_SteakVegetables_Item "]]
@@ -473,7 +473,7 @@ private _classPools = createHashMapFromArray [
         ["nvg",       ["OPTRE_NVG_MVI", "OPTRE_NVG_MVI_CNM", "OPTRE_NVG_MVI_HUL", "OPTRE_NVG_MVI_HURS", "OPTRE_NVG_MVI_UL"]],
         ["optics",    []],
         ["muzzles",   []],
-        ["pointers",  []],
+        ["pointers",  ["OPTRE_BMR_Laser"]],
         ["bipods",    []],
         ["extras",     ["ACE_MRE_BeefStew_Item", "ACE_MRE_ChikenTikkaMasala_Item", "ACE_MRE_ChickenHerbDumplings_Item", "ACE_MRE_CreamChickenSoup_Item",
                        "ACE_MRE_CreamTomatoSoup_Item", "ACE_MRE_LambCurry_Item", "ACE_MRE_MeatballsPasta_Item", "ACE_MRE_SteakVegetables_Item "]]
@@ -485,7 +485,7 @@ private _classPools = createHashMapFromArray [
         ["nvg",       ["OPTRE_NVG_MVI", "OPTRE_NVG_MVI_CNM", "OPTRE_NVG_MVI_HUL", "OPTRE_NVG_MVI_HURS", "OPTRE_NVG_MVI_UL"]],
         ["optics",    []],
         ["muzzles",   []],
-        ["pointers",  []],
+        ["pointers",  ["OPTRE_BMR_Laser"]],
         ["bipods",    []],
         ["extras",    ["ACE_MRE_BeefStew_Item", "ACE_MRE_ChikenTikkaMasala_Item", "ACE_MRE_ChickenHerbDumplings_Item", "ACE_MRE_CreamChickenSoup_Item",
                        "ACE_MRE_CreamTomatoSoup_Item", "ACE_MRE_LambCurry_Item", "ACE_MRE_MeatballsPasta_Item", "ACE_MRE_SteakVegetables_Item "]]
