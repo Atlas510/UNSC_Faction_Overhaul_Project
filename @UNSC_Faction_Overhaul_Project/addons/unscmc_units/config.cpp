@@ -27,7 +27,7 @@ class CfgFactionClasses
 {
 	class B_ATLAS_UNSCMC
 	{
-		displayName = "United Nations Space Command";
+		displayName = "[ATLAS] UNSCMC";
 		priority = 2;
 		side = 1;
 		icon = "\A3\ui_f\data\map\markers\nato\b_inf.paa";
