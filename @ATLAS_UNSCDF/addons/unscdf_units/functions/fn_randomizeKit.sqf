@@ -517,7 +517,7 @@ private _classPools = createHashMapFromArray [
         ["bipods",    []],
         ["extras",     ["ACE_MRE_BeefStew_Item", "ACE_MRE_ChikenTikkaMasala_Item", "ACE_MRE_ChickenHerbDumplings_Item", "ACE_MRE_CreamChickenSoup_Item",
                        "ACE_MRE_CreamTomatoSoup_Item", "ACE_MRE_LambCurry_Item", "ACE_MRE_MeatballsPasta_Item", "ACE_MRE_SteakVegetables_Item "]]
-    ]],
+    ]]
 
 ];
 
