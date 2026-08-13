@@ -618,10 +618,14 @@ if (_nvg != "") then {
 // =========================================================================
 private _bp = [(_pool get "backpack")] call _fnc_pick;
 if (_bp != "") then {
-    private _bpItems = backpackItems _unit;
+    private _bpItems    = backpackItems _unit;
+    private _bpMags     = backpackMagazines _unit;
+    private _bpWeapons  = backpackWeapons _unit;
     removeBackpack _unit;
     _unit addBackpack _bp;
-    { _unit addItemToBackpack _x; } forEach _bpItems;
+    { _unit addItemToBackpack _x; }     forEach _bpItems;
+    { _unit addMagazineToBackpack (_x select 0); } forEach _bpMags;
+    { _unit addWeaponToBackpack _x; }   forEach _bpWeapons;
 };
 
 // =========================================================================
