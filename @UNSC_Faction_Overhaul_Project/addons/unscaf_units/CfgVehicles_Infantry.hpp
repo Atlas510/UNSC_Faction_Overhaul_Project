@@ -1,10 +1,12 @@
   class B_UNSCAF_Officer : TCP_B_UNSC_MC_Officer {
         author = "Atlas";
-        scope = 1;
-        scopeCurator = 1;
+        scope = 2;
+        scopeCurator = 2;
         displayName = "Officer";
         side = 1;
         faction = "B_ATLAS_UNSCAF";
+        vehicleClass = "B_ATLAS_UNSCAF_INF";
+        editorSubcategory = "UNSCAF_Infantry";
 
         identityTypes[] = {"Head_NATO","LanguageENG_F","G_UNSC_Casual_Gray"};
 
@@ -37,11 +39,13 @@
 
     class B_UNSCAF_Rifleman : TCP_B_UNSC_MC_Soldier {
         author = "Atlas";
-        scope = 1;
-        scopeCurator = 1;
+        scope = 2;
+        scopeCurator = 2;
         displayName = "Rifleman";
         side = 1;
         faction = "B_ATLAS_UNSCAF";
+        vehicleClass = "B_ATLAS_UNSCAF_INF";
+        editorSubcategory = "UNSCAF_Infantry";
 
         identityTypes[] = {"Head_NATO","LanguageENG_F","G_UNSC_Default_Gray"};
 
@@ -74,11 +78,13 @@
 
     class B_UNSCAF_Squad_Leader : TCP_B_UNSC_MC_Soldier_SL {
         author = "Atlas";
-        scope = 1;
-        scopeCurator = 1;
+        scope = 2;
+        scopeCurator = 2;
         displayName = "Squad Leader";
         side = 1;
         faction = "B_ATLAS_UNSCAF";
+        vehicleClass = "B_ATLAS_UNSCAF_INF";
+        editorSubcategory = "UNSCAF_Infantry";
 
         identityTypes[] = {"Head_NATO","LanguageENG_F","G_UNSC_Default_Gray"};
 
@@ -111,11 +117,13 @@
 
     class B_UNSCAF_Team_Leader : TCP_B_UNSC_MC_Soldier_TL {
         author = "Atlas";
-        scope = 1;
-        scopeCurator = 1;
+        scope = 2;
+        scopeCurator = 2;
         displayName = "Team Leader";
         side = 1;
         faction = "B_ATLAS_UNSCAF";
+        vehicleClass = "B_ATLAS_UNSCAF_INF";
+        editorSubcategory = "UNSCAF_Infantry";
 
         identityTypes[] = {"Head_NATO","LanguageENG_F","G_UNSC_Default_Gray"};
 
@@ -150,11 +158,13 @@
 
     class B_UNSCAF_Ammo_Bearer : TCP_B_UNSC_MC_Soldier_A {
         author = "Atlas";
-        scope = 1;
-        scopeCurator = 1;
+        scope = 2;
+        scopeCurator = 2;
         displayName = "Ammo Bearer";
         side = 1;
         faction = "B_ATLAS_UNSCAF";
+        vehicleClass = "B_ATLAS_UNSCAF_INF";
+        editorSubcategory = "UNSCAF_Infantry";
 
         identityTypes[] = {"Head_NATO","LanguageENG_F","G_UNSC_Default_Gray"};
 
@@ -189,11 +199,13 @@
 
     class B_UNSCAF_Autorifleman_01 : TCP_B_UNSC_MC_Soldier_AR {
         author = "Atlas";
-        scope = 1;
-        scopeCurator = 1;
+        scope = 2;
+        scopeCurator = 2;
         displayName = "Autorifleman";
         side = 1;
         faction = "B_ATLAS_UNSCAF";
+        vehicleClass = "B_ATLAS_UNSCAF_INF";
+        editorSubcategory = "UNSCAF_Infantry";
 
         identityTypes[] = {"Head_NATO","LanguageENG_F","G_UNSC_Default_Gray"};
 
@@ -228,11 +240,13 @@
 
     class B_UNSCAF_Corpsman : TCP_B_UNSC_MC_Soldier_Medic {
         author = "Atlas";
-        scope = 1;
-        scopeCurator = 1;
+        scope = 2;
+        scopeCurator = 2;
         displayName = "Corpsman";
         side = 1;
         faction = "B_ATLAS_UNSCAF";
+        vehicleClass = "B_ATLAS_UNSCAF_INF";
+        editorSubcategory = "UNSCAF_Infantry";
 
         identityTypes[] = {"Head_NATO","LanguageENG_F","G_UNSC_Default_Gray"};
 
@@ -267,11 +281,13 @@
 
     class B_UNSCAF_Crewman : TCP_B_UNSC_MC_Crew {
         author = "Atlas";
-        scope = 1;
-        scopeCurator = 1;
+        scope = 2;
+        scopeCurator = 2;
         displayName = "Crewman";
         side = 1;
         faction = "B_ATLAS_UNSCAF";
+        vehicleClass = "B_ATLAS_UNSCAF_INF";
+        editorSubcategory = "UNSCAF_Infantry";
 
         identityTypes[] = {"Head_NATO","LanguageENG_F","G_UNSC_Default_Gray"};
 
@@ -304,11 +320,13 @@
 
     class B_UNSCAF_Engineer : TCP_B_UNSC_MC_Soldier_Engineer {
         author = "Atlas";
-        scope = 1;
-        scopeCurator = 1;
+        scope = 2;
+        scopeCurator = 2;
         displayName = "Engineer";
         side = 1;
         faction = "B_ATLAS_UNSCAF";
+        vehicleClass = "B_ATLAS_UNSCAF_INF";
+        editorSubcategory = "UNSCAF_Infantry";
 
         identityTypes[] = {"Head_NATO","LanguageENG_F","G_UNSC_Default_Gray"};
 
@@ -341,11 +359,13 @@
 
     class B_UNSCAF_Explosive_Specialist : TCP_B_UNSC_MC_Soldier_Exp {
         author = "Atlas";
-        scope = 1;
-        scopeCurator = 1;
+        scope = 2;
+        scopeCurator = 2;
         displayName = "Explosive Specialist";
         side = 1;
         faction = "B_ATLAS_UNSCAF";
+        vehicleClass = "B_ATLAS_UNSCAF_INF";
+        editorSubcategory = "UNSCAF_Infantry";
 
         identityTypes[] = {"Head_NATO","LanguageENG_F","G_UNSC_Default_Gray"};
 
@@ -380,11 +400,13 @@
 
     class B_UNSCAF_Grenadier : TCP_B_UNSC_MC_Soldier_GL {
         author = "Atlas";
-        scope = 1;
-        scopeCurator = 1;
+        scope = 2;
+        scopeCurator = 2;
         displayName = "Grenadier";
         side = 1;
         faction = "B_ATLAS_UNSCAF";
+        vehicleClass = "B_ATLAS_UNSCAF_INF";
+        editorSubcategory = "UNSCAF_Infantry";
 
         identityTypes[] = {"Head_NATO","LanguageENG_F","G_UNSC_Default_Gray"};
 
@@ -419,11 +441,13 @@
 
     class B_UNSCAF_Marksman : TCP_B_UNSC_MC_Soldier_M {
         author = "Atlas";
-        scope = 1;
-        scopeCurator = 1;
+        scope = 2;
+        scopeCurator = 2;
         displayName = "Marksman";
         side = 1;
         faction = "B_ATLAS_UNSCAF";
+        vehicleClass = "B_ATLAS_UNSCAF_INF";
+        editorSubcategory = "UNSCAF_Infantry";
 
         identityTypes[] = {"Head_NATO","LanguageENG_F","G_UNSC_Default_Gray"};
 
@@ -456,11 +480,13 @@
 
     class B_UNSCAF_Missile_Speacialist_AA : TCP_B_UNSC_MC_Soldier_AA {
         author = "Atlas";
-        scope = 1;
-        scopeCurator = 1;
+        scope = 2;
+        scopeCurator = 2;
         displayName = "Missile Speacialist (AA)";
         side = 1;
         faction = "B_ATLAS_UNSCAF";
+        vehicleClass = "B_ATLAS_UNSCAF_INF";
+        editorSubcategory = "UNSCAF_Infantry";
 
         identityTypes[] = {"Head_NATO","LanguageENG_F","G_UNSC_Default_Gray"};
 
@@ -495,11 +521,13 @@
 
     class B_UNSCAF_Missile_Specialist_AT : TCP_B_UNSC_MC_Soldier_AT {
         author = "Atlas";
-        scope = 1;
-        scopeCurator = 1;
+        scope = 2;
+        scopeCurator = 2;
         displayName = "Missile Specialist (AT)";
         side = 1;
         faction = "B_ATLAS_UNSCAF";
+        vehicleClass = "B_ATLAS_UNSCAF_INF";
+        editorSubcategory = "UNSCAF_Infantry";
 
         identityTypes[] = {"Head_NATO","LanguageENG_F","G_UNSC_Default_Gray"};
 
@@ -534,11 +562,13 @@
 
     class B_UNSCAF_Repair_Specialist : TCP_B_UNSC_MC_Soldier_Repair {
         author = "Atlas";
-        scope = 1;
-        scopeCurator = 1;
+        scope = 2;
+        scopeCurator = 2;
         displayName = "Repair Specialist";
         side = 1;
         faction = "B_ATLAS_UNSCAF";
+        vehicleClass = "B_ATLAS_UNSCAF_INF";
+        editorSubcategory = "UNSCAF_Infantry";
 
         identityTypes[] = {"Head_NATO","LanguageENG_F","G_UNSC_Default_Gray"};
 
@@ -573,11 +603,13 @@
 
     class B_UNSCAF_Rifleman_AT : TCP_B_UNSC_MC_Soldier_LAT {
         author = "Atlas";
-        scope = 1;
-        scopeCurator = 1;
+        scope = 2;
+        scopeCurator = 2;
         displayName = "Rifleman (AT)";
         side = 1;
         faction = "B_ATLAS_UNSCAF";
+        vehicleClass = "B_ATLAS_UNSCAF_INF";
+        editorSubcategory = "UNSCAF_Infantry";
 
         identityTypes[] = {"Head_NATO","LanguageENG_F","G_UNSC_Default_Gray"};
 
@@ -612,11 +644,13 @@
 
     class B_UNSCAF_Rifleman_Unarmed : TCP_B_UNSC_MC_Soldier_Unarmed {
         author = "Atlas";
-        scope = 1;
-        scopeCurator = 1;
+        scope = 2;
+        scopeCurator = 2;
         displayName = "Rifleman (Unarmed)";
         side = 1;
         faction = "B_ATLAS_UNSCAF";
+        vehicleClass = "B_ATLAS_UNSCAF_INF";
+        editorSubcategory = "UNSCAF_Infantry";
 
         identityTypes[] = {"Head_NATO","LanguageENG_F","G_UNSC_Casual_Gray"};
 
@@ -649,11 +683,13 @@
 
     class B_UNSCAF_Rifleman_Light : TCP_B_UNSC_MC_Soldier_Lite {
         author = "Atlas";
-        scope = 1;
-        scopeCurator = 1;
+        scope = 2;
+        scopeCurator = 2;
         displayName = "Rifleman (Light)";
         side = 1;
         faction = "B_ATLAS_UNSCAF";
+        vehicleClass = "B_ATLAS_UNSCAF_INF";
+        editorSubcategory = "UNSCAF_Infantry";
 
         identityTypes[] = {"Head_NATO","LanguageENG_F","G_UNSC_Casual_Gray"};
 
@@ -687,11 +723,13 @@
 
     class B_UNSCAF_UAV_Operator_OQ_38_Wren : TCP_B_UNSC_MC_Soldier_UAV {
         author = "Atlas";
-        scope = 1;
-        scopeCurator = 1;
+        scope = 2;
+        scopeCurator = 2;
         displayName = "UAV Operator (OQ-38 Wren)";
         side = 1;
         faction = "B_ATLAS_UNSCAF";
+        vehicleClass = "B_ATLAS_UNSCAF_INF";
+        editorSubcategory = "UNSCAF_Infantry";
 
         identityTypes[] = {"Head_NATO","LanguageENG_F","G_UNSC_Default_Gray"};
 
@@ -726,11 +764,13 @@
 
     class B_UNSCAF_UAV_Operator_OQ_40_Minibee : TCP_B_UNSC_MC_Soldier_UAV {
         author = "Atlas";
-        scope = 1;
-        scopeCurator = 1;
+        scope = 2;
+        scopeCurator = 2;
         displayName = "UAV Operator (OQ-40 Minibee)";
         side = 1;
         faction = "B_ATLAS_UNSCAF";
+        vehicleClass = "B_ATLAS_UNSCAF_INF";
+        editorSubcategory = "UNSCAF_Infantry";
 
         identityTypes[] = {"Head_NATO","LanguageENG_F","G_UNSC_Default_Gray"};
 
@@ -765,11 +805,13 @@
 
     class B_UNSCAF_Sniper : TCP_B_UNSC_MC_Soldier_Sniper {
         author = "Atlas";
-        scope = 1;
-        scopeCurator = 1;
+        scope = 2;
+        scopeCurator = 2;
         displayName = "Sniper";
         side = 1;
         faction = "B_ATLAS_UNSCAF";
+        vehicleClass = "B_ATLAS_UNSCAF_INF";
+        editorSubcategory = "UNSCAF_Infantry";
 
         identityTypes[] = {"Head_NATO","LanguageENG_F","G_UNSC_Casual_Gray"};
 
@@ -802,11 +844,13 @@
 
     class B_UNSCAF_Forward_Observer : TCP_B_UNSC_MC_Soldier_Spotter {
         author = "Atlas";
-        scope = 1;
-        scopeCurator = 1;
+        scope = 2;
+        scopeCurator = 2;
         displayName = "Forward Observer";
         side = 1;
         faction = "B_ATLAS_UNSCAF";
+        vehicleClass = "B_ATLAS_UNSCAF_INF";
+        editorSubcategory = "UNSCAF_Infantry";
 
         identityTypes[] = {"Head_NATO","LanguageENG_F","G_UNSC_Casual_Gray"};
 
@@ -925,11 +969,13 @@
 
     class B_UNSCAF_Heavy_Gunner : TCP_B_UNSC_MC_Soldier_MG {
         author = "Atlas";
-        scope = 1;
-        scopeCurator = 1;
+        scope = 2;
+        scopeCurator = 2;
         displayName = "Heavy Gunner";
         side = 1;
         faction = "B_ATLAS_UNSCAF";
+        vehicleClass = "B_ATLAS_UNSCAF_INF";
+        editorSubcategory = "UNSCAF_Infantry";
 
         identityTypes[] = {"Head_NATO","LanguageENG_F","G_UNSC_Default_Gray"};
 
@@ -964,11 +1010,13 @@
 
     class B_UNSCAF_Asst_Heavy_Gunner : TCP_B_UNSC_MC_Soldier_AMort {
         author = "Atlas";
-        scope = 1;
-        scopeCurator = 1;
+        scope = 2;
+        scopeCurator = 2;
         displayName = "Asst. Heavy Gunner";
         side = 1;
         faction = "B_ATLAS_UNSCAF";
+        vehicleClass = "B_ATLAS_UNSCAF_INF";
+        editorSubcategory = "UNSCAF_Infantry";
 
         identityTypes[] = {"Head_NATO","LanguageENG_F","G_UNSC_Default_Gray"};
 
@@ -1005,8 +1053,8 @@
 
 class B_UNSCAF_ODST_Rifleman : TCP_B_UNSC_MC_ODST_Soldier {
 	author = "Atlas";
-	scope = 1;
-	scopeCurator = 1;
+	scope = 2;
+	scopeCurator = 2;
 	displayName = "ODST Rifleman";
 	side = 1;
 	faction = "B_ATLAS_UNSCAF";
@@ -1053,8 +1101,8 @@ class B_UNSCAF_ODST_Rifleman : TCP_B_UNSC_MC_ODST_Soldier {
 
 class B_UNSCAF_ODST_Team_Leader : TCP_B_UNSC_MC_ODST_Soldier {
 	author = "Atlas";
-	scope = 1;
-	scopeCurator = 1;
+	scope = 2;
+	scopeCurator = 2;
 	displayName = "ODST Team Leader";
 	side = 1;
 	faction = "B_ATLAS_UNSCAF";
@@ -1102,8 +1150,8 @@ class B_UNSCAF_ODST_Team_Leader : TCP_B_UNSC_MC_ODST_Soldier {
 
 class B_UNSCAF_ODST_Scout : TCP_B_UNSC_MC_ODST_Soldier {
 	author = "Atlas";
-	scope = 1;
-	scopeCurator = 1;
+	scope = 2;
+	scopeCurator = 2;
 	displayName = "ODST Scout";
 	side = 1;
 	faction = "B_ATLAS_UNSCAF";
@@ -1151,8 +1199,8 @@ class B_UNSCAF_ODST_Scout : TCP_B_UNSC_MC_ODST_Soldier {
 
 class B_UNSCAF_ODST_Corpsman : TCP_B_UNSC_MC_ODST_Soldier {
 	author = "Atlas";
-	scope = 1;
-	scopeCurator = 1;
+	scope = 2;
+	scopeCurator = 2;
 	displayName = "ODST Corpsman";
 	side = 1;
 	faction = "B_ATLAS_UNSCAF";
@@ -1203,8 +1251,8 @@ class B_UNSCAF_ODST_Corpsman : TCP_B_UNSC_MC_ODST_Soldier {
 
 class B_UNSCAF_ODST_AT_Specialist : TCP_B_UNSC_MC_ODST_Soldier {
 	author = "Atlas";
-	scope = 1;
-	scopeCurator = 1;
+	scope = 2;
+	scopeCurator = 2;
 	displayName = "ODST AT Specialist";
 	side = 1;
 	faction = "B_ATLAS_UNSCAF";
@@ -1254,8 +1302,8 @@ class B_UNSCAF_ODST_AT_Specialist : TCP_B_UNSC_MC_ODST_Soldier {
 
 class B_UNSCAF_ODST_AA_Specialist : TCP_B_UNSC_MC_ODST_Soldier {
 	author = "Atlas";
-	scope = 1;
-	scopeCurator = 1;
+	scope = 2;
+	scopeCurator = 2;
 	displayName = "ODST AA Specialist";
 	side = 1;
 	faction = "B_ATLAS_UNSCAF";
@@ -1305,8 +1353,8 @@ class B_UNSCAF_ODST_AA_Specialist : TCP_B_UNSC_MC_ODST_Soldier {
 
 class B_UNSCAF_ODST_Marksman : TCP_B_UNSC_MC_ODST_Soldier {
 	author = "Atlas";
-	scope = 1;
-	scopeCurator = 1;
+	scope = 2;
+	scopeCurator = 2;
 	displayName = "ODST Marksman";
 	side = 1;
 	faction = "B_ATLAS_UNSCAF";
@@ -1354,8 +1402,8 @@ class B_UNSCAF_ODST_Marksman : TCP_B_UNSC_MC_ODST_Soldier {
 
 class B_UNSCAF_ODST_Sniper : TCP_B_UNSC_MC_ODST_Soldier {
 	author = "Atlas";
-	scope = 1;
-	scopeCurator = 1;
+	scope = 2;
+	scopeCurator = 2;
 	displayName = "ODST Sniper";
 	side = 1;
 	faction = "B_ATLAS_UNSCAF";
@@ -1403,8 +1451,8 @@ class B_UNSCAF_ODST_Sniper : TCP_B_UNSC_MC_ODST_Soldier {
 
 class B_UNSCAF_ODST_Breacher : TCP_B_UNSC_MC_ODST_Soldier {
 	author = "Atlas";
-	scope = 1;
-	scopeCurator = 1;
+	scope = 2;
+	scopeCurator = 2;
 	displayName = "ODST Breacher";
 	side = 1;
 	faction = "B_ATLAS_UNSCAF";
@@ -1456,8 +1504,8 @@ class B_UNSCAF_ODST_Breacher : TCP_B_UNSC_MC_ODST_Soldier {
 
 class B_UNSCAF_ODST_Autorifleman : TCP_B_UNSC_MC_ODST_Soldier {
 	author = "Atlas";
-	scope = 1;
-	scopeCurator = 1;
+	scope = 2;
+	scopeCurator = 2;
 	displayName = "ODST Autorifleman";
 	side = 1;
 	faction = "B_ATLAS_UNSCAF";

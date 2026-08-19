@@ -68,6 +68,7 @@ class CfgEditorSubcategories
 class CfgVehicleClasses
 {
 	class B_ATLAS_UNSCAF_INF       { displayName = "Men"; };
+	class B_ATLAS_UNSCAF_INF_ODST  { displayName = "Men (ODST)"; };
 	class B_ATLAS_UNSCAF_MOT       { displayName = "Cars"; };
 	class B_ATLAS_UNSCAF_PLN       { displayName = "Planes"; };
 	class B_ATLAS_UNSCAF_DRN       { displayName = "Drones"; };
