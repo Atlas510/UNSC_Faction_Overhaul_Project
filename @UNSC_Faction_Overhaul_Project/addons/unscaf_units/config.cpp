@@ -29,6 +29,9 @@ class CfgPatches
 			"B_UNSCAF_Forward_Observer","B_UNSCAF_Marine_Pilot","B_UNSCAF_Marine_Aircrewman",
 			"B_UNSCAF_Heavy_Gunner","B_UNSCAF_Asst_Heavy_Gunner",
 			"B_UNSCAF_SF_Team_Leader","B_UNSCAF_SF_Airman","B_UNSCAF_SF_Sentry",
+			"B_UNSCAF_ODST_Rifleman","B_UNSCAF_ODST_Team_Leader","B_UNSCAF_ODST_Scout",
+			"B_UNSCAF_ODST_Corpsman","B_UNSCAF_ODST_AT_Specialist","B_UNSCAF_ODST_AA_Specialist",
+			"B_UNSCAF_ODST_Marksman","B_UNSCAF_ODST_Sniper","B_UNSCAF_ODST_Breacher","B_UNSCAF_ODST_Autorifleman",
 
 			"B_UNSCAF_M12A_FAV","B_UNSCAF_M12A_LRV_M41","B_UNSCAF_M12AG1_LAAV_M68A","B_UNSCAF_M12G2_LAAV_M68B",
 			"B_UNSCAF_M831A_LTV","B_UNSCAF_M274R_ULATV","B_UNSCAF_M112_WPC","B_UNSCAF_M112_WPC_M41",
