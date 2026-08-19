@@ -1,10 +1,10 @@
-  class B_UNSCDF_Officer : TCP_B_UNSC_MC_Officer {
+  class B_UNSCMC_Officer : TCP_B_UNSC_MC_Officer {
         author = "Atlas";
         scope = 2;
         scopeCurator = 2;
         displayName = "Officer";
         side = 1;
-        faction = "B_ATLAS_UNSCDF";
+        faction = "B_ATLAS_UNSCMC";
 
         identityTypes[] = {"Head_NATO","LanguageENG_F","G_UNSC_Casual_Gray"};
 
@@ -35,13 +35,13 @@
 
     };
 
-    class B_UNSCDF_Rifleman : TCP_B_UNSC_MC_Soldier {
+    class B_UNSCMC_Rifleman : TCP_B_UNSC_MC_Soldier {
         author = "Atlas";
         scope = 2;
         scopeCurator = 2;
         displayName = "Rifleman";
         side = 1;
-        faction = "B_ATLAS_UNSCDF";
+        faction = "B_ATLAS_UNSCMC";
 
         identityTypes[] = {"Head_NATO","LanguageENG_F","G_UNSC_Default_Gray"};
 
@@ -72,13 +72,13 @@
 
     };
 
-    class B_UNSCDF_Squad_Leader : TCP_B_UNSC_MC_Soldier_SL {
+    class B_UNSCMC_Squad_Leader : TCP_B_UNSC_MC_Soldier_SL {
         author = "Atlas";
         scope = 2;
         scopeCurator = 2;
         displayName = "Squad Leader";
         side = 1;
-        faction = "B_ATLAS_UNSCDF";
+        faction = "B_ATLAS_UNSCMC";
 
         identityTypes[] = {"Head_NATO","LanguageENG_F","G_UNSC_Default_Gray"};
 
@@ -109,13 +109,13 @@
 
     };
 
-    class B_UNSCDF_Team_Leader : TCP_B_UNSC_MC_Soldier_TL {
+    class B_UNSCMC_Team_Leader : TCP_B_UNSC_MC_Soldier_TL {
         author = "Atlas";
         scope = 2;
         scopeCurator = 2;
         displayName = "Team Leader";
         side = 1;
-        faction = "B_ATLAS_UNSCDF";
+        faction = "B_ATLAS_UNSCMC";
 
         identityTypes[] = {"Head_NATO","LanguageENG_F","G_UNSC_Default_Gray"};
 
@@ -148,13 +148,13 @@
 
     };
 
-    class B_UNSCDF_Ammo_Bearer : TCP_B_UNSC_MC_Soldier_A {
+    class B_UNSCMC_Ammo_Bearer : TCP_B_UNSC_MC_Soldier_A {
         author = "Atlas";
         scope = 2;
         scopeCurator = 2;
         displayName = "Ammo Bearer";
         side = 1;
-        faction = "B_ATLAS_UNSCDF";
+        faction = "B_ATLAS_UNSCMC";
 
         identityTypes[] = {"Head_NATO","LanguageENG_F","G_UNSC_Default_Gray"};
 
@@ -187,13 +187,13 @@
 
     };
 
-    class B_UNSCDF_Autorifleman_01 : TCP_B_UNSC_MC_Soldier_AR {
+    class B_UNSCMC_Autorifleman_01 : TCP_B_UNSC_MC_Soldier_AR {
         author = "Atlas";
         scope = 2;
         scopeCurator = 2;
         displayName = "Autorifleman";
         side = 1;
-        faction = "B_ATLAS_UNSCDF";
+        faction = "B_ATLAS_UNSCMC";
 
         identityTypes[] = {"Head_NATO","LanguageENG_F","G_UNSC_Default_Gray"};
 
@@ -226,13 +226,13 @@
 
     };
 
-    class B_UNSCDF_Corpsman : TCP_B_UNSC_MC_Soldier_Medic {
+    class B_UNSCMC_Corpsman : TCP_B_UNSC_MC_Soldier_Medic {
         author = "Atlas";
         scope = 2;
         scopeCurator = 2;
         displayName = "Corpsman";
         side = 1;
-        faction = "B_ATLAS_UNSCDF";
+        faction = "B_ATLAS_UNSCMC";
 
         identityTypes[] = {"Head_NATO","LanguageENG_F","G_UNSC_Default_Gray"};
 
@@ -265,13 +265,13 @@
 
     };
 
-    class B_UNSCDF_Crewman : TCP_B_UNSC_MC_Crew {
+    class B_UNSCMC_Crewman : TCP_B_UNSC_MC_Crew {
         author = "Atlas";
         scope = 2;
         scopeCurator = 2;
         displayName = "Crewman";
         side = 1;
-        faction = "B_ATLAS_UNSCDF";
+        faction = "B_ATLAS_UNSCMC";
 
         identityTypes[] = {"Head_NATO","LanguageENG_F","G_UNSC_Default_Gray"};
 
@@ -302,13 +302,13 @@
 
     };
 
-    class B_UNSCDF_Engineer : TCP_B_UNSC_MC_Soldier_Engineer {
+    class B_UNSCMC_Engineer : TCP_B_UNSC_MC_Soldier_Engineer {
         author = "Atlas";
         scope = 2;
         scopeCurator = 2;
         displayName = "Engineer";
         side = 1;
-        faction = "B_ATLAS_UNSCDF";
+        faction = "B_ATLAS_UNSCMC";
 
         identityTypes[] = {"Head_NATO","LanguageENG_F","G_UNSC_Default_Gray"};
 
@@ -339,13 +339,13 @@
 
     };
 
-    class B_UNSCDF_Explosive_Specialist : TCP_B_UNSC_MC_Soldier_Exp {
+    class B_UNSCMC_Explosive_Specialist : TCP_B_UNSC_MC_Soldier_Exp {
         author = "Atlas";
         scope = 2;
         scopeCurator = 2;
         displayName = "Explosive Specialist";
         side = 1;
-        faction = "B_ATLAS_UNSCDF";
+        faction = "B_ATLAS_UNSCMC";
 
         identityTypes[] = {"Head_NATO","LanguageENG_F","G_UNSC_Default_Gray"};
 
@@ -378,13 +378,13 @@
 
     };
 
-    class B_UNSCDF_Grenadier : TCP_B_UNSC_MC_Soldier_GL {
+    class B_UNSCMC_Grenadier : TCP_B_UNSC_MC_Soldier_GL {
         author = "Atlas";
         scope = 2;
         scopeCurator = 2;
         displayName = "Grenadier";
         side = 1;
-        faction = "B_ATLAS_UNSCDF";
+        faction = "B_ATLAS_UNSCMC";
 
         identityTypes[] = {"Head_NATO","LanguageENG_F","G_UNSC_Default_Gray"};
 
@@ -417,13 +417,13 @@
 
     };
 
-    class B_UNSCDF_Marksman : TCP_B_UNSC_MC_Soldier_M {
+    class B_UNSCMC_Marksman : TCP_B_UNSC_MC_Soldier_M {
         author = "Atlas";
         scope = 2;
         scopeCurator = 2;
         displayName = "Marksman";
         side = 1;
-        faction = "B_ATLAS_UNSCDF";
+        faction = "B_ATLAS_UNSCMC";
 
         identityTypes[] = {"Head_NATO","LanguageENG_F","G_UNSC_Default_Gray"};
 
@@ -454,13 +454,13 @@
 
     };
 
-    class B_UNSCDF_Missile_Speacialist_AA : TCP_B_UNSC_MC_Soldier_AA {
+    class B_UNSCMC_Missile_Speacialist_AA : TCP_B_UNSC_MC_Soldier_AA {
         author = "Atlas";
         scope = 2;
         scopeCurator = 2;
         displayName = "Missile Speacialist (AA)";
         side = 1;
-        faction = "B_ATLAS_UNSCDF";
+        faction = "B_ATLAS_UNSCMC";
 
         identityTypes[] = {"Head_NATO","LanguageENG_F","G_UNSC_Default_Gray"};
 
@@ -493,13 +493,13 @@
 
     };
 
-    class B_UNSCDF_Missile_Specialist_AT : TCP_B_UNSC_MC_Soldier_AT {
+    class B_UNSCMC_Missile_Specialist_AT : TCP_B_UNSC_MC_Soldier_AT {
         author = "Atlas";
         scope = 2;
         scopeCurator = 2;
         displayName = "Missile Specialist (AT)";
         side = 1;
-        faction = "B_ATLAS_UNSCDF";
+        faction = "B_ATLAS_UNSCMC";
 
         identityTypes[] = {"Head_NATO","LanguageENG_F","G_UNSC_Default_Gray"};
 
@@ -532,13 +532,13 @@
 
     };
 
-    class B_UNSCDF_Repair_Specialist : TCP_B_UNSC_MC_Soldier_Repair {
+    class B_UNSCMC_Repair_Specialist : TCP_B_UNSC_MC_Soldier_Repair {
         author = "Atlas";
         scope = 2;
         scopeCurator = 2;
         displayName = "Repair Specialist";
         side = 1;
-        faction = "B_ATLAS_UNSCDF";
+        faction = "B_ATLAS_UNSCMC";
 
         identityTypes[] = {"Head_NATO","LanguageENG_F","G_UNSC_Default_Gray"};
 
@@ -571,13 +571,13 @@
 
     };
 
-    class B_UNSCDF_Rifleman_AT : TCP_B_UNSC_MC_Soldier_LAT {
+    class B_UNSCMC_Rifleman_AT : TCP_B_UNSC_MC_Soldier_LAT {
         author = "Atlas";
         scope = 2;
         scopeCurator = 2;
         displayName = "Rifleman (AT)";
         side = 1;
-        faction = "B_ATLAS_UNSCDF";
+        faction = "B_ATLAS_UNSCMC";
 
         identityTypes[] = {"Head_NATO","LanguageENG_F","G_UNSC_Default_Gray"};
 
@@ -610,13 +610,13 @@
 
     };
 
-    class B_UNSCDF_Rifleman_Unarmed : TCP_B_UNSC_MC_Soldier_Unarmed {
+    class B_UNSCMC_Rifleman_Unarmed : TCP_B_UNSC_MC_Soldier_Unarmed {
         author = "Atlas";
         scope = 2;
         scopeCurator = 2;
         displayName = "Rifleman (Unarmed)";
         side = 1;
-        faction = "B_ATLAS_UNSCDF";
+        faction = "B_ATLAS_UNSCMC";
 
         identityTypes[] = {"Head_NATO","LanguageENG_F","G_UNSC_Casual_Gray"};
 
@@ -647,13 +647,13 @@
 
     };
 
-    class B_UNSCDF_Rifleman_Light : TCP_B_UNSC_MC_Soldier_Lite {
+    class B_UNSCMC_Rifleman_Light : TCP_B_UNSC_MC_Soldier_Lite {
         author = "Atlas";
         scope = 2;
         scopeCurator = 2;
         displayName = "Rifleman (Light)";
         side = 1;
-        faction = "B_ATLAS_UNSCDF";
+        faction = "B_ATLAS_UNSCMC";
 
         identityTypes[] = {"Head_NATO","LanguageENG_F","G_UNSC_Casual_Gray"};
 
@@ -685,13 +685,13 @@
 
     };
 
-    class B_UNSCDF_UAV_Operator_OQ_38_Wren : TCP_B_UNSC_MC_Soldier_UAV {
+    class B_UNSCMC_UAV_Operator_OQ_38_Wren : TCP_B_UNSC_MC_Soldier_UAV {
         author = "Atlas";
         scope = 2;
         scopeCurator = 2;
         displayName = "UAV Operator (OQ-38 Wren)";
         side = 1;
-        faction = "B_ATLAS_UNSCDF";
+        faction = "B_ATLAS_UNSCMC";
 
         identityTypes[] = {"Head_NATO","LanguageENG_F","G_UNSC_Default_Gray"};
 
@@ -724,13 +724,13 @@
 
     };
 
-    class B_UNSCDF_UAV_Operator_OQ_40_Minibee : TCP_B_UNSC_MC_Soldier_UAV {
+    class B_UNSCMC_UAV_Operator_OQ_40_Minibee : TCP_B_UNSC_MC_Soldier_UAV {
         author = "Atlas";
         scope = 2;
         scopeCurator = 2;
         displayName = "UAV Operator (OQ-40 Minibee)";
         side = 1;
-        faction = "B_ATLAS_UNSCDF";
+        faction = "B_ATLAS_UNSCMC";
 
         identityTypes[] = {"Head_NATO","LanguageENG_F","G_UNSC_Default_Gray"};
 
@@ -763,13 +763,13 @@
 
     };
 
-    class B_UNSCDF_Sniper : TCP_B_UNSC_MC_Soldier_Sniper {
+    class B_UNSCMC_Sniper : TCP_B_UNSC_MC_Soldier_Sniper {
         author = "Atlas";
         scope = 2;
         scopeCurator = 2;
         displayName = "Sniper";
         side = 1;
-        faction = "B_ATLAS_UNSCDF";
+        faction = "B_ATLAS_UNSCMC";
 
         identityTypes[] = {"Head_NATO","LanguageENG_F","G_UNSC_Casual_Gray"};
 
@@ -800,13 +800,13 @@
 
     };
 
-    class B_UNSCDF_Forward_Observer : TCP_B_UNSC_MC_Soldier_Spotter {
+    class B_UNSCMC_Forward_Observer : TCP_B_UNSC_MC_Soldier_Spotter {
         author = "Atlas";
         scope = 2;
         scopeCurator = 2;
         displayName = "Forward Observer";
         side = 1;
-        faction = "B_ATLAS_UNSCDF";
+        faction = "B_ATLAS_UNSCMC";
 
         identityTypes[] = {"Head_NATO","LanguageENG_F","G_UNSC_Casual_Gray"};
 
@@ -839,13 +839,13 @@
 
     };
 
-    class B_UNSCDF_Marine_Pilot : TCP_B_UNSC_MC_Pilot {
+    class B_UNSCMC_Marine_Pilot : TCP_B_UNSC_MC_Pilot {
         author = "Atlas";
         scope = 2;
         scopeCurator = 2;
         displayName = "Marine Pilot";
         side = 1;
-        faction = "B_ATLAS_UNSCDF";
+        faction = "B_ATLAS_UNSCMC";
 
         identityTypes[] = {"Head_NATO","LanguageENG_F","G_UNSC_Default_Gray"};
 
@@ -879,13 +879,13 @@
 
     };
 
-    class B_UNSCDF_Marine_Aircrewman : TCP_B_UNSC_MC_Helicrew {
+    class B_UNSCMC_Marine_Aircrewman : TCP_B_UNSC_MC_Helicrew {
         author = "Atlas";
         scope = 2;
         scopeCurator = 2;
         displayName = "Marine Aircrewman";
         side = 1;
-        faction = "B_ATLAS_UNSCDF";
+        faction = "B_ATLAS_UNSCMC";
 
         identityTypes[] = {"Head_NATO","LanguageENG_F","G_UNSC_Default_Gray"};
 
@@ -919,13 +919,13 @@
 
     };
 
-    class B_UNSCDF_Heavy_Gunner : TCP_B_UNSC_MC_Soldier_MG {
+    class B_UNSCMC_Heavy_Gunner : TCP_B_UNSC_MC_Soldier_MG {
         author = "Atlas";
         scope = 2;
         scopeCurator = 2;
         displayName = "Heavy Gunner";
         side = 1;
-        faction = "B_ATLAS_UNSCDF";
+        faction = "B_ATLAS_UNSCMC";
 
         identityTypes[] = {"Head_NATO","LanguageENG_F","G_UNSC_Default_Gray"};
 
@@ -958,13 +958,13 @@
 
     };
 
-    class B_UNSCDF_Asst_Heavy_Gunner : TCP_B_UNSC_MC_Soldier_AMort {
+    class B_UNSCMC_Asst_Heavy_Gunner : TCP_B_UNSC_MC_Soldier_AMort {
         author = "Atlas";
         scope = 2;
         scopeCurator = 2;
         displayName = "Asst. Heavy Gunner";
         side = 1;
-        faction = "B_ATLAS_UNSCDF";
+        faction = "B_ATLAS_UNSCMC";
 
         identityTypes[] = {"Head_NATO","LanguageENG_F","G_UNSC_Default_Gray"};
 
@@ -999,16 +999,16 @@
 
     // ODST LIST
 
-class B_UNSCDF_ODST_Rifleman : TCP_B_UNSC_MC_ODST_Soldier {
+class B_UNSCMC_ODST_Rifleman : TCP_B_UNSC_MC_ODST_Soldier {
 	author = "Atlas";
 	scope = 2;
 	scopeCurator = 2;
 	displayName = "ODST Rifleman";
 	side = 1;
-	faction = "B_ATLAS_UNSCDF";
+	faction = "B_ATLAS_UNSCMC";
 
-	vehicleClass = "B_ATLAS_UNSCDF_INF_ODST";
-	editorSubcategory = "UNSCDF_Infantry_ODST";
+	vehicleClass = "B_ATLAS_UNSCMC_INF_ODST";
+	editorSubcategory = "UNSCMC_Infantry_ODST";
 
 	identityTypes[] = {"Head_NATO","LanguageENG_F","G_UNSC_Default_Gray"};
 
@@ -1047,17 +1047,17 @@ class B_UNSCDF_ODST_Rifleman : TCP_B_UNSC_MC_ODST_Soldier {
 	ALiVE_orbatCreator_owned = 1;
 };
 
-class B_UNSCDF_ODST_Team_Leader : TCP_B_UNSC_MC_ODST_Soldier {
+class B_UNSCMC_ODST_Team_Leader : TCP_B_UNSC_MC_ODST_Soldier {
 	author = "Atlas";
 	scope = 2;
 	scopeCurator = 2;
 	displayName = "ODST Team Leader";
 	side = 1;
-	faction = "B_ATLAS_UNSCDF";
+	faction = "B_ATLAS_UNSCMC";
     icon = "iconManLeader";
 
-	vehicleClass = "B_ATLAS_UNSCDF_INF_ODST";
-	editorSubcategory = "UNSCDF_Infantry_ODST";
+	vehicleClass = "B_ATLAS_UNSCMC_INF_ODST";
+	editorSubcategory = "UNSCMC_Infantry_ODST";
 
 	identityTypes[] = {"Head_NATO","LanguageENG_F","G_UNSC_Default_Gray"};
 
@@ -1096,17 +1096,17 @@ class B_UNSCDF_ODST_Team_Leader : TCP_B_UNSC_MC_ODST_Soldier {
 	ALiVE_orbatCreator_owned = 1;
 };
 
-class B_UNSCDF_ODST_Scout : TCP_B_UNSC_MC_ODST_Soldier {
+class B_UNSCMC_ODST_Scout : TCP_B_UNSC_MC_ODST_Soldier {
 	author = "Atlas";
 	scope = 2;
 	scopeCurator = 2;
 	displayName = "ODST Scout";
 	side = 1;
-	faction = "B_ATLAS_UNSCDF";
+	faction = "B_ATLAS_UNSCMC";
 	icon = "iconManRecon";
 
-	vehicleClass = "B_ATLAS_UNSCDF_INF_ODST";
-	editorSubcategory = "UNSCDF_Infantry_ODST";
+	vehicleClass = "B_ATLAS_UNSCMC_INF_ODST";
+	editorSubcategory = "UNSCMC_Infantry_ODST";
 
 	identityTypes[] = {"Head_NATO","LanguageENG_F","G_UNSC_Default_Gray"};
 
@@ -1145,17 +1145,17 @@ class B_UNSCDF_ODST_Scout : TCP_B_UNSC_MC_ODST_Soldier {
 	ALiVE_orbatCreator_owned = 1;
 };
 
-class B_UNSCDF_ODST_Corpsman : TCP_B_UNSC_MC_ODST_Soldier {
+class B_UNSCMC_ODST_Corpsman : TCP_B_UNSC_MC_ODST_Soldier {
 	author = "Atlas";
 	scope = 2;
 	scopeCurator = 2;
 	displayName = "ODST Corpsman";
 	side = 1;
-	faction = "B_ATLAS_UNSCDF";
+	faction = "B_ATLAS_UNSCMC";
 	icon = "iconManMedic";
 
-	vehicleClass = "B_ATLAS_UNSCDF_INF_ODST";
-	editorSubcategory = "UNSCDF_Infantry_ODST";
+	vehicleClass = "B_ATLAS_UNSCMC_INF_ODST";
+	editorSubcategory = "UNSCMC_Infantry_ODST";
 
 	attendant = 1;
 	backpack = "TCP_B_EM39_MLBE_Hardcase_Black";
@@ -1197,17 +1197,17 @@ class B_UNSCDF_ODST_Corpsman : TCP_B_UNSC_MC_ODST_Soldier {
 	ALiVE_orbatCreator_owned = 1;
 };
 
-class B_UNSCDF_ODST_AT_Specialist : TCP_B_UNSC_MC_ODST_Soldier {
+class B_UNSCMC_ODST_AT_Specialist : TCP_B_UNSC_MC_ODST_Soldier {
 	author = "Atlas";
 	scope = 2;
 	scopeCurator = 2;
 	displayName = "ODST AT Specialist";
 	side = 1;
-	faction = "B_ATLAS_UNSCDF";
+	faction = "B_ATLAS_UNSCMC";
 	icon = "iconManAT";
 
-	vehicleClass = "B_ATLAS_UNSCDF_INF_ODST";
-	editorSubcategory = "UNSCDF_Infantry_ODST";
+	vehicleClass = "B_ATLAS_UNSCMC_INF_ODST";
+	editorSubcategory = "UNSCMC_Infantry_ODST";
 
 	backpack = "TCP_B_EM39_MLBE_Hardcase_Black";
 
@@ -1248,17 +1248,17 @@ class B_UNSCDF_ODST_AT_Specialist : TCP_B_UNSC_MC_ODST_Soldier {
 	ALiVE_orbatCreator_owned = 1;
 };
 
-class B_UNSCDF_ODST_AA_Specialist : TCP_B_UNSC_MC_ODST_Soldier {
+class B_UNSCMC_ODST_AA_Specialist : TCP_B_UNSC_MC_ODST_Soldier {
 	author = "Atlas";
 	scope = 2;
 	scopeCurator = 2;
 	displayName = "ODST AA Specialist";
 	side = 1;
-	faction = "B_ATLAS_UNSCDF";
+	faction = "B_ATLAS_UNSCMC";
 	icon = "iconManAT";
 
-	vehicleClass = "B_ATLAS_UNSCDF_INF_ODST";
-	editorSubcategory = "UNSCDF_Infantry_ODST";
+	vehicleClass = "B_ATLAS_UNSCMC_INF_ODST";
+	editorSubcategory = "UNSCMC_Infantry_ODST";
 
 	backpack = "TCP_B_EM39_MLBE_Hardcase_Black";
 
@@ -1299,17 +1299,17 @@ class B_UNSCDF_ODST_AA_Specialist : TCP_B_UNSC_MC_ODST_Soldier {
 	ALiVE_orbatCreator_owned = 1;
 };
 
-class B_UNSCDF_ODST_Marksman : TCP_B_UNSC_MC_ODST_Soldier {
+class B_UNSCMC_ODST_Marksman : TCP_B_UNSC_MC_ODST_Soldier {
 	author = "Atlas";
 	scope = 2;
 	scopeCurator = 2;
 	displayName = "ODST Marksman";
 	side = 1;
-	faction = "B_ATLAS_UNSCDF";
+	faction = "B_ATLAS_UNSCMC";
 	icon = "iconMan";
 
-	vehicleClass = "B_ATLAS_UNSCDF_INF_ODST";
-	editorSubcategory = "UNSCDF_Infantry_ODST";
+	vehicleClass = "B_ATLAS_UNSCMC_INF_ODST";
+	editorSubcategory = "UNSCMC_Infantry_ODST";
 
 	identityTypes[] = {"Head_NATO","LanguageENG_F","G_UNSC_Default_Gray"};
 
@@ -1348,17 +1348,17 @@ class B_UNSCDF_ODST_Marksman : TCP_B_UNSC_MC_ODST_Soldier {
 	ALiVE_orbatCreator_owned = 1;
 };
 
-class B_UNSCDF_ODST_Sniper : TCP_B_UNSC_MC_ODST_Soldier {
+class B_UNSCMC_ODST_Sniper : TCP_B_UNSC_MC_ODST_Soldier {
 	author = "Atlas";
 	scope = 2;
 	scopeCurator = 2;
 	displayName = "ODST Sniper";
 	side = 1;
-	faction = "B_ATLAS_UNSCDF";
+	faction = "B_ATLAS_UNSCMC";
 	icon = "iconManRecon";
 
-	vehicleClass = "B_ATLAS_UNSCDF_INF_ODST";
-	editorSubcategory = "UNSCDF_Infantry_ODST";
+	vehicleClass = "B_ATLAS_UNSCMC_INF_ODST";
+	editorSubcategory = "UNSCMC_Infantry_ODST";
 
 	identityTypes[] = {"Head_NATO","LanguageENG_F","G_UNSC_Default_Gray"};
 
@@ -1397,17 +1397,17 @@ class B_UNSCDF_ODST_Sniper : TCP_B_UNSC_MC_ODST_Soldier {
 	ALiVE_orbatCreator_owned = 1;
 };
 
-class B_UNSCDF_ODST_Breacher : TCP_B_UNSC_MC_ODST_Soldier {
+class B_UNSCMC_ODST_Breacher : TCP_B_UNSC_MC_ODST_Soldier {
 	author = "Atlas";
 	scope = 2;
 	scopeCurator = 2;
 	displayName = "ODST Breacher";
 	side = 1;
-	faction = "B_ATLAS_UNSCDF";
+	faction = "B_ATLAS_UNSCMC";
 	icon = "iconMan";
 
-	vehicleClass = "B_ATLAS_UNSCDF_INF_ODST";
-	editorSubcategory = "UNSCDF_Infantry_ODST";
+	vehicleClass = "B_ATLAS_UNSCMC_INF_ODST";
+	editorSubcategory = "UNSCMC_Infantry_ODST";
 
 	engineer = 1;
 	canDeactivateMines = 1;
@@ -1450,17 +1450,17 @@ class B_UNSCDF_ODST_Breacher : TCP_B_UNSC_MC_ODST_Soldier {
 	ALiVE_orbatCreator_owned = 1;
 };
 
-class B_UNSCDF_ODST_Autorifleman : TCP_B_UNSC_MC_ODST_Soldier {
+class B_UNSCMC_ODST_Autorifleman : TCP_B_UNSC_MC_ODST_Soldier {
 	author = "Atlas";
 	scope = 2;
 	scopeCurator = 2;
 	displayName = "ODST Autorifleman";
 	side = 1;
-	faction = "B_ATLAS_UNSCDF";
+	faction = "B_ATLAS_UNSCMC";
 	icon = "iconManMG";
 
-	vehicleClass = "B_ATLAS_UNSCDF_INF_ODST";
-	editorSubcategory = "UNSCDF_Infantry_ODST";
+	vehicleClass = "B_ATLAS_UNSCMC_INF_ODST";
+	editorSubcategory = "UNSCMC_Infantry_ODST";
 
 	backpack = "TCP_B_Autorifleman_1_EM39_MLBE_Hardcase_EM39_Buttpack_Black";
 
