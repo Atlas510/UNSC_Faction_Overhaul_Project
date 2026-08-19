@@ -1,13 +1,3 @@
-// ============================================================
-//  config.cpp — UNSCAF Units
-//  Faction: UNSC Air Force (UNSCAF)
-//  Author: Atlas510
-//
-//  FILL-IN GUIDE:
-//    - Replace every TODO comment with the correct value.
-//    - Search for "FILL:" to find every spot that needs work.
-// ============================================================
-
 class CfgPatches
 {
 	class B_ATLAS_UNSCAF
@@ -26,69 +16,70 @@ class CfgPatches
 			"ace_common",
 			"ALiVE_main",
 			"OPTRE_Core"
-			// FILL: add any additional required addons here
 		};
 
-		// FILL: list every unit classname defined in CfgVehicles_Infantry.hpp and CfgVehicles_Vehicles.hpp
 		units[] =
 		{
-			// Infantry
-			"B_UNSCAF_Officer",
-			"B_UNSCAF_Rifleman",
-			// TODO — add remaining infantry classnames
+			"B_UNSCAF_Officer","B_UNSCAF_Rifleman","B_UNSCAF_Squad_Leader","B_UNSCAF_Team_Leader",
+			"B_UNSCAF_Ammo_Bearer","B_UNSCAF_Autorifleman_01","B_UNSCAF_Corpsman","B_UNSCAF_Crewman",
+			"B_UNSCAF_Engineer","B_UNSCAF_Explosive_Specialist","B_UNSCAF_Grenadier","B_UNSCAF_Marksman",
+			"B_UNSCAF_Missile_Speacialist_AA","B_UNSCAF_Missile_Specialist_AT","B_UNSCAF_Repair_Specialist",
+			"B_UNSCAF_Rifleman_AT","B_UNSCAF_Rifleman_Unarmed","B_UNSCAF_Rifleman_Light",
+			"B_UNSCAF_UAV_Operator_OQ_38_Wren","B_UNSCAF_UAV_Operator_OQ_40_Minibee","B_UNSCAF_Sniper",
+			"B_UNSCAF_Forward_Observer","B_UNSCAF_Marine_Pilot","B_UNSCAF_Marine_Aircrewman",
+			"B_UNSCAF_Heavy_Gunner","B_UNSCAF_Asst_Heavy_Gunner",
+			"B_UNSCAF_ODST_Rifleman","B_UNSCAF_ODST_Team_Leader","B_UNSCAF_ODST_Autorifleman",
+			"B_UNSCAF_ODST_AT_Specialist","B_UNSCAF_ODST_AA_Specialist","B_UNSCAF_ODST_Corpsman",
+			"B_UNSCAF_ODST_Scout","B_UNSCAF_ODST_Marksman","B_UNSCAF_ODST_Sniper","B_UNSCAF_ODST_Breacher",
 
-			// Vehicles
-			// TODO — add vehicle classnames
+			"B_UNSCAF_M12A_FAV","B_UNSCAF_M12A_LRV_M41","B_UNSCAF_M12AG1_LAAV_M68A","B_UNSCAF_M12G2_LAAV_M68B",
+			"B_UNSCAF_M831A_LTV","B_UNSCAF_M274R_ULATV","B_UNSCAF_M112_WPC","B_UNSCAF_M112_WPC_M41",
+			"B_UNSCAF_Maintenance_Cart","B_UNSCAF_M1087_Repair","B_UNSCAF_M1087","B_UNSCAF_M1087C",
+			"B_UNSCAF_M1087_Ammo","B_UNSCAF_M1087_Fuel","B_UNSCAF_M1087_Medical",
+			"B_UNSCAF_OQ_40_Minibee","B_UNSCAF_OQ_38_Wren","B_UNSCAF_D77H_TCI",
+			"B_UNSCAF_AV_14_CAP","B_UNSCAF_AV_14_CAS",
+			"B_UNSCAF_AIE_486H_MMG","B_UNSCAF_AU_44","B_UNSCAF_M95_Lance","B_UNSCAF_LAU_65D_SGM_151",
+			"B_UNSCAF_M247A1_MMG","B_UNSCAF_M250_HMG","B_UNSCAF_M460AGL","B_UNSCAF_M71_Scythe","B_UNSCAF_M247H",
+			"B_UNSCAF_M494_IFV","B_UNSCAF_M808B2","B_UNSCAF_M808B_MBT","B_UNSCAF_M808BM_MBT",
+			"B_UNSCAF_M850_HBT","B_UNSCAF_M875_SPH","B_UNSCAF_D77H_TCI_AV",
+			"B_UNSCAF_M808R_MRV","B_UNSCAF_M808B2A1","B_UNSCAF_M705_MLRS"
 		};
 		weapons[] = {};
 	};
 };
 
-// ============================================================
-//  Faction display settings
-// ============================================================
 class CfgFactionClasses
 {
 	class B_ATLAS_UNSCAF
 	{
-		displayName = "UNSC Air Force";   // FILL: full faction display name
+		displayName = "UNSC Air Force";
 		priority = 2;
-		side = 1;                          // 1 = BLUFOR
-		icon = "\A3\ui_f\data\map\markers\nato\b_inf.paa"; // FILL: custom icon path if available
+		side = 1;
+		icon = "\A3\ui_f\data\map\markers\nato\b_inf.paa";
 	};
 };
 
-// ============================================================
-//  Editor subcategories (shown in Zeus / Eden unit list)
-// ============================================================
 class CfgEditorSubcategories
 {
 	class UNSCAF_Infantry
 	{
-		displayName = "Men";               // FILL: adjust subcategory names as needed
+		displayName = "Men";
 	};
-	// TODO — add more subcategories (e.g. ODST, Pilots) if required
 };
 
-// ============================================================
-//  Vehicle classes (Zeus filter categories)
-// ============================================================
 class CfgVehicleClasses
 {
-	class B_ATLAS_UNSCAF_INF  { displayName = "Men"; };
-	class B_ATLAS_UNSCAF_MOT  { displayName = "Cars"; };
-	class B_ATLAS_UNSCAF_MECH { displayName = "IFVs"; };
-	class B_ATLAS_UNSCAF_ARMR { displayName = "Tanks"; };
-	class B_ATLAS_UNSCAF_ARTY { displayName = "Artillery"; };
-	class B_ATLAS_UNSCAF_AIR  { displayName = "Helicopters / Aircraft"; };
-	class B_ATLAS_UNSCAF_DRN  { displayName = "Drones"; };
-	class B_ATLAS_UNSCAF_TUR  { displayName = "Turrets"; };
-	// FILL: add / remove vehicle class categories as needed
+	class B_ATLAS_UNSCAF_INF       { displayName = "Men"; };
+	class B_ATLAS_UNSCAF_MOT       { displayName = "Cars"; };
+	class B_ATLAS_UNSCAF_MECH      { displayName = "IFVs"; };
+	class B_ATLAS_UNSCAF_ARMR      { displayName = "Tanks"; };
+	class B_ATLAS_UNSCAF_ARTY      { displayName = "Artillery"; };
+	class B_ATLAS_UNSCAF_NAV       { displayName = "Boats"; };
+	class B_ATLAS_UNSCAF_AIR       { displayName = "Helicopters"; };
+	class B_ATLAS_UNSCAF_DRN       { displayName = "Drones"; };
+	class B_ATLAS_UNSCAF_TUR       { displayName = "Turrets"; };
 };
 
-// ============================================================
-//  Script functions
-// ============================================================
 class CfgFunctions
 {
 	class ATLAS
@@ -98,7 +89,7 @@ class CfgFunctions
 		{
 			class randomizeAFUniform
 			{
-				file = "\unscaf_units\functions\fn_randomizeUniform.sqf"; // FILL: update path if folder is renamed
+				file = "\unscaf_units\functions\fn_randomizeUniform.sqf";
 			};
 			class randomizeKit
 			{
@@ -108,10 +99,6 @@ class CfgFunctions
 	};
 };
 
-// ============================================================
-//  Macro — ALiVE / respawn event handler (copy from UNSCMC,
-//  replace function tag if you create AF-specific functions)
-// ============================================================
 #define ATLAS_AF_UNIFORM_RAND_EH \
 class EventHandlers { \
 	class CBA_Extended_EventHandlers {}; \
@@ -120,9 +107,6 @@ class EventHandlers { \
 	}; \
 };
 
-// ============================================================
-//  Include split files
-// ============================================================
 class CfgVehicles
 {
 	#include "CfgVehicles_BaseImports.hpp"
