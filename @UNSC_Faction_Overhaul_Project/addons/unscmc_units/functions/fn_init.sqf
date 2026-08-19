@@ -1,1 +1,1 @@
-UNSCMC_fnc_applyCosmetics = compile preprocessFileLineNumbers "unscdf_units\functions\fn_applyCosmetics.sqf";
+UNSCMC_fnc_applyCosmetics = compile preprocessFileLineNumbers "unscmc_units\functions\fn_applyCosmetics.sqf";
