@@ -263,6 +263,7 @@ class B_UNSCAF_AV_14_CAP : OPTRE_UNSC_hornet_CAP {
 	side = 1;
 	faction = "B_ATLAS_UNSCAF";
 	crew = "B_UNSCAF_Marine_Pilot";
+	vehicleClass = "B_ATLAS_UNSCAF_PLN";
 	class EventHandlers {
 		class CBA_Extended_EventHandlers {};
 	};
@@ -276,7 +277,8 @@ class B_UNSCAF_AV_14_CAS : OPTRE_UNSC_hornet_CAS {
 	displayName = "AV-14 (CAS)";
 	side = 1;
 	faction = "B_ATLAS_UNSCAF";
-	crew = "OPTRE_UNSC_Airforce_Soldier_Airman";
+	crew = "B_UNSCAF_Marine_Pilot";
+	vehicleClass = "B_ATLAS_UNSCAF_PLN";
 	class EventHandlers {
 		class CBA_Extended_EventHandlers {};
 	};
