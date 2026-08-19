@@ -70,19 +70,19 @@ class CfgFunctions
 		{
 			class randomizeMarineUniform
 			{
-				file = "\unscdf_units\functions\fn_randomizeMarineUniform.sqf";
+				file = "\unscmc_units\functions\fn_randomizeMarineUniform.sqf";
 			};
 
 			class randomizeODSTUniform
 			{
-				file = "\unscdf_units\functions\fn_randomizeODSTUniform.sqf";
+				file = "\unscmc_units\functions\fn_randomizeODSTUniform.sqf";
 			};
 
 			class Kit {
-			file = "unscdf_units\functions\fn_randomizeKit.sqf";
+			file = "unscmc_units\functions\fn_randomizeKit.sqf";
 			};
 			class randomizeKit {
-			file = "unscdf_units\functions\fn_randomizeKit.sqf";	
+			file = "unscmc_units\functions\fn_randomizeKit.sqf";	
 			};
 		};
 	};
