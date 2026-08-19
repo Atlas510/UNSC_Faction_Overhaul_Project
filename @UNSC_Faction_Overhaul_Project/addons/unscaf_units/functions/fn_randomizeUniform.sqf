@@ -1,27 +1,32 @@
-// ============================================================
-//  functions/fn_randomizeUniform.sqf — UNSCAF Units
-//
-//  Randomly selects a uniform from the UNSCAF uniform pool
-//  and applies it to the unit while preserving uniform items.
-//
-//  Parameters:
-//    _unit : Object — the unit to randomize
-//
-//  FILL-IN GUIDE:
-//    Replace the TODO strings inside _uniformPool with actual
-//    uniform classnames available for the UNSC Air Force.
-//    You can have as many or as few entries as needed.
-// ============================================================
-
 params ["_unit"];
 if (isNull _unit) exitWith {};
 if (!local _unit) exitWith {};
 
 private _uniformPool = [
-	// FILL: paste UNSCAF uniform classnames here, one per line
-	// "TODO_AF_Uniform_Variant1",
-	// "TODO_AF_Uniform_Variant2",
-	// "TODO_AF_Uniform_Variant3",
+	"WOLFoT_TcP_UNSC_A_CBBU_WDL2_FT_Full_BU_Uni",
+	"WOLFoT_TcP_UNSC_A_CBBU_WDL2_FT_Full_B_Uni",
+	"WOLFoT_TcP_UNSC_A_CBBU_WDL2_FT_Full_GBU_Uni",
+	"WOLFoT_TcP_UNSC_A_CBBU_WDL2_FT_Full_GB_Uni",
+	"WOLFoT_TcP_UNSC_A_CBBU_WDL2_FT_Full_GU_Uni",
+	"WOLFoT_TcP_UNSC_A_CBBU_WDL2_FT_Full_G_Uni",
+	"WOLFoT_TcP_UNSC_A_CBBU_WDL2_FT_Full_U_Uni",
+	"WOLFoT_TcP_UNSC_A_CBBU_WDL2_FT_Full_Uni",
+	"WOLFoT_TcP_UNSC_A_CBBU_WDL2_TS_TB_Uni",
+	"WOLFoT_TcP_UNSC_A_CBBU_WDL2_TS_TBG_Uni",
+	"WOLFoT_TcP_UNSC_A_CBBU_WDL2_TS_TG_Uni",
+	"WOLFoT_TcP_UNSC_A_CBBU_WDL2_TS_UTB_Uni",
+	"WOLFoT_TcP_UNSC_A_CBBU_WDL2_TS_UTBG_Uni",
+	"WOLFoT_TcP_UNSC_A_CBBU_WDL2_TS_UTG_Uni",
+	"WOLFoT_TcP_UNSC_A_CBBU_WDL2_TS_UT_Uni",
+	"WOLFoT_TcP_UNSC_A_CBBU_WDL2_TS_T_Uni",
+	"WOLFoT_TcP_UNSC_A_CBBU_WDL2_FT_Quarter_BU_Uni",
+	"WOLFoT_TcP_UNSC_A_CBBU_WDL2_FT_Quarter_B_Uni",
+	"WOLFoT_TcP_UNSC_A_CBBU_WDL2_FT_Quarter_GBU_Uni",
+	"WOLFoT_TcP_UNSC_A_CBBU_WDL2_FT_Quarter_GB_Uni",
+	"WOLFoT_TcP_UNSC_A_CBBU_WDL2_FT_Quarter_GU_Uni",
+	"WOLFoT_TcP_UNSC_A_CBBU_WDL2_FT_Quarter_G_Uni",
+	"WOLFoT_TcP_UNSC_A_CBBU_WDL2_FT_Quarter_U_Uni",
+	"WOLFoT_TcP_UNSC_A_CBBU_WDL2_FT_Quarter_Uni"
 ];
 
 if (_uniformPool isEqualTo []) exitWith {};
