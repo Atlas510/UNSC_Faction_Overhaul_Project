@@ -165,69 +165,6 @@ class CfgGroups {
 					class Unit1 { position[] = {5,-5,0}; rank = "PRIVATE"; side = 1; vehicle = "B_UNSCAF_UAV_Operator_OQ_38_Wren"; };
 					class Unit2 { position[] = {-5,-5,0}; rank = "PRIVATE"; side = 1; vehicle = "B_UNSCAF_OQ_38_Wren"; };
 				};
-
-				class b_batlasunscaf_infantry_odst_fireteam {
-					name = "ODST Fireteam";
-					side = 1;
-					faction = "B_ATLAS_UNSCAF";
-					icon = "\A3\ui_f\data\map\markers\nato\b_inf.paa";
-					rarityGroup = 0.5;
-
-					class Unit0 { position[] = {0,0,0}; rank = "SERGEANT"; side = 1; vehicle = "B_UNSCAF_ODST_Team_Leader"; };
-					class Unit1 { position[] = {5,-5,0}; rank = "CORPORAL"; side = 1; vehicle = "B_UNSCAF_ODST_Autorifleman"; };
-					class Unit2 { position[] = {-5,-5,0}; rank = "PRIVATE"; side = 1; vehicle = "B_UNSCAF_ODST_AT_Specialist"; };
-					class Unit3 { position[] = {10,-10,0}; rank = "PRIVATE"; side = 1; vehicle = "B_UNSCAF_ODST_Corpsman"; };
-				};
-
-				class b_batlasunscaf_infantry_odst_recon_team {
-					name = "ODST Recon Team";
-					side = 1;
-					faction = "B_ATLAS_UNSCAF";
-					icon = "\A3\ui_f\data\map\markers\nato\b_recon.paa";
-					rarityGroup = 0.5;
-
-					class Unit0 { position[] = {0,0,0}; rank = "SERGEANT"; side = 1; vehicle = "B_UNSCAF_ODST_Team_Leader"; };
-					class Unit1 { position[] = {5,-5,0}; rank = "CORPORAL"; side = 1; vehicle = "B_UNSCAF_ODST_Scout"; };
-					class Unit2 { position[] = {-5,-5,0}; rank = "PRIVATE"; side = 1; vehicle = "B_UNSCAF_ODST_Marksman"; };
-					class Unit3 { position[] = {10,-10,0}; rank = "PRIVATE"; side = 1; vehicle = "B_UNSCAF_ODST_Corpsman"; };
-				};
-
-				class b_batlasunscaf_infantry_odst_sniper_team {
-					name = "ODST Sniper Team";
-					side = 1;
-					faction = "B_ATLAS_UNSCAF";
-					icon = "\A3\ui_f\data\map\markers\nato\b_recon.paa";
-					rarityGroup = 0.5;
-
-					class Unit0 { position[] = {0,0,0}; rank = "SERGEANT"; side = 1; vehicle = "B_UNSCAF_ODST_Sniper"; };
-					class Unit1 { position[] = {5,-5,0}; rank = "CORPORAL"; side = 1; vehicle = "B_UNSCAF_ODST_Scout"; };
-				};
-
-				class b_batlasunscaf_infantry_odst_weapons_team {
-					name = "ODST Weapons Team";
-					side = 1;
-					faction = "B_ATLAS_UNSCAF";
-					icon = "\A3\ui_f\data\map\markers\nato\b_inf.paa";
-					rarityGroup = 0.5;
-
-					class Unit0 { position[] = {0,0,0}; rank = "SERGEANT"; side = 1; vehicle = "B_UNSCAF_ODST_Team_Leader"; };
-					class Unit1 { position[] = {5,-5,0}; rank = "CORPORAL"; side = 1; vehicle = "B_UNSCAF_ODST_AT_Specialist"; };
-					class Unit2 { position[] = {-5,-5,0}; rank = "PRIVATE"; side = 1; vehicle = "B_UNSCAF_ODST_AA_Specialist"; };
-					class Unit3 { position[] = {10,-10,0}; rank = "PRIVATE"; side = 1; vehicle = "B_UNSCAF_ODST_Breacher"; };
-				};
-
-				class b_batlasunscaf_infantry_odst_assault_team {
-					name = "ODST Assault Team";
-					side = 1;
-					faction = "B_ATLAS_UNSCAF";
-					icon = "\A3\ui_f\data\map\markers\nato\b_inf.paa";
-					rarityGroup = 0.5;
-
-					class Unit0 { position[] = {0,0,0}; rank = "SERGEANT"; side = 1; vehicle = "B_UNSCAF_ODST_Team_Leader"; };
-					class Unit1 { position[] = {5,-5,0}; rank = "PRIVATE"; side = 1; vehicle = "B_UNSCAF_ODST_Breacher"; };
-					class Unit2 { position[] = {-5,-5,0}; rank = "PRIVATE"; side = 1; vehicle = "B_UNSCAF_ODST_Autorifleman"; };
-					class Unit3 { position[] = {10,-10,0}; rank = "PRIVATE"; side = 1; vehicle = "B_UNSCAF_ODST_Corpsman"; };
-				};
 			};
 
 			class Motorized {
